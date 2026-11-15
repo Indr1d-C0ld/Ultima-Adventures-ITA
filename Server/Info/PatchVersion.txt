@@ -1,0 +1,2 @@
+# Update the value below to the patch identifier you want displayed in the server console.
+Ultima Adventures Patch 3.0.0

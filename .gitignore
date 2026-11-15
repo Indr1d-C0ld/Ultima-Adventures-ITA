@@ -1,0 +1,20 @@
+# Tracciamo solo sorgenti e dati testuali del server
+/Client/
+/Server/Files/
+/Server/Saves/
+/Server/Backups/
+/Server/Logs/
+/Server/Utilities/
+/Server/UltimaLive/
+/Server/Scripts/bin/
+/Server/Scripts/obj/
+/Server/Scripts/Output/
+/Server/Server/bin/
+/Server/Server/obj/
+*.exe
+*.dll
+*.pdb
+*.mul
+*.log
+*.pdf
+*.bin

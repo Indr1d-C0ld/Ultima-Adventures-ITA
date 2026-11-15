@@ -1,0 +1,18 @@
+
+Hellow there, FinalTwist here - I've been leading the development of this fork of Ultima Odyssey for the last 2 years.  I have over 1,700 hours put into this project and have coded most of the additional content found in Adventures.
+
+I have been getting many requests to help people customize their own personal worlds over the years.  Now, Adventures is and will always remain free, however I am making myself available as a coder-for-hire for anyone who wants additional custom content on their personal servers.
+
+I can do the following for your offline server:
+
+- clean the world of anything you don't want
+- tweak any system in the world to be just the way you want it
+- help you upgrade your existing offline server to the new code
+- code in any new system you want (note that my cost will depend on the complexity of the system)
+
+Want a new type of weapon?  A new way to deal damage?  A new type of taming system?  A new Specialization character class?  Have ideas you'd like to see and use in your world?  I'm available.
+
+I can be contacted on the discord for the server here: https://discord.gg/XCpwksDt
+I can also be contacted on the servuo forums.
+
+Rate will vary from $50 up, depending on what you need done and I accept paypal/bitcoin for payment.  Cheers!

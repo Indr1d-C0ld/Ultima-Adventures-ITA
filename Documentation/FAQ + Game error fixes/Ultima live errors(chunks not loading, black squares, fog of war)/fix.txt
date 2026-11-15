@@ -1,0 +1,10 @@
+Whenever the map looks like that, it tends to be a Ultima Live issue. I don't know why some folks have had that problem and other's havent.
+
+Generally the fix is:
+> delete `%programdata%\Ultima Adventures`
+> (AKA `C:\ProgramData\Ultima Adventures\`)
+
+
+or for Linux, Per Luftwraith!
+
+copied the map cache files over from the Wine C:\Program Data\Ultima Adventures\ from the TazUO ver packaged with the UA files into ~/.local/share/UltimaLive/

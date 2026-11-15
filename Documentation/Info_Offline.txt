@@ -1,0 +1,3 @@
+If you are playing "Offline" (you are hosting your own server), these are the Administrator account credentials:
+Username: newadmin
+Password: newadmin

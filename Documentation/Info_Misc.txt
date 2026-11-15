@@ -1,0 +1,15 @@
+Helpful links:
+- The main ServUO post for Ultima Adventures 
+https://www.servuo.com/archive/ultima-adventures-a-full-featured-content-packed-offline-online-server.1374/
+
+- The public GitHub repository for Ultima Adventures:
+https://github.com/FinalTwist/Ultima-Adventures
+
+- The Releases page for the UA's GitHub
+https://github.com/FinalTwist/Ultima-Adventures/releases
+
+- The UO Odyessy Subreddit
+https://www.reddit.com/r/uodyssey/
+
+- Discord link for Ultima Adventures
+https://discord.com/channels/717420357702778981/817225217252392970

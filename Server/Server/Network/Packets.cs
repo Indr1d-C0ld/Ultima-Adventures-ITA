@@ -382,7 +382,7 @@ namespace Server.Network
 
 				m_Stream.Write( (int) bis.Price );
 
-				string desc = bis.Description;
+				string desc = Localization.ToAscii( Localization.Translate( bis.Description ) );
 
 				if ( desc == null )
 					desc = "";
@@ -418,6 +418,8 @@ namespace Server.Network
 
 				if ( name == null )
 					name = "";
+
+				name = Localization.ToAscii( Localization.Translate( name ) );
 
 				m_Stream.Write( (ushort) (name.Length) );
 				m_Stream.WriteAsciiFixed( name, (ushort) (name.Length) );
@@ -788,7 +790,7 @@ namespace Server.Network
 			m_Stream.Write( (int) ((IMenu)menu).Serial );
 			m_Stream.Write( (short) 0 );
 
-			string question = menu.Question;
+			string question = Localization.ToAscii( Localization.Translate( menu.Question ) );
 
 			if ( question == null )
 				m_Stream.Write( (byte) 0 );
@@ -812,7 +814,7 @@ namespace Server.Network
 				m_Stream.Write( (ushort) e.ItemID );
 				m_Stream.Write( (short) e.Hue );
 
-				string name = e.Name;
+				string name = Localization.ToAscii( Localization.Translate( e.Name ) );
 
 				if ( name == null )
 					m_Stream.Write( (byte) 0 );
@@ -835,7 +837,7 @@ namespace Server.Network
 			m_Stream.Write( (int) ((IMenu)menu).Serial );
 			m_Stream.Write( (short) 0 );
 
-			string question = menu.Question;
+			string question = Localization.ToAscii( Localization.Translate( menu.Question ) );
 
 			if ( question == null ) 
 				m_Stream.Write( (byte) 0 );
@@ -856,7 +858,7 @@ namespace Server.Network
 			{
 				m_Stream.Write( (int) 0 );
 
-				string answer = answers[i];
+				string answer = Localization.ToAscii( Localization.Translate( answers[i] ) );
 
 				if ( answer == null ) 
 					m_Stream.Write( (byte) 0 );
@@ -2229,6 +2231,9 @@ namespace Server.Network
 			if ( name == null ) name = "";
 			if ( args == null ) args = "";
 
+			args = Localization.TranslateArgs( args );
+			name = Localization.ToAscii( AsciiMessage.LocalizeName( serial, name ) );
+
 			if ( hue == 0 )
 				hue = 0x3B2;
 
@@ -2460,7 +2465,7 @@ namespace Server.Network
 
 			for ( int i = 0; i < strings.Count; ++i )
 			{
-				string v = strings[i];
+				string v = Localization.Translate( strings[i] );
 
 				if ( v == null )
 					v = String.Empty;
@@ -2614,7 +2619,7 @@ namespace Server.Network
 
 			for ( int i = 0; i < text.Count; ++i )
 			{
-				string v = text[i];
+				string v = Localization.Translate( text[i] );
 
 				if ( v == null )
 					v = String.Empty;
@@ -2674,8 +2679,11 @@ namespace Server.Network
 			if ( canLift )
 				flags |= 0x02;
 
+			if ( !m.Player )
+				text = Localization.Translate( text );
+
 			m_Stream.Write( (int) m.Serial );
-			m_Stream.WriteAsciiFixed( text, 60 );
+			m_Stream.WriteAsciiFixed( Localization.ToAscii( text ), 60 );
 			m_Stream.Write( (byte) flags );
 		}
 	}
@@ -3012,6 +3020,9 @@ namespace Server.Network
 
 			if ( name == null ) name = "";
 
+			if ( !m.Player )
+				name = Localization.ToAscii( Localization.Translate( name ) );
+
 			this.EnsureCapacity( 37 );
 
 			m_Stream.Write( (int) m.Serial );
@@ -3051,6 +3062,9 @@ namespace Server.Network
 			string name = m.Name;
 			if ( name == null ) name = "";
 
+			if ( !m.Player )
+				name = Localization.ToAscii( Localization.Translate( name ) );
+
 			this.EnsureCapacity( 43 );
 
 			m_Stream.Write( (int) m.Serial );
@@ -3074,6 +3088,9 @@ namespace Server.Network
 		{
 			string name = m.Name;
 			if ( name == null ) name = "";
+
+			if ( !m.Player )
+				name = Localization.ToAscii( Localization.Translate( name ) );
 
 			int type;
 
@@ -3169,6 +3186,9 @@ namespace Server.Network
 		{
 			string name = beheld.Name;
 			if ( name == null ) name = "";
+
+			if ( !beheld.Player )
+				name = Localization.ToAscii( Localization.Translate( name ) );
 
 			int type;
 
@@ -3729,7 +3749,36 @@ namespace Server.Network
 
 	public sealed class AsciiMessage : Packet
 	{
-		public AsciiMessage( Serial serial, int graphic, MessageType type, int hue, int font, string name, string text ) : base( 0x1C )
+		// Se la traduzione contiene caratteri non ASCII (accenti) il pacchetto
+		// viene emesso nel formato Unicode (0xAE), che il client mostra correttamente.
+		private static int SelectID( Serial serial, string text )
+		{
+			return Localization.IsAscii( LocalizeText( serial, text ) ) ? 0x1C : 0xAE;
+		}
+
+		internal static string LocalizeText( Serial serial, string text )
+		{
+			// il parlato dei giocatori e' escluso a monte (Mobile.DoSpeech sospende la traduzione)
+			return Localization.Translate( text );
+		}
+
+		internal static string LocalizeName( Serial serial, string name )
+		{
+			if ( !Localization.Enabled || string.IsNullOrEmpty( name ) || name == "System" )
+				return name;
+
+			if ( serial.IsMobile )
+			{
+				Mobile m = World.FindMobile( serial );
+
+				if ( m != null && m.Player )
+					return name; // i nomi dei personaggi non si traducono
+			}
+
+			return Localization.Translate( name );
+		}
+
+		public AsciiMessage( Serial serial, int graphic, MessageType type, int hue, int font, string name, string text ) : base( SelectID( serial, text ) )
 		{
 			if ( name == null )
 				name = "";
@@ -3737,8 +3786,26 @@ namespace Server.Network
 			if ( text == null )
 				text = "";
 
+			text = LocalizeText( serial, text );
+			name = LocalizeName( serial, name );
+
 			if ( hue == 0 )
 				hue = 0x3B2;
+
+			if ( PacketID == 0xAE )
+			{
+				this.EnsureCapacity( 50 + (text.Length * 2) );
+
+				m_Stream.Write( (int) serial );
+				m_Stream.Write( (short) graphic );
+				m_Stream.Write( (byte) type );
+				m_Stream.Write( (short) hue );
+				m_Stream.Write( (short) font );
+				m_Stream.WriteAsciiFixed( "ITA", 4 );
+				m_Stream.WriteAsciiFixed( Localization.ToAscii( name ), 30 );
+				m_Stream.WriteBigUniNull( text );
+				return;
+			}
 
 			this.EnsureCapacity( 45 + text.Length );
 
@@ -3747,7 +3814,7 @@ namespace Server.Network
 			m_Stream.Write( (byte) type );
 			m_Stream.Write( (short) hue );
 			m_Stream.Write( (short) font );
-			m_Stream.WriteAsciiFixed( name, 30 );
+			m_Stream.WriteAsciiFixed( Localization.ToAscii( name ), 30 );
 			m_Stream.WriteAsciiNull( text );
 		}
 	}
@@ -3759,6 +3826,9 @@ namespace Server.Network
 			if ( string.IsNullOrEmpty( lang ) ) lang = "ENU";
 			if ( name == null ) name = "";
 			if ( text == null ) text = "";
+
+			text = AsciiMessage.LocalizeText( serial, text );
+			name = Localization.ToAscii( AsciiMessage.LocalizeName( serial, name ) );
 
 			if ( hue == 0 )
 				hue = 0x3B2;
@@ -4338,6 +4408,10 @@ namespace Server.Network
 			if ( name == null ) name = "";
 			if ( affix == null ) affix = "";
 			if ( args == null ) args = "";
+
+			args = Localization.TranslateArgs( args );
+			affix = Localization.ToAscii( Localization.Translate( affix ) );
+			name = Localization.ToAscii( AsciiMessage.LocalizeName( serial, name ) );
 
 			if ( hue == 0 )
 				hue = 0x3B2;

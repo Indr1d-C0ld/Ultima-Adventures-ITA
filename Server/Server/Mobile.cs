@@ -5206,6 +5206,24 @@ namespace Server
 		private static List<Mobile> m_Hears = new List<Mobile>();
 		private static List<IEntity> m_OnSpeech = new List<IEntity>();
 
+		// Il parlato digitato dai giocatori non va tradotto; quello degli NPC si'.
+		private Packet CreateSpeechPacket( MessageType type, int hue, string text )
+		{
+			if ( !m_Player )
+				return new UnicodeMessage( m_Serial, Body, type, hue, 3, m_Language, Name, text );
+
+			Localization.PushSuppress();
+
+			try
+			{
+				return new UnicodeMessage( m_Serial, Body, type, hue, 3, m_Language, Name, text );
+			}
+			finally
+			{
+				Localization.PopSuppress();
+			}
+		}
+
 		public virtual void DoSpeech( string text, int[] keywords, MessageType type, int hue )
 		{
 			if( m_Deleted || CommandSystem.Handle( this, text, type ) )
@@ -5318,7 +5336,7 @@ namespace Server
 
 						if( ns != null ) {
 							if( regp == null )
-								regp = Packet.Acquire( new UnicodeMessage( m_Serial, Body, type, hue, 3, m_Language, Name, text ) );
+								regp = Packet.Acquire( CreateSpeechPacket( type, hue, text ) );
 
 							ns.Send( regp );
 						}
@@ -5329,7 +5347,7 @@ namespace Server
 
 						if( ns != null ) {
 							if( mutp == null )
-								mutp = Packet.Acquire( new UnicodeMessage( m_Serial, Body, type, hue, 3, m_Language, Name, mutatedText ) );
+								mutp = Packet.Acquire( CreateSpeechPacket( type, hue, mutatedText ) );
 
 							ns.Send( mutp );
 						}

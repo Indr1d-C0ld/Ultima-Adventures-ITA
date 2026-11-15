@@ -1,0 +1,4 @@
+# Lingua dei testi inviati al client: it = italiano, en = inglese originale
+lingua=it
+# si = annota in Logs/localization-missing.tsv i testi ancora senza traduzione
+registra-mancanti=no

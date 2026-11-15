@@ -98,6 +98,8 @@ namespace Server
 			if ( arguments == null )
 				arguments = "";
 
+			arguments = Localization.TranslateArgs( arguments );
+
 			if ( m_Header == 0 )
 			{
 				m_Header = number;

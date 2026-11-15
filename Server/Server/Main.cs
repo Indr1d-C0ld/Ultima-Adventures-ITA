@@ -550,6 +550,8 @@ namespace Server
 			}
 
 			ScriptCompiler.Invoke( "Configure" );
+
+			Localization.Configure();
 			
 			Region.Load();
 			World.Load();

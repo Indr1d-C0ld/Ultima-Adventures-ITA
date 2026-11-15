@@ -50,6 +50,8 @@ namespace Server.Misc
             if (!paging)
             {
                 string input = Console.ReadLine();
+                if (input == null)
+                    return; // stdin chiuso (server avviato in background/servizio): smetti di ascoltare
                 Next(input);
             }
         }

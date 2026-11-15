@@ -788,10 +788,11 @@ namespace Server
 		{
 			Type t = null;
 
-			if( ignoreCase )
+			// Prima il match esatto: tipi che differiscono solo per maiuscole
+			// (es. WereWolf/Werewolf) altrimenti si risolvono a caso, secondo
+			// l'ordine di GetTypes(), e il caricamento del salvataggio fallisce.
+			if( !m_Sensitive.TryGetValue( key, out t ) && ignoreCase )
 				m_Insensitive.TryGetValue( key, out t );
-			else
-				m_Sensitive.TryGetValue( key, out t );
 
 			return t;
 		}

@@ -1,0 +1,8 @@
+Magia
+Per lanciare incantesimi di Magia servono: il <B>libro degli incantesimi</B> con l'incantesimo, i <B>reagenti</B> nello zaino, abbastanza <B>mana</B> e l'abilità Magia.
+
+Gli 8 reagenti base si comprano dai maghi e dagli erboristi: Perla Nera, Muschio Sanguigno, Aglio, Ginseng, Radice di Mandragora, Belladonna, Seta di Ragno, Cenere Sulfurea.
+
+Primi incantesimi utili: Cura (Heal), Freccia Magica (Magic Arrow), Visione Notturna (Night Sight), Purificazione (Cure), Richiamo (Recall).
+
+Esistono molte altre scuole: Negromanzia, Cavalleria, Bushido, Ninjitsu, canti del Bardo, la Ricerca arcana e sistemi speciali del gioco. Trovi le tabelle complete nel manuale.

@@ -1,0 +1,11 @@
+Abilità e caratteristiche
+Le <B>abilità</B> vanno da 0 a 100 (alcune oltre, con oggetti speciali) e salgono usandole. C'è un tetto al totale delle abilità: quando lo raggiungi puoi bloccare o far scendere quelle che non ti servono dalla finestra delle abilità (frecce su/giù/lucchetto).
+
+Le <B>caratteristiche</B> (Forza, Destrezza, Intelligenza) salgono insieme alle abilità collegate, con un'attesa di qualche minuto tra un aumento e l'altro.
+
+Consigli:
+• Concentrati su poche abilità alla volta.
+• Le abilità di mestiere si allenano creando oggetti via via più difficili.
+• Meditazione recupera il mana più in fretta; Guarigione con le bende cura senza magia.
+
+Digita <B>[skill</B> o apri la finestra Abilità dal paperdoll.

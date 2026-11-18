@@ -107,7 +107,7 @@ namespace Server.Mobiles
             string keyword = this.Name + " Hail";
  
 
-                if (keyword != null && e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0)
+                if (keyword != null && (e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0 || e.Speech.ToLower().IndexOf((this.Name + " salve").ToLower()) >= 0 || e.Speech.ToLower().IndexOf((this.Name + " ave").ToLower()) >= 0))
             {
                 isMatch = true;
 

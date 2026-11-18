@@ -1,0 +1,8 @@
+Benvenuto
+<B>Benvenuto in Ultima Adventures!</B> Questo è un mondo vasto e pericoloso, ispirato alla saga di Ultima: terre diverse da esplorare, dungeon, città, mestieri e magie.
+
+Questa guida riassume ciò che serve per muovere i primi passi. Scegli un argomento dall'elenco a sinistra.
+
+<BASEFONT COLOR=#88FF88>Per le prime 20 ore di gioco (o fino a 300 punti abilità) sei sotto la protezione del principiante</BASEFONT><BASEFONT COLOR=#FFFFFF>: morire non ti costa oggetti né abilità. Approfittane per sperimentare!</BASEFONT>
+
+Il manuale completo in italiano, con tutte le tabelle di incantesimi, armi e armature, si trova nella cartella <B>Documentazione</B> del gioco.

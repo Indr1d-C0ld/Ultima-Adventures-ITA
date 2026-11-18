@@ -1,0 +1,10 @@
+Parlare con i PNG
+Molti personaggi rispondono a parole chiave. Puoi parlare in italiano:
+• <B>banca</B> / <B>saldo</B>: apre la cassetta di sicurezza / dice quanto oro hai in banca.
+• <B>mercante compra</B> / <B>mercante vendi</B> (oppure <B>compra</B> / <B>vendi</B> rivolgendoti a un mercante per nome): commercio. In alternativa apri il menu contestuale del mercante (clic singolo prolungato o tasto destro, a seconda del client) e scegli Compra o Vendi.
+• <B>guardie</B>: chiama le guardie in città se vieni aggredito.
+• <B>stalla</B> / <B>riprendi</B>: lascia o riprende un animale dallo stalliere.
+• <B>addestra</B> o <B>insegna</B>: chiedi a un PNG di insegnarti un'abilità a pagamento.
+• Con i PNG del mondo puoi chiacchierare: prova "lavoro", "nome", "città", "notizie".
+
+Con i tuoi animali: <B>nome vieni</B>, <B>nome segui</B>, <B>nome seguimi</B>, <B>nome proteggi</B>, <B>nome attacca</B>, <B>nome fermo</B>, <B>nome resta</B>, <B>nome libera</B>; oppure a tutti insieme: <B>tutti seguitemi</B>, <B>tutti attaccate</B>, <B>tutti fermi</B>, <B>tutti restate</B>.

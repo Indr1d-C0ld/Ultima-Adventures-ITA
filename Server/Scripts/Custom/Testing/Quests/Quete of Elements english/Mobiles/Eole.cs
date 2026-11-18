@@ -83,7 +83,7 @@ namespace Server.Mobiles
             string keyword = this.Name + " silence";
 
 
-            if (keyword != null && e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0)
+            if (keyword != null && (e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0 || e.Speech.ToLower().IndexOf((this.Name + " silenzio").ToLower()) >= 0))
             {
                 isMatch = true;
 

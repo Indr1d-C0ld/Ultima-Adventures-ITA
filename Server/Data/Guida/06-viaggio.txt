@@ -1,0 +1,7 @@
+Viaggiare
+• <B>A piedi o a cavallo</B>: compra un cavallo dallo stalliere e cavalcalo (doppio clic). Nei dungeon spesso non si può entrare a cavallo.
+• <B>Rune e Richiamo</B>: con l'incantesimo Marchio (Mark) si segna una runa in un luogo; con Richiamo (Recall) ci si torna. Un libro delle rune ne contiene molte.
+• <B>Portali lunari</B> e <B>Portale</B> (Gate Travel) collegano città e terre diverse.
+• Viaggiare con la magia verso un'altra terra può portare una <B>maledizione</B> legata all'Equilibrio (non ai principianti).
+
+Il manuale descrive le terre del mondo, le città e i dungeon in ordine di difficoltà consigliato.

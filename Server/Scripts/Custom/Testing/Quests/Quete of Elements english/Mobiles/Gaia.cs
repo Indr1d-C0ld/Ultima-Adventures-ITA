@@ -84,7 +84,7 @@ namespace Server.Mobiles
             string keyword = this.Name + " fire";
 
 
-            if (keyword != null && e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0)
+            if (keyword != null && (e.Speech.ToLower().IndexOf(keyword.ToLower()) >= 0 || e.Speech.ToLower().IndexOf((this.Name + " fuoco").ToLower()) >= 0))
             {
                 isMatch = true;
 

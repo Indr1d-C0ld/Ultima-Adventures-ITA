@@ -1,0 +1,9 @@
+Morte e resurrezione
+Quando muori diventi uno spirito e il tuo cadavere resta dov'eri. Puoi:
+• raggiungere un guaritore o un santuario (ankh) e farti resuscitare;
+• accettare la resurrezione immediata, se la finestra te la propone (a costo di una penalità maggiore, salvo protezione del principiante);
+• farti resuscitare da un altro giocatore.
+
+Dopo la resurrezione torna al tuo cadavere per riprendere i tuoi oggetti (da principiante restano già nello zaino).
+
+<B>Avatar o no?</B> Nell'introduzione hai scelto se essere Avatar. Chi non è Avatar non perde mai abilità né caratteristiche alla morte e impara alla stessa velocità; l'Avatar ha un tetto caratteristiche più alto (250 contro 225) ma rischia di perdere qualcosa morendo.

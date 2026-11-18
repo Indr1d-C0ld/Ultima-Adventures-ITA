@@ -1,0 +1,10 @@
+Protezione principiante
+Finché sei un principiante:
+• quando muori <B>non perdi oggetti</B> (restano nel tuo zaino), né abilità, caratteristiche, fama o karma;
+• le trappole che rubano o distruggono oggetti non hanno effetto su di te, e le trappole dei forzieri si disinnescano da sole;
+• Richiamo e Portale non ti portano maledizioni di viaggio;
+• non subisci agguati casuali lungo le strade;
+• fame e sete calano a metà velocità;
+• la resurrezione immediata (la finestra che compare da spirito) torna disponibile dopo 10 minuti invece di 60.
+
+La protezione termina dopo <B>20 ore di gioco</B> o al raggiungimento di <B>300 punti abilità totali</B>, alla prima soglia raggiunta. Digita <B>[principiante</B> per vedere quanto manca o per rinunciarvi.

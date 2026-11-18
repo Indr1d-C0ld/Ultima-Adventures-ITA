@@ -314,7 +314,7 @@ namespace Server.Items
 			}
 		}
 
-		private const int MaxProperties = 32;
+		private const int MaxProperties = 40; // era 32: gli strumenti usano 33 proprietà (la 32 è lo slayer)
 		private static BitArray m_Props = new BitArray( MaxProperties );
 		private static int[] m_Possible = new int[MaxProperties];
 
@@ -924,7 +924,7 @@ namespace Server.Items
 
 			for ( int i = 0; i < attributeCount; ++i )
 			{
-				int random = GetUniqueRandom( 32 );
+				int random = GetUniqueRandom( 33 );
 
 				if ( random == -1 )
 					break;

@@ -56,7 +56,7 @@ namespace Server.Items
 					Mobile m = (Mobile)targets[i];
 					attacker.SendLocalizedMessage( 1060161 );
 					int stamdrain = Math.Max(10, (int)(attacker.Stam * 0.1));
-					attacker.Stam  = stamdrain;
+					attacker.Stam -= stamdrain; // corretto: prima impostava il vigore invece di sottrarlo
 					m.SendLocalizedMessage( 1060162 );
 					weapon.OnHit( attacker, m, damageBonus );
 					weapon.OnHit( attacker, m, damageBonus );

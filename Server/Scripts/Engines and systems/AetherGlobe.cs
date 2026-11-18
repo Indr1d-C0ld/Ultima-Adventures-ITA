@@ -363,7 +363,7 @@ namespace Server.Items
 			if ( ((double)balance / 125000.0) <= ((double)MyServerSettings.curseincrease() / 100000) )
 				balance = MyServerSettings.curseincrease();
 
-			cursechance = (( (double)balance / 100000 ) * ( (double)m.Karma / 15000)) /1.5   ;
+			cursechance = (( (double)balance / 100000 ) * ( (double)Math.Abs( m.Karma ) / 15000)) /1.5   ; // corretto: col karma negativo la probabilità era sempre <= 0 (i malvagi non venivano mai maledetti)
 
 			if (frommap != tomap) // recalling/gating to another facet is dangerous
 			cursechance *= 5;

@@ -247,7 +247,7 @@ Per entrare in una gilda di mestiere usa il **menu contestuale** del maestro di 
 
 ### Guardie
 
-Le parole "guardie", "guardia" o "guards" vengono riconosciute come parola chiave, ma **su questo server non evocano nessuna guardia**. La sicurezza delle città è affidata alle **guardie blu** (Blue Guard), che pattugliano e attaccano da sole criminali, assassini e personaggi con karma molto basso (vedi [4.6](04-meccaniche.md#46-notorietà-karma-fama-criminali-assassini)).
+Dire "guards" (o "guardie") **non evoca nessuna guardia** su questo server. La sicurezza delle città è affidata alle **guardie blu** (Blue Guard), che pattugliano e attaccano da sole criminali, assassini e personaggi con karma molto basso (vedi [4.6](04-meccaniche.md#46-notorietà-karma-fama-criminali-assassini)).
 
 ### Frasi generali
 

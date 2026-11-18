@@ -48,23 +48,27 @@ namespace Server.Items
 		{
 			BaseWeapon weapon = from.Weapon as BaseWeapon;
 
+            // prima le mosse proprie dell'arma (la Danza delle Lame abbassava i requisiti delle mosse 3-5 a 80)
             if ( weapon != null && weapon.PrimaryAbility == this )
                 return 70.0;
             else if ( weapon != null && weapon.SecondaryAbility == this )
                 return 80.0;
-			else if (weapon != null && weapon.SecondaryAbility == Bladeweave)
-				return 80.0;
-			else if (weapon != null && weapon.ThirdAbility == Bladeweave)
-				return 90.0;
-			else if (weapon != null && weapon.FourthAbility == Bladeweave)
-				return 100.0;
-			else if (weapon != null && weapon.FifthAbility == Bladeweave)
-				return 110.0;
             else if ( weapon != null && weapon.ThirdAbility == this )
                 return 90.0;
             else if ( weapon != null && weapon.FourthAbility == this )
                 return 100.0;
             else if ( weapon != null && weapon.FifthAbility == this )
+                return 110.0;
+            // mossa scelta dalla Danza delle Lame: vale il requisito dello slot della Danza
+            else if (weapon != null && weapon.PrimaryAbility == Bladeweave)
+                return 70.0;
+            else if (weapon != null && weapon.SecondaryAbility == Bladeweave)
+                return 80.0;
+            else if (weapon != null && weapon.ThirdAbility == Bladeweave)
+                return 90.0;
+            else if (weapon != null && weapon.FourthAbility == Bladeweave)
+                return 100.0;
+            else if (weapon != null && weapon.FifthAbility == Bladeweave)
                 return 110.0;
            
             return 200.0;

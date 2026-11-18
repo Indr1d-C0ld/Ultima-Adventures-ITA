@@ -175,7 +175,7 @@ namespace Server.Items
                                                 int damage = Utility.RandomMinMax(20, 40);
                                                 AOS.Damage(target, attacker, damage, true, 0, 0, 0, 100, 0);
 
-                                                int poisonLevel = attacker.Skills[SkillName.Poisoning].Fixed / 200;
+                                                int poisonLevel = Math.Min( 4, attacker.Skills[SkillName.Poisoning].Fixed / 200 ); // corretto: a 100+ dava il livello 5 inesistente (nessun veleno)
                                                 Poison poison = Poison.GetPoison(poisonLevel);
                                                 if (poison != null)
                                                         target.ApplyPoison(attacker, poison);

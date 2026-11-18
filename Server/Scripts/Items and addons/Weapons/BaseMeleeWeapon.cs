@@ -18,7 +18,23 @@ namespace Server.Items
 			damage = base.AbsorbDamage( attacker, defender, damage );
 
 			if ( Core.AOS )
+			{
+				// Protezione da Mischia I/II (mosse speciali): in AOS il valore assorbito non veniva mai applicato,
+				// quindi la mossa costava mana senza effetto. Ora assorbe danno da mischia fino a esaurimento.
+				int pool = defender.MeleeDamageAbsorb;
+
+				if ( pool > 0 && damage > 0 )
+				{
+					int absorbed = Math.Min( pool, damage );
+					damage -= absorbed;
+					defender.MeleeDamageAbsorb = pool - absorbed;
+
+					if ( defender.MeleeDamageAbsorb <= 0 )
+						defender.SendMessage( "Your protection from weapon attacks has been exhausted." );
+				}
+
 				return damage;
+			}
 			
 			int absorb = defender.MeleeDamageAbsorb;
 

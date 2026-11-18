@@ -3485,7 +3485,7 @@ Animal Tamer	Domatore
 Animal Taming	Addomesticare Animali
 Animal friendship magic was the only way your parents could get puppies to play with you!	La magia dell'amicizia con gli animali era l'unico modo per far giocare dei cuccioli con te!
 Animate Bones	Anima Ossa
-Animate Dead	Animare Morti
+Animate Dead	Rianima Morti
 Animated	Animato
 Animated Legs of the Insane Tinker	Gambali Animati del Meccanico Folle
 Animates the bones of a mighty skeletal warrior that will fight for the caster for 8-25 minutes. The caster may lose some karma if they attempt this.	Anima le ossa di un possente guerriero scheletrico che combatterà per l'incantatore per 8-25 minuti. L'incantatore potrebbe perdere un po' di karma se lo tenta.
@@ -3835,6 +3835,7 @@ Back Stone	Pietra del Ritorno
 Back and forth, Back and forth goes the Balance.	Avanti e indietro, avanti e indietro oscilla l'Equilibrio.
 Backpack	Zaino
 Backpack Gold:	Oro nello zaino:
+Backstab	Pugnalata alle Spalle
 Backup Batteries	Batterie di riserva
 Bad Harvest	Raccolto Cattivo
 Bad format	Formato errato
@@ -3883,8 +3884,8 @@ Bandages	Bende
 Bandages are more effective when applied directly on the wound.	Le bende sono più efficaci se applicate direttamente sulla ferita.
 Bandit	Bandito
 Baneful	Funesto
-Banish	Bandisci
-Banish Daemon	Bandisci Demone
+Banish	Esilio
+Banish Daemon	Scaccia Demoni
 Banish<BR><BR>Piety: 120<BR><BR>Skill: 60<BR><BR>Mana: {0}<BR><BR>Patriarch Morden rests south of the Village of Springvale<BR><BR>  Mantra: exilium</BIG></BASEFONT></BODY>	Bandisci<BR><BR>Pietà: 120<BR><BR>Abilità: 60<BR><BR>Mana: {0}<BR><BR>Il patriarca Morden riposa a sud del Villaggio di Springvale<BR><BR>  Mantra: exilium</BIG></BASEFONT></BODY>
 Banisher	Scacciatore
 Banishes demons and undead from the realm	Scaccia demoni e non morti dal regno
@@ -5177,6 +5178,7 @@ Concubine {0}	Concubina {0}
 Concussion	Commozione
 Concussion Blow	Colpo Concussivo
 Condition	Condizione
+Confidence	Fiducia
 Configure links	Configura collegamenti
 Confirm	Conferma
 Confirm Combine	Conferma Unione
@@ -5317,6 +5319,7 @@ Couldn't find resource nearby.	Non trovo risorse nelle vicinanze.
 Counselor	Consigliere
 Countdown cancelled.	Conto alla rovescia annullato.
 Countdown updated: {0}.	Conto alla rovescia aggiornato: {0}.
+Counter Attack	Contrattacco
 Countess	Contessa
 Counts the number of objects that a command modifier would use. Generally used with condition arguments.	Conta il numero di oggetti che un modificatore di comando userebbe. Di solito usato con gli argomenti di condizione.
 Courier	Corriere
@@ -5468,7 +5471,7 @@ Currently spiking the balance	Sta alterando l'equilibrio
 Currently {0}	Attualmente {0}
 Curse	Maledizione
 Curse Scroll	Pergamena di Maledizione
-Curse Weapon	Maledici Arma
+Curse Weapon	Arma Maledetta
 Curse you, {0}!	Maledetto sii, {0}!
 Cursed	Maledetto
 Cursed Box with Books of Power	Scatola Maledetta con Libri del Potere
@@ -5664,6 +5667,7 @@ Death Grip	Presa Mortale
 Death Knight Skull	Teschio di Cavaliere della Morte
 Death Report (5s window)	Rapporto di morte (ultimi 5s)
 Death Speak	Parlare coi Morti
+Death Strike	Colpo Mortale
 Death Vortex	Vortice di Morte
 Death fills the air, you feel uneasy as the clanging of chains and cackeling undead draw closer	La morte riempie l'aria, ti senti a disagio mentre il tintinnio di catene e le risate stridule dei non morti si avvicinano.
 Death is only a distraction to me!	La morte per me è solo una distrazione!
@@ -5821,7 +5825,7 @@ Devastating Blow	Colpo Devastante
 Device Charged! Double Click To Build.	Dispositivo carico! Fai doppio clic per costruire.
 Devil	Diavolo
 Devil Costume	Costume da Diavolo
-Devil Pact	Patto Infernale
+Devil Pact	Patto col Diavolo
 Devil's	Diavolo
 Devils	Diavoli
 Deviously Coded	Codificata Subdolamente
@@ -5910,7 +5914,7 @@ Dismiss your room attendant	Congeda il tuo inserviente
 Dismissal	Congedo
 Dismount	Disarcionare
 Dispel	Dissolvi
-Dispel Evil	Dissolvi il Male
+Dispel Evil	Scaccia il Male
 Dispel Field	Dissolvi Campo
 Dispel Field Scroll	Pergamena di Dissolvi Campo
 Dispel Magic Scroll	Pergamena di Dissolvi
@@ -6408,7 +6412,7 @@ Enchanted Seaweed, Fairy Egg, Pixie Skull	Alga Incantata, Uovo di Fata, Teschio 
 Enchanted Titan Leg Bone	Osso di Gamba di Titano Incantato
 Enchanter	Incantatore
 Enchanting	Incanto
-Enchanting Etude	Studio dell'Incanto
+Enchanting Etude	Studio Incantatore
 Enchantment	Incantamento
 Enchantment Power Orb	Sfera del Potere dell'Incanto
 Enchantress	Incantatrice
@@ -6425,13 +6429,13 @@ Endure Cold	Resistere al Freddo
 Endure Heat	Resistere al Calore
 Enduring	Duraturo
 Enemy	Avversario
-Enemy of One	Nemico Unico
+Enemy of One	Nemico Giurato
 Energized Sosarian Ingots	Lingotti Sosariani Energizzati
 Energizer Crystal	Cristallo Energizzante
 Energy	Energia
 Energy Bolt	Dardo di Energia
 Energy Bolt Scroll	Pergamena di Dardo di Energia
-Energy Carol	Carola dell'Energia
+Energy Carol	Canto dell'Energia
 Energy Damage	Danno da Energia
 Energy Essence: {0}/{1}	Essenza di Energia: {0}/{1}
 Energy Field	Campo di Energia
@@ -6440,7 +6444,7 @@ Energy Forged	Forgiato dall'Energia
 Energy Piece	Pezzo dell'Energia
 Energy Resist	Resistenza all'Energia
 Energy Resistance	Resistenza all'energia
-Energy Threnody	Treno dell'Energia
+Energy Threnody	Trenodia dell'Energia
 Energy Vortex	Vortice di Energia
 Energy Vortex Scroll	Pergamena di Vortice di Energia
 Energy area	Area di energia
@@ -6596,6 +6600,7 @@ Eurybia's	Eurybia
 Eval Intelligence	Valutare Intelligenza
 Evaluate Intelligence: 30	Valutare Intelligenza: 30
 Evaluating Intelligence	Valutare Intelligenza
+Evasion	Evasione
 Even ghouls wouldn't touch something as gross as you!	Nemmeno i ghoul toccherebbero una cosa disgustosa come te!
 Even money	Pari
 Even more disturbing	Ancor più inquietante
@@ -6633,7 +6638,7 @@ Evil Fireplace South Deed	Atto del Camino Malvagio Sud
 Evil Mage Gloves	Guanti del Mago Malvagio
 Evil Mount For Grandmaster Death Knights	Cavalcatura malvagia per Cavalieri della Morte Gran Maestri
 Evil Mount For Grandmasters in both Necromancy and Magery	Cavalcatura malvagia per Gran Maestri di Negromanzia e Magia
-Evil Omen	Malaugurio
+Evil Omen	Cattivo Presagio
 Evil Succubus	Succube Malvagia
 Evil Wyrm	Wyrm Malvagio
 Evil actions are not tolerated here... beware.	Le azioni malvagie non sono tollerate qui... sta' attento.
@@ -7024,7 +7029,7 @@ Finlor's Letter to Snyden of Cove.	Lettera di Finlor a Snyden di Cove.
 Fire	Fuoco
 Fire Beetles	Scarabei di fuoco
 Fire Burden	Fardello di Fuoco
-Fire Carol	Carola del Fuoco
+Fire Carol	Canto del Fuoco
 Fire Damage	Danno da Fuoco
 Fire Elemental	Elementale del Fuoco
 Fire Essence: {0}/{1}	Essenza di Fuoco: {0}/{1}
@@ -7039,7 +7044,7 @@ Fire Piece	Pezzo del Fuoco
 Fire Resist	Resistenza al Fuoco
 Fire Resistance	Resistenza al fuoco
 Fire Strike	Colpo di Fuoco
-Fire Threnody	Treno del Fuoco
+Fire Threnody	Trenodia del Fuoco
 Fire Titan	Titano di Fuoco
 Fire Wyrmlings	Wyrmling di fuoco
 Fire area	Area di fuoco
@@ -7104,6 +7109,7 @@ Flowers from the Silver River	Fiori del Fiume d'Argento
 Flute	Flauto
 Flying	Volante
 Focus	Concentrazione
+Focus Attack	Attacco Concentrato
 Foe	Nemico
 Foe Requiem	Requiem del Nemico
 Fog	Nebbia
@@ -7956,7 +7962,7 @@ Griffin	Grifone
 Griffon	Grifone
 Griffons	Grifoni
 Grim	Cupo
-Grim Reaper	Triste Mietitore
+Grim Reaper	Tristo Mietitore
 Grim Reaper's Lantern	Lanterna del Mietitore Oscuro
 Grim Reaper's Mask	Maschera del Mietitore Oscuro
 Grim Reaper's Robe	Veste del Mietitore Oscuro
@@ -8060,7 +8066,7 @@ Hades	Ade
 Hades'	Hades
 Hades' Greed	L'Avidità di Ade
 Hag	Megera
-Hag Hand	Mano della Strega
+Hag Hand	Mano di Strega
 Hah {0} I'm gonna get you	Ah {0}, ti prenderò
 Hah {0} You think you're one of us?	Ah {0}, credi di essere uno di noi?
 Hah! Nice try you noob.	Ah! Bel tentativo, novellino.
@@ -8543,6 +8549,7 @@ Home to the Spiteful and Vengeful	Dimora dei Rancorosi e dei Vendicativi
 Homeowner Tools	Strumenti del proprietario
 Honor contracts,	Onora i contratti,
 Honor guild tariffs,	Rispetta le tariffe della gilda,
+Honorable Execution	Esecuzione Onorevole
 Honorae Costume	Costume di Honorae
 Honorae!  Come slay this impostor!	Honorae!  Vieni a uccidere questo impostore!
 Hood	Cappuccio
@@ -9455,7 +9462,7 @@ IRC names list updating	Aggiornamento elenco nomi IRC
 Ice	Di Ghiaccio
 Ice Alloy 	Lega di Ghiaccio 
 Ice Arms	Bracciali di ghiaccio
-Ice Carol	Carola del Ghiaccio
+Ice Carol	Canto del Ghiaccio
 Ice Cold and Unwelcoming	Gelido e Inospitale
 Ice Elemental	Elementale di Ghiaccio
 Ice Female Tunic	Tunica femminile di ghiaccio
@@ -9470,7 +9477,7 @@ Ice Serpents	Serpenti di ghiaccio
 Ice Shield	Scudo di ghiaccio
 Ice Snakes	Serpi di ghiaccio
 Ice Steeds	Destrieri di ghiaccio
-Ice Threnody	Treno del Ghiaccio
+Ice Threnody	Trenodia del Ghiaccio
 Ice Toads	Rospi di ghiaccio
 Ice Tunic	Tunica di ghiaccio
 Icecoal {0}	{0} di carbone di ghiaccio
@@ -10048,6 +10055,7 @@ Keyword	Parola chiave
 Keyword\t{0}	Parola chiave\t{0}
 Khal Ankur, I have	Khal Ankur, sono
 Khaldun at last!	Khaldun finalmente!
+Ki Attack	Attacco Ki
 Kibbles	Crocchette
 Kill	Uccisione
 Kill it! Kill it quick before they're all gone!	Ammazzalo! Ammazzalo in fretta prima che siano finiti tutti!
@@ -10087,7 +10095,7 @@ Kneel before me you puny creature!	Inginocchiati davanti a me, misera creatura!
 Knife of the Maniacal Tailor	Coltello del Sarto Maniacale
 Knight [{0}]	Cavallo [{0}]
 Knight of the Dark Rose	Cavaliere della Rosa Oscura
-Knight's Minne	Lamento del Cavaliere
+Knight's Minne	Canzone del Cavaliere
 Knight's Robe	Veste del Cavaliere
 Knights Against Evil	Cavalieri contro il Male
 Knights Minne	Minne dei Cavalieri
@@ -10447,7 +10455,7 @@ Light of Love	Luce dell'Amore
 Lightning	Fulmine
 Lightning Arrow	Freccia Fulminante
 Lightning Scroll	Pergamena di Fulmine
-Lightning Strike	Colpo di Fulmine
+Lightning Strike	Colpo Fulmineo
 Lightning arcs from your arrow onto {0}!	Un fulmine scocca dalla tua freccia su {0}!
 Lightning arcs from {0}{1} arrow onto you!	Un fulmine scocca dalla freccia di {0}{1} su di te!
 Lightning arcs from {0}{1} strike, shocking you and weakening your energy resistance!	Un fulmine scocca dal colpo di {0}{1}, folgorandoti e indebolendo la tua resistenza all'energia!
@@ -11342,7 +11350,7 @@ Min/Max bet:	Puntata min/max:
 Mind	Della Mente
 Mind Blast	Esplosione Mentale
 Mind Blast Scroll	Pergamena di Esplosione Mentale
-Mind Rot	Mente Marcia
+Mind Rot	Marcescenza Mentale
 Mind's Eye	Occhio della Mente
 Mine : {0}	Miniera: {0}
 Mine {0}	Miniera {0}
@@ -11428,6 +11436,7 @@ Modifiers: 	Modificatori:
 Modify	Modifica
 Molded Cheese	Formaggio Ammuffito
 Molten-Core Tunnels of Fire Daemons	Tunnel dal Nucleo Fuso dei Demoni del Fuoco
+Momentum Strike	Colpo d'Impeto
 Momma Bear	Mamma Orsa
 Momonos, Elder Veterinarian	Momonos, Anziano Veterinario
 Monarchy	Monarchia
@@ -12559,7 +12568,7 @@ Page {0} of {1}	Pagina {0} di {1}
 Page {0} of {1} ({2})	Pagina {0} di {1} ({2})
 Page {0}/{1}	Pagina {0}/{1}
 Pages	Pagine
-Pain Spike	Spina del Dolore
+Pain Spike	Fitta di Dolore
 Paint Almost Anything	Dipingi Quasi Tutto
 Paint Palette (Leather)	Tavolozza di colori (cuoio)
 Paint Palette (Metal)	Tavolozza di colori (metallo)
@@ -12985,7 +12994,7 @@ Points Avail:	Punti disp.:
 Points to an item on a shelf and changes his mind.	Indica un oggetto su uno scaffale e cambia idea.
 Poison	Veleno
 Poison Beetles	Scarabei velenosi
-Poison Carol	Carola del Veleno
+Poison Carol	Canto del Veleno
 Poison Damage	Danno da Veleno
 Poison Elemental	Elementale del Veleno
 Poison Field	Campo Velenoso
@@ -12997,7 +13006,7 @@ Poison Resistance	Resistenza al veleno
 Poison Scroll	Pergamena di Veleno
 Poison Splash	Spruzzo di Veleno
 Poison Strike	Colpo Velenoso
-Poison Threnody	Treno del Veleno
+Poison Threnody	Trenodia del Veleno
 Poison area	Area di veleno
 Poison damage %	Danno da veleno %
 Poison erupts outward in a noxious nova!	Il veleno erutta verso l'esterno in una nova nociva!
@@ -14422,7 +14431,7 @@ Shadow Pillar	Pilastro d'Ombra
 Shadow Strike	Colpo d'Ombra
 Shadow Token	Gettone d'Ombra
 Shadow Wyrm	Wyrm d'Ombra
-Shadowjump	Salto d'Ombra
+Shadowjump	Balzo d'Ombra
 Shaman	Sciamano
 Shamanic	Sciamanico
 Shameful	Vergognoso
@@ -14478,7 +14487,7 @@ Shield	Scudo
 Shield Of Ice	Scudo di Ghiaccio
 Shield Of The Dark Lord	Scudo del Signore Oscuro
 Shield of Chaos	Scudo del Caos
-Shield of Hate	Scudo dell'Odio
+Shield of Hate	Scudo d'Odio
 Shield of Invulnerability	Scudo dell'Invulnerabilità
 Shield of Oblivion	Scudo dell'Oblio
 Shield of Sloth	Scudo dell'Accidia
@@ -14674,7 +14683,7 @@ Since you are begging, do you still want to hire me to repair something...at lea
 Since you are begging, this shoppe is only {0} gold.	Dato che stai mendicando, questa bottega costa solo {0} monete d'oro.
 Since you are begging, which unusual item shall I examine, for {0} gold?	Dato che stai mendicando, quale oggetto insolito devo esaminare, per {0} monete d'oro?
 Since you can not afford the rent, the bank has reclaimed your town house.	Poiché non puoi permetterti l'affitto, la banca ha rivendicato la tua casa cittadina.
-Sinewy Etude	Studio del Vigore
+Sinewy Etude	Studio Vigoroso
 Single	Singolo
 Single Click Context For Information	Clic singolo per il menu contestuale con informazioni
 Single Click To Use	Fai clic una volta per usare
@@ -15022,7 +15031,7 @@ Soul Bow	Arco dell'Anima
 Soul Essence	Essenza dell'Anima
 Soul Force Costs:	Costi in Forza dell'Anima:
 Soul Items:	Oggetti dell'anima:
-Soul Reaper	Mietitore di Anime
+Soul Reaper	Mietitore d'Anime
 Soul Seeker	Cercatore di Anime
 Soul Sword	Spada dell'Anima
 Soul of Arachnis	Anima di Arachnis
@@ -15455,7 +15464,7 @@ Succeeded	Riusciti
 Success! Who should they fight?	Successo! Chi dovrebbe combattere?
 Succubus	Succubo
 Succubus Costume	Costume da Succube
-Succubus Skin	Pelle di Succubo
+Succubus Skin	Pelle di Succube
 Such a pity, but if you change your mind, I'll be here.	Peccato, ma se cambi idea, sarò qui.
 Suddenly the shutters blew open and Lord British fell to the ground, one hand shielding his eyes.	Improvvisamente le imposte si spalancarono e Lord British cadde a terra, con una mano a schermarsi gli occhi.
 Suddenly, Suzanne lunged	All'improvviso, Suzanne si lanciò
@@ -15516,6 +15525,7 @@ Sure!	Certo!
 Sure.	Certo.
 Surely You Jest	Stai Scherzando
 Surgeon Knives	Coltelli da Chirurgo
+Surprise Attack	Attacco a Sorpresa
 Surprise Gift	Regalo a Sorpresa
 Surprise your audience with a gift they will never forget. These presents are placed on the ground where nearby foes may be intrigued enough to go open it. They will be surprise by a nice fiery bang. The explosion is equitable to your jester skills, and the range of the explosion will also increase with those skilled as fools.	Sorprendi il tuo pubblico con un regalo che non dimenticherà mai. Questi doni vengono posati a terra dove i nemici vicini potrebbero essere abbastanza incuriositi da andare ad aprirli. Saranno sorpresi da un bel botto infuocato. L'esplosione è proporzionata alle tue abilità di giullare, e il raggio dell'esplosione aumenterà anche per chi è esperto nell'arte del buffone.
 Surtaz the Fallen	Surtaz il Caduto
@@ -18295,7 +18305,7 @@ Totem Leggings	Gambali Totemici
 Totem Tunic	Tunica Totemica
 Totem of the Void	Totem del Vuoto
 Touch	Tocco
-Touch of Life	Tocco di Vita
+Touch of Life	Tocco della Vita
 Touch of Life<BR><BR>Piety: 40<BR><BR>Skill: 20<BR><BR>Mana: {0}<BR><BR>Xephyn the Monk rests near the Town of Devil Guard<BR><BR>  Mantra: tactus vitae</BIG></BASEFONT></BODY>	Tocco della Vita<BR><BR>Pietà: 40<BR><BR>Abilità: 20<BR><BR>Mana: {0}<BR><BR>Xephyn il Monaco riposa vicino alla Cittadina di Devil Guard<BR><BR>  Mantra: tactus vitae</BIG></BASEFONT></BODY>
 Tourmaline	Tormalina
 Tournament	Torneo
@@ -19568,7 +19578,7 @@ Wow, {0}, I feel great!	Wow, {0}, mi sento alla grande!
 Wow, {0}, I feel refreshed!	Wow, {0}, mi sento rinvigorito!
 Wow, {0}, I feel stronger!	Wow, {0}, mi sento più forte!
 Wraith	Spettro
-Wraith Form	Forma di Spettro
+Wraith Form	Forma Spettrale
 Wrapped in Thick Weeds	Avvolto in Erbacce Fitte
 Wrath	Ira
 Wrath of the Dryad	Ira della Driade

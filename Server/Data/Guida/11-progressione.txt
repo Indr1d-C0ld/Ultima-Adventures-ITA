@@ -1,0 +1,10 @@
+Crescere più in fretta
+<B>Riposa bene.</B> Esci dal gioco in una locanda, in una taverna, a casa tua o accanto a un giaciglio da campo: accumuli ispirazione (1 minuto ogni 4 di riposo, fino a 120). Al ritorno, finché dura, migliori le abilità con probabilità doppia. Digita <B>[ispirazione</B> per vedere quanta ne hai.
+
+<B>Varia.</B> Se negli ultimi 30 minuti hai usato almeno 4 abilità diverse impari il 25% più in fretta: l'avventura vera rende più della ripetizione.
+
+<B>Fatti insegnare.</B> I maestri PNG ti portano a pagamento fino a 50 punti in un'abilità: di' "addestra" o "insegna".
+
+<B>Mangia.</B> Un personaggio sazio impara di più; uno affamato impara di meno.
+
+<B>Allenati nei dungeon.</B> Combattere e usare le abilità nei dungeon dà ispirazione aggiuntiva, tanto più quanto il dungeon è pericoloso.

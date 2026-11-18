@@ -52,9 +52,7 @@ namespace Server.Gumps
 
 			string sText = "";
 
-			string c2 = "5";
-			if ( !((PlayerMobile)owner).Avatar)
-				c2  = "10";
+			string c2 = "5"; // modalità non-Avatar riequilibrata: stessa perdita di fama/karma dell'Avatar
 
 			string loss = "";
 			if ( ((PlayerMobile)owner).Avatar)
@@ -68,15 +66,7 @@ namespace Server.Gumps
 			{
 				if ( m_Price > m_Bank )
 				{
-					if ( !((PlayerMobile)owner).Avatar)
-					{
-						if ((owner.RawStr + owner.RawDex + owner.RawInt) < 125)
-							c2 = "20";
-						else
-							c2 = "40";
-					}
-					else 
-						c2 = "10";		
+					c2 = "10";		
 					
 					/*if ( (owner.RawStr + owner.RawDex + owner.RawInt) < 125 )
 					{
@@ -102,15 +92,7 @@ namespace Server.Gumps
 						
 						if (m_Healer == 2)
 						{
-							if ( !((PlayerMobile)owner).Avatar)
-							{
-								if ((owner.RawStr + owner.RawDex + owner.RawInt) < 125)
-									c2 = "20";
-								else
-									c2 = "40";
-							}
-							else
-								c2 = "20";
+							c2 = "20";
 							if ( !((PlayerMobile)owner).Avatar )
 								sText = "Luckily for you, the shrine does not need gold to bring you back to life. Do you wish to plead to the gods for your life back now? If you do, you will suffer a " + c2 + "% loss to your fame and karma.";
 							else
@@ -172,15 +154,7 @@ namespace Server.Gumps
 					{
 						if (m_Healer == 2)
 						{
-							if ( !((PlayerMobile)owner).Avatar)
-							{
-								if ((owner.RawStr + owner.RawDex + owner.RawInt) < 125)
-									c2 = "20";
-								else
-									c2 = "40";
-							}
-							else
-								c2 = "10";
+							c2 = "10";
 							
 							sText = "Luckily for you, the shrine does not need gold to bring you back to life. Do you wish to plead to the gods for your life back now? If you do, you will suffer a " + c2 + "% loss to your fame and karma." + GetSkillLossText( owner, m_AllPenalty );
 							m_ResurrectType = 3;

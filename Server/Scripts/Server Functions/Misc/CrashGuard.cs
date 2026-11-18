@@ -14,7 +14,8 @@ namespace Server.Misc
 	{
 		private static bool Enabled = true;
 		private static bool SaveBackup = true;
-		private static bool RestartServer = true;
+		// sotto systemd (INVOCATION_ID impostata) il riavvio lo fa il servizio: evitiamo due istanze del server
+		private static bool RestartServer = Environment.GetEnvironmentVariable( "INVOCATION_ID" ) == null;
 		private static bool GenerateReport = true;
 
 		public static void Initialize()

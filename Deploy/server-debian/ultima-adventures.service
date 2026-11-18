@@ -1,0 +1,21 @@
+[Unit]
+Description=Ultima Adventures (server UO, versione italiana)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ultima
+Group=ultima
+WorkingDirectory=/opt/ultima-adventures/Server
+ExecStart=/opt/ultima-adventures/avvia-server.sh
+# arresto pulito: salva il mondo e chiude
+ExecStop=/bin/sh -c 'echo shutdown > /opt/ultima-adventures/console.fifo'
+TimeoutStopSec=120
+KillMode=mixed
+Restart=on-failure
+RestartSec=15
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

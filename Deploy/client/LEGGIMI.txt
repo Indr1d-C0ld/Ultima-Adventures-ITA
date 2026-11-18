@@ -1,0 +1,28 @@
+ULTIMA ADVENTURES - VERSIONE ITALIANA
+=====================================
+
+COME GIOCARE
+  Windows 10/11 (64 bit):  doppio clic su uno dei file "Gioca - ....bat"
+     - "Gioca - Internet"            : da fuori casa (nome.dyndns.esempio)
+     - "Gioca - Rete di casa (LAN)"  : dalla rete di casa (IP-LAN-DEL-SERVER)
+     - "Gioca - Questo PC"           : se il server gira sullo stesso computer
+  Debian/Linux (64 bit):
+     ./gioca.sh                 (chiede quale collegamento usare)
+     ./gioca.sh internet|lan|locale
+     ./installa-collegamenti.sh (crea le voci nel menu delle applicazioni)
+
+PRIMO ACCESSO
+  Scegli un nome account e una password: l'account viene creato automaticamente al primo accesso.
+  Poi crea il personaggio e segui l'introduzione (puoi rispondere con i pulsanti o a voce: sì/no).
+
+IN GIOCO
+  [guida         guida rapida in italiano
+  [principiante  protezione del principiante (prime 20 ore)
+  [ispirazione   riposo e apprendimento più rapido
+  Manuale completo: Documentazione/Manuale.html (si apre con qualsiasi browser)
+
+CONTENUTO
+  Dati/            file del gioco (comuni a Windows e Linux)
+  Client-Windows/  client TazUO per Windows
+  Client-Linux/    client TazUO per Linux
+  Profili/         impostazioni dei collegamenti e, in Personaggi/, le preferenze di ogni personaggio

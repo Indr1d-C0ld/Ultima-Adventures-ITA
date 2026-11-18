@@ -1,0 +1,7 @@
+[Unit]
+Description=Backup dei salvataggi di Ultima Adventures
+
+[Service]
+Type=oneshot
+User=ultima
+ExecStart=/opt/ultima-adventures/backup-salvataggi.sh

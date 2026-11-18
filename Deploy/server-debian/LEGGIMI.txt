@@ -1,0 +1,38 @@
+ULTIMA ADVENTURES (ITA) - INSTALLAZIONE DEL SERVER SU UN SERVER DEBIAN (Debian 64 bit)
+=============================================================================
+
+1) Copia questa cartella sul server, per esempio:
+     scp -r server-debian utente@IP-LAN-DEL-SERVER:~/
+
+2) Sul server:
+     cd ~/server-debian
+     sudo ./installa-server.sh
+
+   Lo script:
+   - crea l'utente di servizio "ultima";
+   - estrae il server in /opt/ultima-adventures (se esiste già, CONSERVA i salvataggi);
+   - installa Mono 6.12 in /opt/ultima-adventures/mono (serve Internet);
+   - installa e avvia il servizio systemd "ultima-adventures" (avvio automatico al boot,
+     riavvio automatico in caso di crash);
+   - attiva il backup notturno dei salvataggi (05:00, ultimi 14 in /var/backups/ultima-adventures);
+   - se ufw è attivo, apre la porta 2593/tcp.
+
+3) Comandi utili:
+     systemctl status ultima-adventures        stato
+     journalctl -u ultima-adventures -f        console del server in tempo reale
+     ultima-console save                       salva il mondo
+     ultima-console "bc Ciao a tutti"          messaggio a tutti i giocatori
+     ultima-console online                     chi è collegato
+     systemctl stop ultima-adventures          salva e spegne
+     systemctl start ultima-adventures         avvia
+
+RETE
+- Porta del gioco: 2593/TCP (inoltrata dal router verso IP-LAN-DEL-SERVER).
+- Indirizzo pubblico comunicato ai giocatori da Internet: nome.dyndns.esempio
+  (si cambia in Scripts/MyServerSettings.cs, ServerPublicAddress()).
+- I giocatori in casa usano il profilo "Rete di casa (LAN)" del client; da fuori il profilo "Internet".
+
+PRIMO ACCOUNT AMMINISTRATORE
+Gli account si creano da soli al primo accesso. Per dare i poteri di amministratore a un account,
+fermare il server e modificare Saves/Accounts/accounts.xml (AccessLevel="Owner"), oppure usare
+l'account amministratore già presente nel mondo.

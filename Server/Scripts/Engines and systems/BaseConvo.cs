@@ -270,7 +270,8 @@ namespace Server.Mobiles
 
 		public void Add( string str )
 		{
-			m_Strings.Add( Parse( str ) );
+			// traduce la battuta grezza (con i suoi marcatori $m/f$, _Name_, %0...) prima dell'analisi
+			m_Strings.Add( Parse( Localization.Translate( str ) ) );
 		}
 	}
 
@@ -328,6 +329,11 @@ namespace Server.Mobiles
 										keyExp.Append( "|" );
 									count+=7;
 									keyExp.Append( "(*hi*)|(*hello*)|(*hail*)|(*greeting*)|(*how*((*you*)|(*thou*)))|(*good*see*thee*)" );
+									if ( ConvoKeys.Enabled )
+									{
+										count+=6;
+										keyExp.Append( "|(*ciao*)|(*salve*)|(*buongiorno*)|(*buonasera*)|(*salut*)|(*come*sta*)" );
+									}
 								}
 					
 								continue;
@@ -338,6 +344,13 @@ namespace Server.Mobiles
 								if ( count > 1 )
 									keyExp.Append( "|" );
 								keyExp.AppendFormat( "({0})", tok );
+
+								// parole chiave italiane equivalenti (Data/Localization/<lingua>/convo-keys.txt)
+								foreach ( string alt in ConvoKeys.Get( tok ) )
+								{
+									count++;
+									keyExp.AppendFormat( "|({0})", alt );
+								}
 							}
 						}
 
@@ -1231,3 +1244,59 @@ namespace Server.Mobiles
 	public enum Sophistication { Low=0, Medium=1, High=2 }
 }
 
+
+namespace Server.Mobiles
+{
+	/// <summary>Parole chiave dei dialoghi nella lingua del server: modello inglese -> modelli alternativi separati da |.</summary>
+	public static class ConvoKeys
+	{
+		private static System.Collections.Generic.Dictionary<string, string[]> m_Map;
+		private static readonly string[] m_Empty = new string[0];
+
+		public static bool Enabled { get { Load(); return m_Map.Count > 0; } }
+
+		private static void Load()
+		{
+			if ( m_Map != null )
+				return;
+
+			m_Map = new System.Collections.Generic.Dictionary<string, string[]>( StringComparer.OrdinalIgnoreCase );
+
+			string file = Path.Combine( Core.BaseDirectory, Path.Combine( "Data", Path.Combine( "Localization", Path.Combine( Localization.Language, "convo-keys.txt" ) ) ) );
+
+			if ( !File.Exists( file ) )
+				return;
+
+			foreach ( string line in File.ReadAllLines( file, Encoding.UTF8 ) )
+			{
+				if ( line.Length == 0 || line[0] == '#' )
+					continue;
+
+				int tab = line.IndexOf( '\t' );
+				if ( tab <= 0 )
+					continue;
+
+				string en = line.Substring( 0, tab );
+				ArrayList alts = new ArrayList();
+
+				foreach ( string a in line.Substring( tab + 1 ).Split( '|' ) )
+				{
+					string t = a.Trim();
+					// solo lettere, spazi, apostrofi e jolly: niente caratteri speciali delle regex
+					if ( t.Length > 0 && Regex.IsMatch( t, @"^[\p{L}\p{N} '*\-]+$" ) && !t.Equals( en, StringComparison.OrdinalIgnoreCase ) )
+						alts.Add( t );
+				}
+
+				if ( alts.Count > 0 )
+					m_Map[en] = (string[])alts.ToArray( typeof( string ) );
+			}
+		}
+
+		public static string[] Get( string en )
+		{
+			Load();
+			string[] r;
+			return m_Map.TryGetValue( en, out r ) ? r : m_Empty;
+		}
+	}
+}

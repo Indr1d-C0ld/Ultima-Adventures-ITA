@@ -348,6 +348,9 @@ namespace Server.Items
 
 			if (((PlayerMobile)m).sbmaster)
 				return;
+
+			if ( BeginnerProtection.IsActive( m ) ) // protezione del principiante: niente maledizioni di viaggio
+				return;
 				
 			double cursechance;
 			int balance = 0;

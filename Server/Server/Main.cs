@@ -549,9 +549,10 @@ namespace Server
 					return;
 			}
 
-			ScriptCompiler.Invoke( "Configure" );
-
+			// la localizzazione va caricata prima di Configure degli script (es. i dialoghi dei PNG la usano al caricamento)
 			Localization.Configure();
+
+			ScriptCompiler.Invoke( "Configure" );
 			
 			Region.Load();
 			World.Load();

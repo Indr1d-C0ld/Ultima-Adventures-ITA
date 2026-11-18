@@ -25,6 +25,9 @@ namespace Server.Misc
 			if ( player.SoulBound || AdventuresFunctions.IsPuritain( from ) || !player.Avatar )
 				return 0.0;
 
+			if ( BeginnerProtection.IsActive( from ) )
+				return 0.0;
+
 			if ( (from.RawStr + from.RawDex + from.RawInt) < 125 )
 				return 0.0;
 
@@ -72,10 +75,16 @@ namespace Server.Misc
 				if (AdventuresFunctions.IsPuritain(from))
 					return;
 
+				if ( BeginnerProtection.IsActive( from ) )
+				{
+					from.SendMessage( 0x59, "La protezione del principiante ti risparmia ogni penalità per questa morte." );
+					return;
+				}
+
 				double val1 = 0.05; // karma loss
 				
-				if ( !((PlayerMobile)from).Avatar )
-					val1 *= 2; // normal mode players now 10%
+				// Modalità facile (non Avatar): la perdita di fama/karma è ora uguale a quella dell'Avatar
+				// (prima era doppia o quadrupla). Resta il vantaggio di non perdere abilità e caratteristiche.
 				
 				double val2 = 0; // skill loss
 
@@ -85,17 +94,12 @@ namespace Server.Misc
 
 				if ( allPenalty ) // they either insta-ressed or don't have gold, etc
 				{
-					if ( !((PlayerMobile)from).Avatar )
-						val1 *= 4; // max fame/karma is now 40% for them
-					else 
-						val1 *= 2;// max fame/karma is now 10% for them
+					val1 *= 2;// max fame/karma is now 10%
 					
 					val2 = 1-((1-val2)*3); // skill loss changed to max .9847 (1.5% loss)
 
 					val3 *= 3; // max 15%
 				}
-				else if ( !((PlayerMobile)from).Avatar )
-					val1 *= 2; // penalty for easymode players just doubles here to 20%
 					
 				if ( (from.RawStr + from.RawDex + from.RawInt) < 125  )
 				{

@@ -1,0 +1,81 @@
+# Parole chiave del parlato in italiano -> codice della parola chiave (come in speech.mul del client).
+# Il client riconosce solo le parole chiave inglesi: queste permettono di dire i comandi in italiano.
+# Formato: modello<TAB>codice esadecimale.  * = qualsiasi testo. Senza * finale la frase deve finire così.
+*preleva*	0x0
+*prelievo*	0x0
+*saldo*	0x1
+*estratto conto*	0x1
+*banca*	0x2
+*assegno*	0x3
+*unisciti*	0x4
+*iscrivimi*	0x4
+*abbandono la gilda*	0x5
+*gilda*	0x6
+*gilde*	0x6
+*guardia*	0x7
+*guardie*	0x7
+*stalla*	0x8
+*riprendi*	0x9
+*riscatta*	0x9
+*aiuto*	0x16
+*voglio bloccare questo*	0x23
+*voglio liberare questo*	0x24
+*voglio proteggere questo*	0x25
+*voglio togliere la protezione*	0x26
+*voglio mettere una cassaforte*	0x27
+*voglio mettere un cestino*	0x28
+*notizie*	0x30
+*vattene*	0x33
+*ti bandisco*	0x34
+*valuta*	0x38
+*mercante compra*	0x3c
+*mercante vendi*	0x14d
+mercante guarda	0x3d
+mercante incassa	0x3e
+mercante stato	0x3f
+mercante congeda	0x40
+*addestra*	0x6c
+*insegna*	0x6c
+*addestrami*	0x6c
+*spostati*	0x9d
+*che ore*	0x9e
+*che ora*	0x9e
+*vieni	0x155
+*lascia	0x156
+*riporta	0x157
+*prendi	0x158
+*porta qui	0x159
+*segui	0x15a
+*amico	0x15b
+*proteggi	0x15c
+*difendi	0x15c
+*uccidi	0x15d
+*attacca	0x15e
+*pattuglia	0x15f
+*rapporto	0x160
+*fermo	0x161
+*fermati	0x161
+*ti assumo	0x162
+*seguimi	0x163
+tutti vieni	0x164
+tutti venite	0x164
+tutti seguite	0x165
+tutti segui	0x165
+tutti proteggete	0x166
+tutti fermi	0x167
+tutti uccidete	0x168
+tutti attaccate	0x169
+tutti attacca	0x169
+tutti rapporto	0x16a
+tutti proteggetemi	0x16b
+tutti seguitemi	0x16c
+*libera	0x16d
+*trasferisci	0x16e
+*resta	0x16f
+*resta qui	0x16f
+tutti restate	0x170
+tutti fermi qui	0x170
+*compra*	0x171
+*comprare*	0x171
+*vendi*	0x177
+*vendere*	0x177

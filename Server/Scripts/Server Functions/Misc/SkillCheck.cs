@@ -257,10 +257,8 @@ namespace Server.Misc
 			if (from is PlayerMobile)
 			{
 
-				if (((PlayerMobile)from).Avatar || AdventuresFunctions.IsPuritain((object)from))
-					gc *= 1.75;
-				else 
-					gc *= 0.75;
+				// Modalità facile riequilibrata: stessa velocità di apprendimento dell'Avatar (prima 0.75 contro 1.75)
+				gc *= 1.75;
 					
 				if (from.Hunger <= 3)
 					gc /= 1.5;
@@ -1011,11 +1009,14 @@ namespace Server.Misc
 		}
 
 		private static double m_DefaultStatGainDelay = 15.0;
-		private static TimeSpan m_StatGainDelay = TimeSpan.FromMinutes(m_DefaultStatGainDelay);
 		private static TimeSpan m_PetStatGainDelay = TimeSpan.FromMinutes( 5.0 );
 
 		public static void GainStat( Mobile from, Stat stat )
 		{
+			// Correzione: il ritardo era un campo statico condiviso, quindi un giocatore con
+			// filatterio o FastGain cambiava il ritardo per TUTTI i giocatori. Ora è calcolato per chi guadagna.
+			TimeSpan m_StatGainDelay = TimeSpan.FromMinutes( m_DefaultStatGainDelay );
+
 			if (from is PlayerMobile)
 			{
 				if ( ((PlayerMobile)from).SoulBound) {

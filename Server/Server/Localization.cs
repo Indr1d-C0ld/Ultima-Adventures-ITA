@@ -116,6 +116,7 @@ namespace Server
 				m_BySuffix.Clear();
 				m_Loose.Clear();
 				m_Cache.Clear();
+				m_SpeechKeys = null;
 				TemplateCount = 0;
 				m_Enabled = false;
 
@@ -322,6 +323,69 @@ namespace Server
 		}
 
 		/// <summary>Traduce un testo destinato al client. Restituisce l'originale se non c'e' traduzione.</summary>
+		// ---- parole chiave del parlato (Data/Localization/<lingua>/parole-chiave.txt) ----
+		private static List<KeyValuePair<Regex, int>> m_SpeechKeys;
+
+		private static void LoadSpeechKeys()
+		{
+			List<KeyValuePair<Regex, int>> list = new List<KeyValuePair<Regex, int>>();
+			string file = Path.Combine( Core.BaseDirectory, Path.Combine( "Data", Path.Combine( "Localization", Path.Combine( m_Language, "parole-chiave.txt" ) ) ) );
+
+			if ( File.Exists( file ) )
+			{
+				foreach ( string raw in File.ReadAllLines( file, Encoding.UTF8 ) )
+				{
+					if ( raw.Length == 0 || raw[0] == '#' )
+						continue;
+
+					string[] c = raw.Split( '\t' );
+					if ( c.Length < 2 )
+						continue;
+
+					try
+					{
+						int id = Convert.ToInt32( c[1].Trim(), 16 );
+						string[] parts = c[0].Trim().Split( '*' );
+						for ( int i = 0; i < parts.Length; ++i )
+							parts[i] = Regex.Escape( parts[i] );
+						list.Add( new KeyValuePair<Regex, int>( new Regex( "^" + String.Join( ".*", parts ) + "$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled ), id ) );
+					}
+					catch { }
+				}
+			}
+
+			m_SpeechKeys = list;
+		}
+
+		/// <summary>Aggiunge ai codici inviati dal client quelli delle parole chiave dette nella lingua del server.</summary>
+		public static int[] AddSpeechKeywords( string text, int[] keywords )
+		{
+			if ( !m_Enabled || text == null )
+				return keywords;
+
+			if ( m_SpeechKeys == null )
+				LoadSpeechKeys();
+
+			if ( m_SpeechKeys.Count == 0 )
+				return keywords;
+
+			List<int> result = null;
+
+			foreach ( KeyValuePair<Regex, int> kv in m_SpeechKeys )
+			{
+				if ( !kv.Key.IsMatch( text ) )
+					continue;
+
+				if ( result == null )
+					result = new List<int>( keywords );
+
+				if ( !result.Contains( kv.Value ) )
+					result.Add( kv.Value );
+			}
+
+			return result == null ? keywords : result.ToArray();
+		}
+
 		public static string Translate( string text )
 		{
 			if ( !Enabled || string.IsNullOrEmpty( text ) )

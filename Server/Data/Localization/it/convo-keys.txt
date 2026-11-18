@@ -1,0 +1,994 @@
+# Parole chiave dei dialoghi: modello inglese<TAB>modelli italiani separati da |
+* Inn*	* locanda*
+* Job*	* lavoro|* mestiere|* professione
+* arrow*	* frecc*
+* art*	* arte*|* artist*
+* bow *	* arc *
+* cast*	* lanci*|* incant*
+* die*	* mor*
+* info*	* notizi*|* inform*
+* inn*	* locanda*
+* job	* lavoro|* mestiere|* professione
+* king*	* re*|* sovran*
+* lyc*m 	* lice*|* liceo*
+* mace*	* maz*
+* map*	* mappa*|* mappe*
+* name	* nome
+* smith*	* fabbr*
+* spells*	* incantesim*
+*Are you*well*	*stai*bene*|*state*bene*
+*Armorer*	*armaiol*
+*Armour*	*armatur*
+*Armourer*	*armaiol*
+*Art thou*well*	*stai*bene*|*state*bene*
+*Baker*	*Fornaio*|*Panettier*
+*Bank*	*banca*|*banchiere*
+*Blacksmith*	*fabbro*|*fabbri*
+*Boat*	*Barca*|*Barche*
+*Breastplate*	*corazza*|*pettorale*
+*Brittany River*	*Brittany River*|*fiume Brittany*
+*Feudal Lords*	*Feudal Lords*|*signori feudali*
+*Fish Market*	*mercato del pesce*|*pescheria*
+*Fisher*	*pescator*
+*Fisherman*	*pescator*
+*Fishermen*	*pescator*
+*Gold*	*Oro*|*oro*
+*Great bridge*	*Great bridge*|*grande ponte*
+*Healer*	*Guaritor*
+*Horse*	*cavall*
+*House of Parliament*	*House of Parliament*|*Parlamento*
+*How art thou*	*come stai*|*come state*
+*How*you*	*come*stai*|*come*state*
+*I*sale*	*I*sale*|*in vendita*
+*Inn*	*locanda*
+*Jeweler*	*Gioiellier*
+*Knights*	*cavalier*
+*Lord British*fork*	*Lord British*forc*
+*Lyceum*	*Lyceum*|*Liceo*
+*Mage Guild*	*gilda dei maghi*|*gilda magica*
+*Mage shop*	*negozio dei maghi*|*negozio di magia*
+*Mage tower*	*torre dei maghi*|*torre del mago*
+*Mage's Bridge*	*Mage's Bridge*|*ponte dei maghi*
+*Magic Guild*	*gilda dei maghi*|*gilda magica*
+*Magic Shop*	*negozio di magia*|*negozio magico*
+*Main gate*	*cancello principale*|*porta principale*
+*Matey*	*amico*|*compare*|*mozzo*
+*Merchant Guild*	*gilda dei mercanti*
+*Merchant's Guild*	*gilda dei mercanti*
+*Miner's Guild*	*gilda dei minator*
+*Mining Guild*	*gilda mineraria*|*gilda dei minator*
+*Mount*	*cavalcatur*|*cavalcar*
+*Nobility*	*nobilt*
+*Noble*	*nobil*|*nobile*
+*Northern bridge*	*ponte settentrionale*|*ponte nord*
+*Northside*	*Northside*|*lato nord*
+*Order of the Silver Serpent*	*Order of the Silver Serpent*|*ordine del serpente d'argento*
+*Parliament*	*Parlamento*
+*Pirate*	*Pirat*
+*Prisoner*	*prigionier*|*detenut*
+*Provisioner*	*Approvvigionator*|*Fornitor*
+*Provisions*	*provvist*
+*Runner*	*Corriere*|*Messaggero*
+*Sailor*	*Marinaio*|*Marinai*
+*Scum*	*Feccia*|*Canaglia*
+*Service*	*Servizio*|*Servizi*
+*Sextant*	*Sestante*
+*Shepherd*	*Pastor*
+*Ship wright*	*Maestro d'ascia*|*Carpentiere navale*
+*Shipwright*	*Maestro d'ascia*|*Carpentiere navale*
+*Smith*	*fabbro*|*fabbri*
+*Tailor*	*Sart*
+*Tavern*	*Taverna*
+*Temple*	*Tempio*
+*Tinker*	*Meccanic*
+*Town Square*	*Piazza del paese*|*Piazza principale*|*piazza*
+*Training dummy*	*manichino*|*manichini*
+*Virtue*	*virtù*|*virtu*
+*Warehouse*	*Magazzin*
+*Weather*	*tempo*|*meteo*|*clima*
+*What is wrong*	*che c'è che non va*|*cosa non va*|*che hai*
+*What town am I in*	*in che città*|*che città*
+*What's thy name*	*come ti chiami*|*il tuo nome*
+*What's wrong*	*cosa non va*|*che c'è che non va*|*che hai*
+*What*do*	*che*fai*|*cosa*fai*
+*What*do*do*	*che*fai*|*cosa*fai*
+*abbey*	*abbazia*
+*abilities*	*abilit*|*capacit*
+*ability*	*abilit*|*capacit*
+*ac*tor*	*attor*|*attrice*
+*ac-tore*	*attor*|*attrice*
+*account*	*conto*|*conti*
+*actor*	*attor*|*attrice*|*recit*
+*agility*	*agilit*
+*alchem*	*alchim*
+*alchem**	*alchim*
+*alchemist*	*alchim*
+*alcohol*	*alcol*|*alcool*
+*ale*	*birra*|*birre*
+*allies*	*alleat*
+*alligator*	*alligator*|*coccodrill*
+*amber*	*ambra*
+*amethyst*	*ametist*
+*anatomy*	*anatomia*
+*apiarist*	*apicolt*
+*apple*	*mela*|*mele*
+*appraise*	*stimar*|*valutar*
+*appreciate*	*apprezz*
+*apprentice*	*apprendist*
+*apron*	*grembiul*
+*arbor*	*pergolat*|*pergola*
+*arcane *	*arcan*
+*archery*	*tiro con l'arco*|*arcier*
+*architect*	*architett*
+*architecture*	*architettur*
+*are you well*	*stai bene*|*state bene*|*tutto bene*
+*armor*	*armatur*
+*armorer*	*armaiol*
+*armour*	*armatur*
+*armourer*	*armaiol*
+*arrow*	*frecc*
+*art thou well*	*stai*bene*|*state*bene*
+*art*	*arte*|*artist*
+*art*guild*	*gilda*artist*|*gilda*arte*
+*artifact*	*manufatt*|*artefatt*
+*artisan*	*artigian*
+*artwork*	*opera d'arte*|*opere d'arte*
+*authorities*	*autorit*
+*axe*	*asc*
+*backpack*	*zaino*|*zaini*
+*bacon*	*pancetta*
+*bag*	*sacca*|*sacche*|*borsa*
+*bail*	*cauzione*|*libertà su cauzione*
+*bake*	*cuoc*|*cuocer*|*infornar*
+*baker*	*fornaio*|*panettier*
+*bakery*	*panetteria*|*forno*
+*baking*	*cuocer*|*infornar*|*cottura*
+*bandage*	*bend*
+*bank*	*banca*|*banche*
+*bard*	*bardo*|*bardi*
+*bard* guild*	*gilda*bard*
+*bard*guild*	*gilda*bard*
+*bardiche*	*bardiche*|*bardica*
+*barmaid*	*cameriera*|*cameriere*
+*barrack*	*caserm*
+*bath*	*bagno*|*bagni*
+*bay*	*baia*
+*bead*	*perlin*|*perla*|*perle*
+*bear*	*orso*|*orsi*
+*bed*	*letto*|*letti*
+*bedroll*	*giaciglio*|*saccone*
+*bee*	*ape*
+*beef*	*manzo*
+*beekeep*	*apicolt*
+*beer*	*birra*|*birre*
+*bees*	*api*
+*beggar*	*mendic*|*pezzent*
+*bird*	*uccell*
+*black pearl*	*perla nera*|*perle nere*
+*black potion*	*pozione nera*|*pozioni nere*
+*blacksmith*	*fabbro*|*fabbri*
+*blackthorn's castle*	*castello di blackthorn*|*castello di Blackthorn*
+*blank*	*vuot*|*bianc*
+*blind*	*accieca*|*cieco*|*cecit*
+*bloodmoss*	*muschio sanguigno*
+*blue blood*	*sangue blu*
+*blue potion*	*pozione blu*|*pozioni blu*
+*blue-blood*	*sangue blu*|*sangue-blu*
+*boats*	*barca*|*barche*
+*bolt*	*dardo*|*dardi*|*quadrell*
+*book*	*libr*
+*boot*	*stival*
+*booz*	*birra*|*vino*|*sbornia*
+*bow*	*arc*
+*bower*	*pergola*|*pergolato*
+*bowyer*	*arcaio*|*costruttore di archi*
+*bracelet*	*bracciale*|*braccialett*
+*brawl*	*rissa*|*risse*
+*bread*	*pane*|*pani*
+*breakfast*	*colazione*
+*bridge*	*ponte*|*ponti*
+*brigand*	*brigant*
+*brittany bay*	*baia di brittany*|*brittany bay*
+*bucket helm*	*elmo a secchio*|*elmo a catino*
+*buckler*	*brocchiere*|*brocchier*
+*build*	*costru*
+*building*	*edific*|*costruzion*
+*bullwhip*	*frusta*
+*bury*dead*	*seppell*mort*|*sepolt*mort*
+*butcher*	*macellaio*|*macellai*
+*buy*	*compra*|*acquista*
+*bye*	*addio*|*arrivederci*|*ciao*
+*cake*	*tort*|*dolc*
+*camp*	*accampament*|*campo*
+*can*not*sell*	*non*puo*vendere*|*non*può*vendere*
+*can*you*sell*	*puoi*vendere*|*potresti*vendere*
+*candle*	*candel*
+*canvas*	*tela*
+*cape*	*mantell*
+*capital*	*capitale*
+*captain*?	*capitan*?
+*captain*?*	*capitan*?*
+*carpent*	*falegnam*
+*carpenter*	*falegnam*
+*carrots*	*caroti*|*carota*
+*cartographer*	*cartograf*
+*carv*	*intagli*|*scolp*
+*carver*	*intagliator*
+*casino*	*casinò*|*casino*
+*casting*	*lanci*|*incanta*
+*castle*	*castell*
+*cat*	*gatt*
+*catch*	*cattur*|*pesca*
+*cattle*	*bestiame*|*mandri*
+*cave*	*caverna*|*grotta*
+*cemet*ry*	*cimiter*
+*cemetery*	*cimiter*
+*chain*	*maglia*
+*charge*	*costo*|*prezzo*|*addebit*
+*chart*course*	*traccia*rotta*|*tracciar*rotta*
+*cheat*	*imbrogl*|*bar*
+*cheese*	*formagg*
+*chess*	*scacch*
+*chest*	*forzier*
+*chicken*	*pollo*|*polli*
+*chisel*	*scalpell*
+*chow*	*ciao*
+*cider*	*sidro*
+*citrine*	*citrin*
+*city hall*	*municipio*|*palazzo comunale*
+*city wall*	*mura*|*cinta muraria*
+*clock*	*orolog*
+*cloth *	*stoffa *|*tessuto *
+*cloth!*	*stoffa!*|*tessuto!*
+*cloth*	*stoffa*|*tessut*
+*cloth.*	*stoffa.*|*tessuto.*
+*cloth?*	*stoffa?*|*tessuto?*
+*clothe*	*vestit*|*abit*
+*clothes*	*vestit*|*abit*
+*clothier*	*sart*|*negozio di abiti*
+*clothiers*	*sart*|*negozio di abiti*
+*clothing*	*vestiari*|*abbigliament*
+*club*	*clava*|*clave*
+*coat*	*giacca*|*giubba*|*cappotto*
+*cobbler*	*calzolaio*|*calzolai*
+*coin*	*monet*
+*colony*	*colonia*
+*compassion*	*compassione*
+*concerns*	*preoccupazion*|*problemi*
+*conservatory*	*conservatorio*
+*constab*	*conestabil*|*gendarm*
+*consumption*	*consum*
+*container*	*contenitor*
+*containers*	*contenitor*
+*cook*	*cuoc*|*cucin*
+*cool*	*figo*|*fico*|*forte*
+*copper*	*rame*
+*corn*	*mais*|*granturco*
+*costume*	*costum*
+*cotton*	*cotone*
+*council*	*consigli*
+*courage*	*coraggio*
+*court*	*corte*|*tribunal*
+*cow*	*mucca*|*mucche*|*vacca*
+*craft*	*creare*|*artigian*|*prepara*
+*creature*	*creatur*
+*crime*	*crimin*|*delitt*
+*critter*	*bestiol*|*bestia*
+*crops*	*raccolt*|*coltur*
+*cross*	*croce*|*balestr*
+*crossbow*	*balestr*
+*crypt*	*cripta*|*cripte*
+*cure*	*purific*|*cur*
+*currency*	*valut*
+*curse*	*maledi*
+*custom*house*	*dogana*
+*customs house*	*dogana*
+*customs*	*dogan*
+*cut*	*tagli*
+*cutlass*	*sciabola*|*sciabole*
+*daemon*	*demon*
+*dagger*	*pugnal*
+*dark practitioner*	*praticante oscuro*|*praticanti oscuri*
+*death*	*mort*
+*deer*	*cervo*|*cervi*
+*defend*	*difend*|*difes*
+*description*	*descrizion*
+*device*	*dispositiv*|*congegn*
+*diamond*	*diamant*
+*dig*	*scav*
+*dinner*	*cena*
+*do*not*sell*	*non*vend*
+*dock*	*molo*|*moli*|*banchina*
+*docks*	*molo*|*moli*|*banchin*
+*does*not*sell*	*non vende*
+*dog*	*cane*|*cani*
+*dolphin*	*delfin*
+*domicile*	*dimora*|*abitazione*
+*donate*	*don*|*elemosin*
+*dough*	*impast*
+*dragon*	*drag*
+*draw*	*disegn*
+*dress*	*vestit*|*abit*
+*drink*	*bere*|*bevand*|*da bere*
+*drinking*	*bere*|*bevut*
+*duel*	*duell*
+*dueling pit*	*arena dei duelli*|*fossa dei duelli*
+*dummies*	*manichin*
+*dummy*	*manichin*
+*dungeon*	*dungeon*|*sotterran*
+*dye*	*tint*|*colorant*
+*eagle*	*aquila*|*aquile*
+*earn*	*guadagn*
+*earn*money*	*guadagn*sold*|*guadagn*denar*
+*eat*	*mangia*|*mangiar*
+*egg*	*uov*
+*elemental*	*elementale*|*elementali*
+*emerald*	*smeraldo*|*smeraldi*
+*empath*	*empat*
+*empty*	*vuot*
+*engin*guild*	*gilda*ingegner*
+*engineer*	*ingegner*
+*equip*	*equipagg*|*equipaggi*
+*escape*	*fuga*|*evadere*|*scappar*
+*estimate*	*stima*|*stimar*
+*ether*	*etere*|*eter*
+*evaluate*	*valut*
+*explain*	*spieg*
+*explode*	*esplod*|*esplo*
+*explosion*	*esplosion*
+*fare*well*	*addio*|*arrivederci*
+*farewell*	*addio*|*arrivederci*
+*farm*	*fattoria*|*fattorie*|*podere*
+*farmer*	*contadin*|*agricoltor*
+*farmers*	*contadin*|*agricoltor*
+*farms*	*fattori*|*campi*
+*feather*	*piuma*|*piume*
+*fight*	*combatt*|*lott*
+*fight*guild*	*gilda*combatt*|*gilda*guerrier*
+*fighter's guild*	*gilda dei combattenti*|*gilda dei guerrieri*
+*fighter*	*combattent*|*guerrier*
+*fighters guild*	*gilda dei combattenti*|*gilda dei guerrieri*
+*fighters' guild*	*gilda dei combattenti*|*gilda dei guerrieri*
+*fighters*	*combattent*|*guerrier*
+*first aid*	*primo soccorso*|*pronto soccorso*
+*fish *	*pesc *|*pesce *
+*fish!*	*pesce!*|*pesca!*
+*fish*	*pesc*|*pesce*
+*fish*guild*	*gilda*pesc*
+*fish*shop*	*negozio*pesc*|*pescheria*
+*fish.*	*pesce.*|*pesca.*
+*fish?*	*pesce?*|*pesca?*
+*fisher's guild*	*gilda dei pescatori*
+*fishers guild*	*gilda dei pescatori*
+*fishers' guild*	*gilda dei pescatori*
+*fleece*	*vello*|*velli*
+*fletcher*	*frecciaio*|*frecciai*
+*fletching*	*impennagg*
+*flour*	*farina*
+*flower*	*fior*
+*food*	*cibo*|*mangiar*
+*for the night*	*per la notte*
+*forest*	*forest*|*bosco*|*boschi*
+*forge*	*fucina*|*forgia*
+*fork*	*forca*|*forcone*
+*fork*Lord British*	*forc*Lord British*
+*fort*	*forte*|*fortezza*
+*fowl*	*pollam*|*volatil*
+*free*	*gratis*|*gratuit*
+*freeman*	*uomo libero*|*uomini liberi*
+*fresh*	*fresc*
+*fruit*	*frutt*
+*fuck off*	*vaffa*|*fottiti*
+*fur*	*pellicc*
+*gadget*	*congegno*|*aggeggi*|*gadget*
+*gambl*	*gioc*|*azzard*|*scommett*
+*gamble*	*gioco d'azzardo*|*scommett*|*giocar*
+*game*	*gioco*|*giochi*
+*gaming*	*gioco*|*giochi*
+*gaol*	*prigione*|*carcere*
+*garlic*	*aglio*
+*garment*	*indument*
+*gate*	*cancell*|*porta*|*porte*
+*gauntlet*	*guanto*|*guanti*
+*gazebo*	*gazebo*|*chiosco*
+*gazer*	*gazer*|*osservator*|*beholder*
+*gear*	*ingranagg*
+*gem*	*gemm*|*pietr*
+*get*money*	*ottener*sold*|*ottener*denar*|*procurar*sold*
+*ghost*	*ghost*|*spirit*|*fantasm*
+*giant*	*giant*|*gigant*
+*ginsing*	*ginseng*
+*glass*	*vetro*|*vetri*
+*gloves*	*guant*
+*go away*	*vattene*|*vai via*|*sparisci*
+*go fly a kite*	*vai a quel paese*
+*goat*	*capra*|*capre*
+*god*	*dio*|*dei*|*divinit*
+*gold*	*oro*
+*good*see*thee*	*lieto*vederti*|*bello*vederti*
+*gorget*	*gorgiera*
+*grain*	*grano*|*cereal*
+*grave*	*tomba*|*tombe*
+*graves*	*tombe*|*tomba*
+*graveyard*	*cimiter*
+*green potion*	*pozione verde*|*pozioni verdi*
+*greetings*	*salve*|*saluti*
+*guard house*	*caserma*|*corpo di guardia*
+*guard tower*	*torre di guardia*
+*guard*	*guardi*
+*guardhouse*	*caserma*|*corpo di guardia*
+*guards*	*guardi*
+*guild*	*gilda*|*gilde*
+*gypsie*	*zingar*
+*gypsy*	*zingar*
+*halberd*	*alabard*
+*ham*	*prosciutt*
+*hammer*	*martell*
+*harpy*	*harpy*|*arpi*
+*hasta l*	*hasta l*|*a presto*
+*headless*	*headless*|*senza testa*|*senzatesta*
+*heal*	*cura*|*guari*
+*healer*	*guaritor*
+*healing scrolls*	*pergamene di guarigione*|*pergamene curative*
+*healing*	*guarigion*|*guarire*
+*heater*	*scudo a mandorla*|*scudo triangolare*
+*hello*	*salve*|*ciao*|*buongiorno*
+*helm*	*elmo*|*elmi*
+*help*	*aiut*
+*herb*	*erba*|*erbe*
+*hide*	*pelle*|*pelli*
+*hides*	*pelli*|*pelle*
+*hint*	*suggerim*|*indizi*
+*history*	*stori*
+*hoe*	*zappa*|*zappe*
+*hold up*	*rapin*|*assalt*
+*hole*	*buca*|*buco*
+*home*	*casa*|*dimora*
+*hone*	*miele*
+*honesty*	*onestà*
+*honey*	*miele*
+*honor*	*onore*|*onor*
+*horse*	*cavall*
+*house*	*case*|*casa*
+*how are you*	*come stai*|*come state*
+*how are*	*come stai*|*come va*|*come state*
+*how are* 	*come stai*|*come va*|*come state*
+*how art thee*	*come stai*|*come state*
+*how art thou*	*come stai*|*come state*
+*how*quit*?*	*come*uscire*?*|*come*smettere*?*
+*how*thou*	*come*tu*|*come stai*
+*how*to*sell*	*come*vender*
+*how*you*	*come*stai*|*come va*
+*humility*	*umiltà*
+*hungry*	*fame*|*affamat*
+*hunt*	*cacci*
+*hurt*	*ferit*|*male*
+*idiot*	*idiota*|*idioti*
+*importan*	*important*
+*ingredients*	*ingredient*
+*injured*	*ferit*|*infortun*
+*ink*	*inchiostro*
+*inn*	*locanda*|*locande*
+*interest*	*interess*
+*interesting*	*interessant*
+*inventory*	*inventar*|*merce*
+*item of protection*	*oggetto protettivo*|*oggetto di protezione*|*oggetti protettivi*
+*items of protection*	*oggetti protettivi*|*oggetti di protezione*
+*items*	*oggett*
+*jail*	*prigione*|*carcere*|*gattabuia*
+*jar*	*vaso*|*vasi*|*barattol*
+*jew*r*	*gioiell*
+*jew*ry*	*gioiell*
+*jewel*	*gioiell*|*gioiel*
+*jeweler*	*gioiellier*
+*jewler*	*gioiellier*
+*job	lavoro|mestiere
+*job*	*lavor*|*mestier*|*profession*
+*join*	*unir*|*iscri*
+*joining*	*giunzion*|*incastr*
+*judge*	*giudic*
+*justice*	*giustizia*
+*keep*	*mantieni*|*torrione*|*mastio*
+*keeper*	*carcerier*|*custode*
+*kidnap*	*rapi*|*sequestr*
+*kill*	*uccid*|*ammazz*
+*kindling*	*esca*|*legnetti*|*legna*
+*king*	*re *|*sovrano*
+*kitana*	*katana*|*kitana*
+*knife*	*coltell*
+*know thy name*	*conosci il tuo nome*
+*know yer name*	*conosci il tuo nome*
+*know your name*	*conosci il tuo nome*
+*knowledge*	*conoscenz*|*sapere*
+*lab*	*laborator*
+*labor*	*lavor*|*fatica*
+*lantern*	*lanterna*|*lanterne*
+*law*	*legge*|*leggi*
+*leather*	*cuoi*
+*leave me alone*	*lasciami in pace*|*lasciami stare*
+*lettuce*	*lattug*
+*library*	*bibliotec*
+*liche*	*liche*|*lich*
+*lighthouse*	*faro*
+*liquor*	*liquor*|*superalcolic*
+*lizard men*	*lizard men*|*uomini lucertola*|*uomo lucertola*|*lucertol*
+*lizard-men*	*lizard-men*|*uomini-lucertola*|*uomo-lucertola*
+*llama*	*lama*
+*loaf*	*pagnott*|*filone*
+*loaves*	*pagnott*|*filon*
+*lock*	*serratur*|*lucchett*
+*log off*	*esci dal gioco*|*disconnett*
+*logoff*	*disconnett*|*esci dal gioco*
+*loom*	*telaio*|*telai*
+*lot*	*lotto*|*lotti*|*terreno*
+*love*	*amore*|*amare*
+*lumber*	*legname*
+*lunch*	*pranzo*
+*lyc*m	*lice*
+*m lost*	*mi sono perso*|*sono perso*|*sono persa*
+*mace*	*maz*
+*machine*	*macchin*
+*mag*guild*	*gilda*mag*
+*mag*student*	*student*mag*|*allievo*mag*|*allieva*mag*
+*mag*teacher*	*insegnant*mag*|*maestro*mag*|*maestra*mag*
+*mage guild*	*gilda dei maghi*|*gilda magica*
+*mage tower*	*torre dei maghi*|*torre del mago*
+*mage's shop*	*negozio del mago*|*negozio dei maghi*
+*mage*	*mago*|*maghi*
+*magic shop*	*negozio di magia*|*negozio magico*
+*magic*	*magi*
+*magic*guild*	*gilda*mag*
+*magic*hall*	*sala*mag*|*salone*mag*
+*maim*	*mutil*|*storpi*
+*make maps*	*fare mappe*|*disegnare mappe*
+*make*money*	*guadagn*sold*|*fare*sold*|*fare*denar*
+*mall*	*centro commerciale*|*galleria*
+*mandrake*	*mandragora*
+*manor*	*maniero*|*dimora*
+*mansion*	*villa*|*palazzo*
+*many lands*	*molte terre*|*tante terre*
+*many realms*	*molti regni*|*tanti regni*
+*map making*	*cartografia*|*fare mappe*
+*map*	*mappa*|*mappe*
+*mapmaker*	*cartograf*|*disegnator*di mappe*
+*mapmaking*	*cartografia*
+*market*	*mercat*
+*master*	*maestr*
+*maul*	*maglio*|*magli*
+*mausoleum*	*mausole*
+*mayor*	*sindac*
+*meal*	*past*|*pasto*
+*meals*	*past*|*pasti*
+*meat cleaver*	*mannaia*|*mannaie*
+*meat*	*carne*|*carni*
+*mechanician*	*meccanic*
+*merchant* guild*	*gilda*mercant*
+*message*	*messagg*
+*milk*	*latte*
+*mill *	*mulino *
+*mill!*	*mulino!*
+*mill*	*mulin*
+*mill.*	*mulino.*
+*mill?*	*mulino?*
+*miller*	*mugnaio*|*mugnai*
+*mine*	*miniera*|*miniere*
+*mine*guild*	*gilda*minator*|*gilda*miner*
+*miner Guild*	*gilda dei minator*
+*miners*	*minator*
+*mining guild*	*gilda dei minator*|*gilda mineraria*
+*minstrel*	*menestrell*
+*mint *	*zecca *
+*mint!*	*zecca!*
+*mint.*	*zecca.*
+*mint?*	*zecca?*
+*minter*	*coniator*|*zecchier*
+*moat*	*fossato*
+*monast*	*monaster*
+*money*	*denaro*|*soldi*
+*mong bat*	*mong bat*|*mongbat*
+*monk*	*monac*|*frate*|*frati*
+*monster*	*mostr*
+*moongates*	*portali lunari*|*portale lunare*
+*moons*	*lune*|*luna*
+*moonstones*	*pietre lunari*
+*mooons*	*lune*|*luna*
+*moron*	*cretin*
+*mortar*	*mortaio*
+*mountain cat*	*puma*|*felino di montagna*
+*mule*	*mul*
+*museum*	*muse*
+*mushroom*	*fung*|*funghi*
+*musician*	*music*
+*mutton*	*montone*
+*mystical spirit*	*spirito mistico*|*spiriti mistici*
+*nail*	*chiod*
+*narrows neck*	*stretto*|*collo*
+*narrows*	*stretto*|*strett*
+*neck*	*collo*
+*necklace*	*collan*
+*nets*	*rete*|*reti*
+*new*	*nuov*
+*news*	*notizi*|*novit*
+*nightshade*	*belladonna*
+*norse helm*	*elmo norreno*|*elmo nordico*
+*oaken oar*	*remo di quercia*|*remo*
+*oat*	*avena*
+*objets d'art*	*oggetti d'arte*|*objets d'art*
+*occupation*	*occupazion*|*impiego*
+*ogre*	*ogre*|*orchi*
+*old keep*	*vecchia fortezza*|*vecchio forte*
+*one realm of many?*	*un regno fra tanti*|*uno dei tanti regni*
+*onion*	*cipoll*
+*open faced helm*	*elmo aperto*|*elmo a viso aperto*
+*orange potion*	*pozione arancio*|*pozioni arancio*
+*orb of the moons*	*sfera delle lune*
+*orc*	*orco*|*orchi*
+*ore*	*minerale*|*minerali*
+*other lands*	*altre terre*
+*other realm*	*altro regno*|*altri regni*
+*other realms*	*altri regni*
+*other*money*	*altri soldi*|*altro denaro*|*altra valuta*
+*oven*	*forno*|*forni*
+*overseer*	*sorveglia*|*capoccia*
+*p*word*?*	*p*word*?*|*parola*d'ordine*?*|*password*?*
+*pack*	*zaino*|*zaini*
+*padded*	*imbottit*
+*paint*	*dipin*|*pittur*
+*palace*	*palazzo*|*palazzi*
+*palad*guild*	*gilda*paladin*
+*pant*	*pantalon*|*calzon*
+*parliament*	*parlament*
+*part*	*parte*|*parti*|*pezzo*|*pezzi*
+*pastr*	*pasticc*|*pastr*
+*patio*	*patio*|*cortile*
+*paws*	*zampe*|*zampa*
+*payment*	*pagament*|*pagare*
+*pear*	*pera*|*pere*
+*peas*	*pisell*
+*peek*	*sbircia*|*occhiat*
+*pelt*	*pelliccia*|*pellicce*|*pelle*
+*perform*	*esibi*|*recita*|*spettacol*
+*pergola*	*pergola*|*pergolat*
+*pestle*	*pestello*
+*pet*	*animal*|*cucciol*
+*picture*	*quadro*|*quadri*|*immagin*
+*pie*	*torta*|*tortin*
+*pig*	*maial*|*porc*
+*pike*	*picc*|*lancia*
+*pirate*	*pirat*
+*pit*	*fossa*|*arena*
+*plane*	*pialla*|*piall*
+*plate*	*piastre*|*piastra*
+*plates*	*piastre*|*piastra*
+*play*	*suon*|*gioca*
+*plot*course*	*tracci*rotta*|*pianific*rotta*
+*plow*	*arare*|*aratro*
+*plowshare*	*vomere*|*vomeri*
+*plowshares*	*vomere*|*vomeri*
+*poison*	*veleno*|*velen*
+*poor gate*	*porta dei poveri*|*porta povera*
+*pork*	*maiale*|*suino*
+*portrait*	*ritratt*
+*potatoes*	*patat*
+*potion*	*pozion*
+*potions*	*pozion*
+*pouch*	*borsell*
+*poultry*	*pollame*|*pollo*
+*press*	*torchi*|*pressa*
+*pride*	*orgoglio*
+*priest*	*sacerdot*|*prete*|*preti*
+*prison*	*prigion*|*carcer*
+*prisoner*	*prigionier*|*detenut*
+*priss*	*smorfios*|*effemin*
+*produce*	*prodott*|*ortofrutt*
+*profession*	*professione*
+*protection*	*protezion*
+*provision*	*provvist*|*vettovagli*
+*provisioner*	*approvvigion*|*fornitor*
+*purple potion*	*pozione viola*|*pozioni viola*
+*quality*	*qualità*|*qualita*
+*quarrel*	*quadrell*|*dardo*|*dardi*
+*rabbit*	*coniglio*|*conigli*
+*raise dead*	*resuscit*|*riportare in vita*
+*raise*dead*	*resuscit*|*riportare in vita*|*riportar*in vita*
+*ranch*	*ranch*|*allevament*
+*ranger's guild*	*gilda dei ranger*
+*rangers guild*	*gilda dei ranger*
+*rangers' guild*	*gilda dei ranger*
+*rangers' guild* 	*gilda dei ranger* 
+*ransom*	*riscatt*
+*rat men*	*rat men*|*uomini ratto*|*uomo ratto*|*ratti*
+*rat-men*	*rat-men*|*uomini-ratto*|*uomo-ratto*
+*ration*	*raziom*|*razion*
+*reagents*	*reagent*
+*real job*	*vero lavoro*|*lavoro vero*
+*reaper*	*reaper*|*mietitor*
+*red potion*	*pozione rossa*|*pozioni rosse*
+*refresh*	*ristor*|*rinfresc*
+*rent*	*affitt*|*noleggi*
+*restful slumber*	*sonno ristoratore*|*riposo ristoratore*|*Restful Slumber*
+*resur*	*resur*|*resusc*
+*resurrect*	*resuscit*|*resurrez*
+*resurrection*	*resurrez*
+*ribs*	*costol*
+*ring*	*anelli*|*anello*
+*river*	*fiume*|*fiumi*
+*roast*	*arrost*
+*rob*	*rub*|*deruba*
+*robe*	*tonaca*|*veste*|*vesti*
+*rodents*	*roditor*|*topi*
+*room*	*stanza*|*camera*|*stanze*|*camere*
+*rubies*	*rubin*
+*ruby*	*rubin*
+*ruler*	*sovran*|*regnante*
+*rules*	*regol*
+*rumor*	*voci*|*diceri*
+*rumour*	*voci*|*diceri*
+*sacrifice*	*sacrificio*
+*saddle*	*sella*
+*sail*	*navigar*|*salpar*|*vela*
+*sapphire*	*zaffir*
+*savings*	*risparm*
+*saw*	*sega*|*seghe*
+*schol*	*studios*|*erudit*|*dott*
+*scholar*	*studios*|*erudit*
+*scimitar*	*scimitarr*
+*scorpion's tail*	*coda di scorpione*|*coda dello scorpione*
+*scorpions tail*	*coda di scorpione*|*coda dello scorpione*
+*scorpions' tail*	*coda di scorpione*|*coda dello scorpione*
+*scribe*	*scrib*|*amanuense*
+*scroll*	*pergamen*
+*sculpt*	*scolp*
+*sea*	*mare*
+*sea*guild*	*gilda*mar*|*gilda*marinai*
+*seal*	*foca*|*foche*
+*secret*	*segret*
+*see ya*	*ci vediamo*|*a presto*
+*see you *	*a presto *
+*see*ya*	*a presto*|*ci vediamo*|*alla prossima*
+*see*you*	*a presto*|*ci vediamo*|*alla prossima*
+*sell*	*vend*
+*serpent*	*serpent*|*serpe*
+*servant*	*servitor*|*servo*|*serva*
+*server*	*servitor*|*cameriere*
+*sew*	*cuci*
+*sextant*	*sestante*|*sestanti*
+*shaft*	*asta*|*aste*
+*shawl*	*scialle*|*scialli*
+*sheep*	*pecor*
+*shield*	*scud*
+*ship wright*	*maestro d'ascia*|*carpentiere navale*
+*ship*	*nave*|*navi*
+*ships*	*navi*|*nave*
+*shipwright*	*maestro d'ascia*|*carpentiere navale*
+*shirt*	*camici*
+*shoe*	*scarp*
+*shop*fish*	*negozio*pesc*|*pescheria*
+*shrine*	*santuari*|*santuario*
+*shrines*	*santuari*|*santuario*
+*silver bow*	*arco d'argento*|*Silver Bow*
+*silver*	*argento*
+*sissy*	*femminuc*|*mammola*
+*skeleton*	*schelet*
+*skill*	*abilit*
+*skin*	*pelle*|*pelli*
+*skirt*	*gonn*
+*slave auction*	*asta degli schiavi*|*asta di schiavi*
+*slave market*	*mercato degli schiavi*|*mercato di schiavi*
+*sleep*	*sonno*|*dorm*
+*slime*	*slime*|*melma*|*melme*
+*smith*	*fabbro*|*fabbri*
+*soldier*	*soldat*
+*soldiers*	*soldati*
+*song*	*canzon*|*cant*
+*sorcer*	*stregon*|*incantator*
+*sorcer*guild*	*gilda*stregon*|*gilda*incantator*
+*soup*	*zuppa*|*zuppe*
+*spear*	*lanc*
+*spell books*	*libri degli incantesimi*|*libri di incantesim*
+*spell*	*incantesim*
+*spellbooks*	*libri degli incantesimi*|*libri di incantesim*
+*spider silk*	*seta di ragno*
+*spirituality*	*spiritualit*
+*spring*	*molla*|*molle*
+*stable*	*stall*|*scuderi*
+*stables*	*stall*|*scuderi*
+*staff*	*bastone*|*bastoni*
+*stage*	*palco*|*scena*
+*statue*	*statu*
+*stay the night*	*passare la notte*|*trascorrere la notte*
+*steal*	*furt*|*rub*
+*steed*	*destrier*|*destriero*
+*steel*	*acciaio*
+*stew*	*stufato*|*stufati*
+*stick*	*bastoncin*|*bastone*
+*sticks*	*bastoncin*|*bastoni*
+*storehouse*	*magazzin*|*deposito*
+*strength*	*forza*
+*sulphurous ash*	*cenere sulfurea*|*cenere*
+*suppl*	*rifornim*|*provvist*
+*supplies*	*provvist*|*rifornim*
+*supply*	*rifornim*|*provvist*
+*sweat*	*sudor*|*sudare*|*sudat*
+*sweets*	*dolc*
+*sword*	*spad*
+*tailor*	*sart*
+*take a hike*	*levati di torno*|*sparisci*
+*tale*	*raccont*|*storia*|*storie*
+*tanner*	*conciator*
+*taste*	*assaggi*|*gust*
+*tavern*	*taverna*|*taverne*
+*tavernkeeper*	*oste*|*locandier*
+*teach*mag*	*insegn*mag*|*imparar*mag*
+*teleport*	*teletrasport*
+*teleporter*	*teletrasport*
+*telescope*	*telescopi*|*cannocchial*
+*temple*	*tempio*|*templi*
+*tent*	*tenda*|*tende*
+*thank thee*	*grazie*|*ti ringrazio*
+*thank ye*	*grazie*|*ti ringrazio*
+*thank you*	*grazie*|*ti ringrazio*
+*thanks*	*grazie*
+*theater*	*teatr*
+*theatre*	*teatr*
+*thief*	*ladr*
+*thiev*	*ladr*
+*thiev*guild*	*gilda*ladr*
+*thieves guild*	*gilda dei ladri*
+*thou fare*	*come te la passi*|*come stai*
+*thou need*	*ti serve*|*hai bisogno*|*ti occorre*
+*thou require*	*ti serve*|*hai bisogno*|*ti occorre*|*richiedi*
+*thou want*	*vuoi*|*desideri*
+*thou*idiot*	*idiota*|*idioti*
+*thou*live*	*dove*vivi*|*dove abiti*
+*thou*moron*	*cretin*
+*thou*purchase*	*acquist*|*compr*
+*thou*stupid*	*stupid*
+*thread*	*filo*|*fili*
+*tinker*	*meccanic*
+*to do*	*da fare*|*cosa fare*
+*tool*	*attrezz*|*utensil*
+*tools*	*attrezz*|*utensil*
+*torch*	*torci*|*torcia*
+*tourmaline*	*tormalina*|*tormaline*
+*town hall*	*municipio*|*palazzo comunale*
+*toxin*	*tossin*
+*track*	*traccia*|*tracce*|*seguire*
+*trade*	*commerci*|*mestiere*
+*train*	*addestr*
+*trainer*	*addestrator*
+*training dummies*	*manichini d'allenamento*|*manichini*
+*training dummy*	*manichino d'allenamento*|*manichino*
+*transaction*	*transazion*|*operazion*
+*trap*	*trappol*
+*treasure*	*tesor*
+*troubad*	*trovator*
+*trouble*	*guai*|*problem*
+*troubles*	*guai*|*problemi*
+*truth*	*verità*|*verita*
+*turnkey*	*carcerier*|*secondin*
+*undead*	*non morti*|*non-morti*
+*valor*	*valore*
+*valor*, 	*valore*, 
+*value*	*valore*|*valor*
+*vegetable*	*verdur*|*ortagg*
+*vegetables*	*verdur*|*ortagg*
+*vellum*	*pergamena*|*cartapecora*
+*venom*	*veleno*|*velen*
+*vermin*	*parassit*|*animali nocivi*
+*vessel*	*imbarcazion*|*vascello*
+*vessels*	*recipient*|*vasell*
+*vest*	*gilet*|*panciott*
+*vet*	*veterinar*|*vet*
+*vial*	*fiala*|*fiale*
+*villain*	*furfant*|*malfattor*
+*virtue*	*virtù*|*virtu*
+*virtues*	*virtù*|*virtu*
+*wager*	*scommess*|*puntata*|*puntare*
+*waiter*	*cameriere*|*cameriera*
+*waitperson*	*cameriere*|*cameriera*|*inserviente*
+*waitress*	*cameriera*
+*wall*	*mura*|*muro*
+*war hammer*	*martello da guerra*|*martelli da guerra*
+*warehouse*	*magazzin*
+*warrior*	*guerrier*
+*warrior*guild*	*gilda*guerrier*
+*warriors*	*guerrier*
+*waterfront*	*lungomare*|*porto*
+*wealth*	*ricchezz*|*patrimoni*
+*wealthy*	*ricc*|*benestant*
+*weapon*	*arm*
+*weaponeer*	*armaiol*|*mastro d'armi*
+*weapons trainer*	*istruttore di armi*|*addestratore di armi*
+*weaponsmith*	*armaiol*|*fabbro d'armi*
+*weave*	*tess*
+*wench*	*ragazza*|*servetta*
+*what are ye called*	*come ti chiami*
+*what are you called*	*come ti chiami*
+*what art thou called*	*come ti chiami*
+*what city are you from*	*da quale città vieni*|*da quale citt*|*di dove sei*
+*what do you do*	*che fai*|*cosa fai*|*che lavoro*
+*what is thy job*	*che lavoro fai*|*qual è il tuo lavoro*|*che mestiere*
+*what is thy name*	*il tuo nome*
+*what is your job*	*che lavoro fai*|*qual è il tuo lavoro*|*che mestiere*
+*what is your name*	*come ti chiami*|*qual è il tuo nome*|*il tuo nome*
+*what town am I in*	*in che città*|*che città*
+*what town are you from*	*da quale paese vieni*|*da quale villaggio*|*di dove sei*
+*what's thy job*	*che lavoro fai*
+*what's thy name*	*come ti chiami*|*qual è il tuo nome*|*qual e il tuo nome*
+*what's your job*	*che lavoro fai*
+*what's your name*	*come ti chiami*|*qual è il tuo nome*|*il tuo nome*
+*what*do*	*che*fai*|*cosa*fai*
+*what*do*do*	*che*fai*|*cosa*fai*
+*what*thou*sale*	*cosa*vendi*|*in vendita*
+*what*thou*sell*	*cosa*vendi*|*che*vendi*
+*what*town is this*	*che città*|*quale città*
+*what*you*cook*	*cosa*cucin*|*che*cucin*
+*what*you*sale*	*cosa*vendi*|*in vendita*
+*what*you*sell*	*cosa*vendi*|*che*vendi*
+*wheat*	*frumento*|*grano*
+*where am i*	*dove sono*
+*where is*	*dov'è*|*dove si trova*|*dove*
+*where*am*I*	*dove*sono*
+*where*am*i*	*dove*sono*
+*where*monks*	*dove*monac*
+*where*thou*from*	*da dove*vieni*|*di dove sei*
+*where*thou*live*	*dove*vivi*|*dove abiti*
+*where*thou*work*	*dove*lavori*
+*where*you*from*	*da dove*vieni*|*di dove sei*
+*where*you*live*	*dove*vivi*|*dove abiti*
+*where*you*work*	*dove*lavori*
+*whip*	*frusta*
+*white potion*	*pozione bianca*|*pozioni bianche*
+*who are ye*	*chi sei*
+*who are you*	*chi sei*|*chi siete*
+*who art thou*	*chi sei*
+*who you are*	*chi sei*
+*who*you*	*chi*sei*
+*wind*	*vento*
+*wine*	*vino*|*vini*
+*wisdom*	*saggezza*|*saggi*
+*wisp*	*wisp*|*fuoco fatuo*|*fuochi fatui*
+*wolf*	*lupo*|*lupi*
+*wood*	*legno*|*legni*
+*wood*er*	*legn*|*boscaiol*
+*woodcarve*	*intagli*
+*woodcarving*	*intaglio*|*intagli*
+*woodw*	*falegnam*|*lavorazione del legno*
+*woodworker*	*falegnam*|*intagliator*
+*wool*	*lana*
+*words of power*	*parole di potere*|*parole del potere*
+*work*	*lavor*
+*wrong*	*sbagliat*|*errat*
+*wuss*	*vigliacc*|*codard*
+*yarn*	*filato*|*lana*
+*yellow potion*	*pozione gialla*|*pozioni gialle*
+*you fare*	*come te la passi*|*come stai*
+*you lacking*	*ti manca*|*ti serve*
+*you need*	*ti serve*|*hai bisogno*|*ti occorre*
+*you needing*	*ti serve*|*hai bisogno*|*ti occorre*
+*you require*	*ti serve*|*hai bisogno*|*ti occorre*|*richiedi*
+*you want*	*vuoi*|*desideri*
+*you*buy*	*compri*|*acquisti*
+*you*idiot*	*idiota*|*idioti*
+*you*live*	*vivi*|*abiti*
+*you*moron*	*cretin*
+*you*purchase*	*acquisti*|*compri*
+*you*stupid*	*stupid*
+*youth*	*giovent*|*giovan*
+*zombie*	*zombie*|*zombi*
+*zoo*	*zoo*|*serraglio*
+Hello	Salve
+What's up*	*come va*|*novità*|*novita*
+bed	letto
+for the night	per la notte
+hello	salve
+hi	ciao|salve
+job	lavoro|mestiere|professione
+liquor*	alcolic*|liquor*
+name	nome|chiami
+rent	affitt*|noleggi*
+room	stanza|camera
+sleep	dormire|dormi
+stay the night	passare la notte|trascorrere la notte
+what do you do	che fai|cosa fai|che lavoro fai

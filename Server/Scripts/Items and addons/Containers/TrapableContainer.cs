@@ -168,6 +168,16 @@ namespace Server.Items
 					}
 				}
 
+				if ( Server.Misc.BeginnerProtection.IsActive( from ) )
+				{
+					from.PlaySound( 0x241 );
+					TrapPower = 0;
+					TrapLevel = 0;
+					TrapType = TrapType.None;
+					SendMessageTo( from, "That was trapped, but your beginner's luck made it misfire harmlessly.", 0x3B2 );
+					return false;
+				}
+
 				int MagicAvoid = (int)(( from.Skills[SkillName.RemoveTrap].Value + from.EnergyResistance ) / 3);
 				if (MagicAvoid > 90){ MagicAvoid = 90; }
 

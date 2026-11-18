@@ -199,7 +199,9 @@ namespace Server.Gumps
 		{
 			if (mobile.Alive) return false;
 			
-			return mobile.LastAutoRes == null || mobile.LastAutoRes.AddMinutes(60) <= DateTime.UtcNow;
+			// Principianti: la resurrezione immediata torna disponibile dopo 10 minuti invece di 60
+			int cooldown = Server.Misc.BeginnerProtection.IsActive( mobile ) ? 10 : 60;
+			return mobile.LastAutoRes == null || mobile.LastAutoRes.AddMinutes(cooldown) <= DateTime.UtcNow;
 		}
 
         public static void TryShowAutoResurrectGump(PlayerMobile mobile, bool ignoreOtherGumps = false)

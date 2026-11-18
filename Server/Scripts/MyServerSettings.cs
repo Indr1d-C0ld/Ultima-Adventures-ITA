@@ -101,9 +101,10 @@ namespace Server.Misc
 
 		public static int FloorTrapTrigger()
 		{
-			// THERE ARE MANY HIDDEN TRAPS ON THE FLOOR, BUT THE PERCENT CHANCE
-			// IS SET BELOW THAT THEY WILL TRIGGER WHEN WALKED OVER BY PLAYERS
-			// 20% IS THE DEFAULT...WHERE 0 IS NEVER AND 100 IS ALWAYS
+			// THERE ARE MANY HIDDEN TRAPS ON THE FLOOR. THE VALUE BELOW IS THE PERCENT
+			// CHANCE THAT A PLAYER WALKING OVER ONE AUTOMATICALLY *AVOIDS* IT
+			// (see HiddenTrap.CheckTrapAvoidance): 0 = TRAPS ALWAYS GET A CHANCE TO
+			// TRIGGER, 100 = THEY NEVER TRIGGER.
 			return 35;
 		}
 
@@ -994,9 +995,18 @@ namespace Server.Misc
 		
 		public static bool buysellcontext() // do you want vendors to have clickable context menus for buy/sell? (comment one OR the other)
 		{
-			//return true; 
-			return false;
+			return true; // QoL: menu contestuali Compra/Vendi sui mercanti attivi
 		}
+
+		// ---------------------------------------------------------------------
+		// PROTEZIONE DEL PRINCIPIANTE (vedi Server Functions/Beginner/BeginnerProtection.cs)
+		// Finché è attiva: alla morte niente perdita di oggetti, abilità, caratteristiche o fama;
+		// trappole che distruggono/rubano oggetti rese innocue; niente maledizione di viaggio;
+		// fame e sete calano più lentamente. Termina alla prima soglia raggiunta.
+		// ---------------------------------------------------------------------
+		public static bool BeginnerProtectionEnabled() { return true; }
+		public static double BeginnerProtectionHours() { return 20.0; }      // ore di gioco del personaggio
+		public static int BeginnerProtectionSkillPoints() { return 300; }   // punti abilità totali
 		
 		public static int decayrate() // note, itemdecay was disabled in this release.  if you want itemdecay, run runuo.exe.itemdecay instead and set the value here to the amount of time you want for item decay .  
 		{

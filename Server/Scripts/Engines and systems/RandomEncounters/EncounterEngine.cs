@@ -1120,6 +1120,7 @@ public class RandomEncounterEngine
                 if (accessLevel != AccessLevel.Player)                  continue; // staff doesn't qualify
                 if (!mobile.Alive)                                      continue; // no randoms for dead players
                 //if (pm!=null && pm.Young)                               continue; // young don't qualify
+                if (Server.Misc.BeginnerProtection.IsActive(mobile))   continue; // protezione del principiante: niente agguati casuali
                 if (RandomEncounterEngine.SkipHidden && mobile.Hidden)  continue; // skip hidden players
 
                 mobiles.Add ( state.Mobile );

@@ -1602,6 +1602,9 @@ namespace Server.Network
 			if ( !Enum.IsDefined( typeof( MessageType ), type ) )
 				type = MessageType.Regular;
 
+			// parole chiave dette in italiano (il client codifica solo quelle inglesi)
+			keywords = Localization.AddSpeechKeywords( text, keywords );
+
 			from.Language = lang;
 			from.DoSpeech( text, keywords, type, Utility.ClipDyedHue( hue ) );
 		}

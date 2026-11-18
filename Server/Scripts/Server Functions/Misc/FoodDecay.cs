@@ -37,7 +37,8 @@ namespace Server.Misc
 			{
 				if ( m is PlayerMobile && !Server.Commands.AFK.m_AFK.Contains(m.Serial.Value) && m.AccessLevel == AccessLevel.Player && m.Alive )
 				{
-					if ( m.Skills[SkillName.Camping].Value <= Utility.RandomMinMax( 1, 400 ) )
+					if ( BeginnerProtection.IsActive( m ) && Utility.RandomBool() ) { } // principiante: la fame cala a metà velocità
+					else if ( m.Skills[SkillName.Camping].Value <= Utility.RandomMinMax( 1, 400 ) )
 					{
 						if ( m.Hunger >= 1 )
 						{
@@ -86,6 +87,7 @@ namespace Server.Misc
 				if ( m is PlayerMobile && !Server.Commands.AFK.m_AFK.Contains(m.Serial.Value) && m.AccessLevel == AccessLevel.Player && m.Alive)
 				{
 					if ( m.Skills[SkillName.Camping].Value >= Utility.RandomMinMax( 1, 400 ) ){}
+					else if ( BeginnerProtection.IsActive( m ) && Utility.RandomBool() ){} // principiante: la sete cala a metà velocità
 					else
 					{
 						if ( m.Thirst >= 1 )

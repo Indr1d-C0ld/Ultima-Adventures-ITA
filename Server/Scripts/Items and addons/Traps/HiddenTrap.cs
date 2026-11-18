@@ -73,6 +73,9 @@ namespace Server.Items
 							nTrapType = HiddenTrapType;
 						}
 
+					if ( Server.Misc.BeginnerProtection.IsActive( m ) ) // protezione del principiante: trappole distruttive rese innocue
+						nTrapType = Server.Misc.BeginnerProtection.SafeTrapType( nTrapType );
+
 					if ( m is PlayerMobile && Spells.Research.ResearchAirWalk.UnderEffect( m ) )
 					{
 						Point3D air = new Point3D( ( m.X+1 ), ( m.Y+1 ), ( m.Z+5 ) );

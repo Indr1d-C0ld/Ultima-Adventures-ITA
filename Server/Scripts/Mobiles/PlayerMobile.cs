@@ -127,6 +127,12 @@ namespace Server.Mobiles
 		// Transient UI cooldown; it intentionally resets on server restart.
 		private DateTime m_NextDungeonInspirationMessage;
 		private DateTime m_NextFrankenFighterSummonAllowed = DateTime.MinValue;
+
+		// Protezione del principiante: 0 = attiva/in valutazione, 1 = rinunciata dal giocatore, 2 = terminata (avviso dato)
+		private int m_BeginnerState;
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int BeginnerState { get { return m_BeginnerState; } set { m_BeginnerState = value; } }
 		private TimeSpan m_NpcGuildGameTime;
                 private PlayerFlag m_Flags;
                 public bool High;
@@ -4612,7 +4618,7 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 		{
 			DeathMoveResult res = base.GetParentMoveResultFor( item );
 
-			if ( res == DeathMoveResult.MoveToCorpse && item.Movable && this.Young )
+			if ( res == DeathMoveResult.MoveToCorpse && item.Movable && ( this.Young || Server.Misc.BeginnerProtection.IsActive( this ) ) )
 				res = DeathMoveResult.MoveToBackpack;
 
 			return res;
@@ -4622,7 +4628,7 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 		{
 			DeathMoveResult res = base.GetInventoryMoveResultFor( item );
 
-			if ( res == DeathMoveResult.MoveToCorpse && item.Movable && this.Young )
+			if ( res == DeathMoveResult.MoveToCorpse && item.Movable && ( this.Young || Server.Misc.BeginnerProtection.IsActive( this ) ) )
 				res = DeathMoveResult.MoveToBackpack;
 
 			return res;
@@ -5764,7 +5770,8 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 
 			base.Serialize( writer );
 
-                        writer.Write( (int) 67 );
+                        writer.Write( (int) 68 );
+			writer.Write( (int)m_BeginnerState );
 			writer.Write( m_NextFrankenFighterSummonAllowed );
 			writer.Write( (bool)m_sbmasterspeedenabled );
                         writer.Write( m_PetStandbyRange );
@@ -5970,6 +5977,9 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 
                         switch ( version )
                         {
+	                               case 68:
+	                                        m_BeginnerState = reader.ReadInt();
+	                                        goto case 67;
 	                               case 67:
 	                                        m_NextFrankenFighterSummonAllowed = reader.ReadDateTime();
 	                                        goto case 66;

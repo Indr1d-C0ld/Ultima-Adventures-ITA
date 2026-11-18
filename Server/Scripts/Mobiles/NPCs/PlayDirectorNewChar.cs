@@ -931,6 +931,24 @@ namespace Server.Mobiles
             return busy;
         }
 
+        // Riconoscimento delle risposte per parole intere (prima "no" scattava anche con "know"/"now",
+        // e "i do" anche con "i don't"). Accetta anche l'italiano.
+        private static readonly string[] m_YesWords = { "yes", "yeah", "aye", "sure", "okay", "ok", "si", "sì", "certo", "certamente", "giuro", "accetto", "va bene", "i pledge", "i do", "lo giuro", "d'accordo" };
+        private static readonly string[] m_NoWords = { "no", "nay", "nope", "naw", "nah", "never", "mai", "rifiuto", "non voglio", "i do not", "i don't", "no grazie" };
+
+        private static bool HasPhrase(string speech, string[] phrases)
+        {
+            string s = " " + System.Text.RegularExpressions.Regex.Replace(speech.ToLowerInvariant(), @"[^\p{L}\p{N}' ]", " ") + " ";
+            s = System.Text.RegularExpressions.Regex.Replace(s, @"\s+", " ");
+            foreach (string p in phrases)
+                if (s.Contains(" " + p + " "))
+                    return true;
+            return false;
+        }
+
+        public static bool IsYesAnswer(string speech) { return speech != null && HasPhrase(speech, m_YesWords); }
+        public static bool IsNoAnswer(string speech) { return speech != null && HasPhrase(speech, m_NoWords); }
+
         public override void OnSpeech(SpeechEventArgs e)
         {
 
@@ -943,7 +961,10 @@ namespace Server.Mobiles
                 StartPlay(this);
             }
 
-            if (Waiting && (Insensitive.Contains(e.Speech, "i pledge") || Insensitive.Contains(e.Speech, "i do") || Insensitive.Contains(e.Speech, "aye") || Insensitive.Contains(e.Speech, "yes") || Insensitive.Contains(e.Speech, "sure") || Insensitive.Contains(e.Speech, "okay")))
+            bool saidNo = IsNoAnswer(e.Speech);
+            bool saidYes = !saidNo && IsYesAnswer(e.Speech);
+
+            if (Waiting && saidYes)
             {
                 PlayerMobile yesPlayer = NewPlayer as PlayerMobile;
                 if (yesPlayer != null)
@@ -989,7 +1010,7 @@ namespace Server.Mobiles
                 if (!endedConversation)
                     AdvanceSkipIfNeeded();
             }
-            else if (Waiting && (Insensitive.Contains(e.Speech, "nay") || Insensitive.Contains(e.Speech, "no") || Insensitive.Contains(e.Speech, "nope") || Insensitive.Contains(e.Speech, "naw")))
+            else if (Waiting && saidNo)
             {
                 PlayerMobile noPlayer = NewPlayer as PlayerMobile;
                 if (noPlayer != null)
@@ -1034,13 +1055,13 @@ namespace Server.Mobiles
                 if (!endedConversation)
                     AdvanceSkipIfNeeded();
             }
-            else if (PlayCheck > 1 && Waiting && Insensitive.Contains(e.Speech, "repeat"))
+            else if (PlayCheck > 1 && Waiting && (Insensitive.Contains(e.Speech, "repeat") || Insensitive.Contains(e.Speech, "ripeti")))
             {
                 NoAnswer = 0;
                 Waiting = false;
                 m_SkipIntro = false;
             }
-            else if (PlayCheck > 0 && Insensitive.Contains(e.Speech, "skip"))
+            else if (PlayCheck > 0 && (Insensitive.Contains(e.Speech, "skip") || Insensitive.Contains(e.Speech, "salta")))
             {
                 if (e.Mobile == NewPlayer)
                 {
@@ -1134,23 +1155,24 @@ namespace Server.Mobiles
                 switch (type)
                 {
                     case IntroQuestionType.Pledge:
-                        title = "Community Conduct";
-                        body = "You are being asked to promise that you will respect other adventurers and keep the realm free of griefing, exploitation, and harassment.<br><br>" +
-                               "<u>If you answer Yes</u>: you acknowledge the community rules and the introduction will continue so you can enter the world.<br><br>" +
-                               "<u>If you answer No</u>: the introduction will end immediately and you will be returned to the jail, unable to continue until you agree.";
+                        title = "Regole della comunità";
+                        body = "Ti viene chiesto di promettere che rispetterai gli altri avventurieri e che non rovinerai il gioco altrui con molestie, imbrogli o sfruttamento di errori.<br><br>" +
+                               "<u>Se rispondi Sì</u>: accetti le regole e l'introduzione prosegue fino al tuo ingresso nel mondo.<br><br>" +
+                               "<u>Se rispondi No</u>: l'introduzione termina subito e torni nella prigione iniziale; potrai rientrare solo accettando.";
                         break;
                     case IntroQuestionType.Avatar:
-                        title = "Avatar of the Balance";
-                        body = "Becoming an Avatar aligns you with the Balance system. This increases your potential attributes (stat cap 250) and improves rewards, but monsters will become tougher and death will carry stiffer penalties while the Balance shifts with your actions.<br><br>" +
-                               "<u>If you answer Yes</u>: you will join the Balance as an Avatar, gaining the added challenge and benefits that come with it.<br><br>" +
-                               "<u>If you answer No</u>: you will remain an unaligned adventurer with an easier journey (stat cap 225) and lighter repercussions on death.";
+                        title = "Avatar dell'Equilibrio";
+                        body = "Diventare Avatar ti lega al sistema dell'Equilibrio: le tue azioni (karma) spostano l'equilibrio del mondo, le caratteristiche possono arrivare a 250 punti totali e le ricompense migliorano, ma alla morte puoi perdere un po' di abilità e caratteristiche.<br><br>" +
+                               "<u>Se rispondi Sì</u>: diventi Avatar, con più sfida e più potenziale.<br><br>" +
+                               "<u>Se rispondi No</u> (consigliato a chi inizia): resti un avventuriero non allineato. Impari le abilità alla stessa velocità di un Avatar e alla morte <b>non perdi mai abilità né caratteristiche</b>; in cambio il tetto delle caratteristiche è 225 e la resurrezione dai guaritori costa di più.<br><br>" +
+                               "In ogni caso, per le prime 20 ore di gioco (o fino a 300 punti abilità) sei sotto la <b>protezione del principiante</b>: digita [principiante per i dettagli.";
                         break;
                     case IntroQuestionType.SoulBound:
                     default:
-                        title = "SoulBound Challenge";
-                        body = "SoulBound heroes bind their souls to the realm. Death becomes permanent for that incarnation, you reset as a new person, and you must rely on your wits. In return you keep Avatar status, a 250 stat cap, and can imprint powerful item properties into yourself via the Soul Tome.<br><br>" +
-                               "<u>If you answer Yes</u>: you will become SoulBound immediately, receive a Soul Tome, and your character will be reset for this hardcore path. This option is intended for experienced players.<br><br>" +
-                               "<u>If you answer No</u>: you remain a mortal adventurer with normal death mechanics and can finish the introduction without the SoulBound restrictions.";
+                        title = "Sfida dell'Anima Legata";
+                        body = "Gli eroi dall'Anima Legata (SoulBound) vincolano la loro anima al regno: la morte è definitiva per quella incarnazione, ricominci come una persona nuova e devi contare solo sul tuo ingegno. In cambio mantieni lo stato di Avatar, il tetto di 250 alle caratteristiche e puoi imprimere in te potenti proprietà degli oggetti tramite il Tomo dell'Anima.<br><br>" +
+                               "<u>Se rispondi Sì</u>: diventi subito Anima Legata, ricevi il Tomo dell'Anima e il personaggio viene azzerato per questo percorso estremo. <b>Sconsigliato ai principianti</b> (niente protezione del principiante).<br><br>" +
+                               "<u>Se rispondi No</u>: resti un avventuriero mortale con le normali regole sulla morte e completi l'introduzione.";
                         break;
                 }
 
@@ -1158,22 +1180,33 @@ namespace Server.Mobiles
 
                 AddHtml(padding + innerPadding, padding + 5, innerWidth, 40, string.Format("<CENTER><BASEFONT COLOR=#FFD700>{0}</BASEFONT></CENTER>", title), false, false);
                 AddHtml(padding + innerPadding, padding + 55, innerWidth, 240, string.Format("<BASEFONT COLOR=#FFFFFF>{0}</BASEFONT>", body), true, true);
-                AddHtml(
-                    padding + innerPadding,
-                    height - padding - 70,
-                    innerWidth,
-                    50,
-                    "<BASEFONT COLOR=#000000>Speak \"</BASEFONT>" +
-                    "<BASEFONT COLOR=#FF0000>yes</BASEFONT>" +
-                    "<BASEFONT COLOR=#000000>\" or \"</BASEFONT>" +
-                    "<BASEFONT COLOR=#FF0000>no</BASEFONT>" +
-                    "<BASEFONT COLOR=#000000>\" (\"</BASEFONT>" +
-                    "<BASEFONT COLOR=#FF0000>repeat</BASEFONT>" +
-                    "<BASEFONT COLOR=#000000>\" to hear it again, \"</BASEFONT>" +
-                    "<BASEFONT COLOR=#FF0000>skip</BASEFONT>" +
-                    "<BASEFONT COLOR=#000000>\" to fast-forward) to respond.</BASEFONT>",
-                    true,
-                    true);
+
+                // Pulsanti cliccabili: equivalgono a dire la risposta ad alta voce
+                int by = height - padding - 60;
+                AddButton(padding + innerPadding, by, 4023, 4025, 1, GumpButtonType.Reply, 0);
+                AddHtml(padding + innerPadding + 35, by + 2, 60, 20, "<BASEFONT COLOR=#88FF88>Sì</BASEFONT>", false, false);
+                AddButton(padding + innerPadding + 100, by, 4017, 4019, 2, GumpButtonType.Reply, 0);
+                AddHtml(padding + innerPadding + 135, by + 2, 60, 20, "<BASEFONT COLOR=#FF8888>No</BASEFONT>", false, false);
+                AddButton(padding + innerPadding + 200, by, 4011, 4013, 3, GumpButtonType.Reply, 0);
+                AddHtml(padding + innerPadding + 235, by + 2, 80, 20, "<BASEFONT COLOR=#FFFFFF>Ripeti</BASEFONT>", false, false);
+                AddButton(padding + innerPadding + 320, by, 4014, 4016, 4, GumpButtonType.Reply, 0);
+                AddHtml(padding + innerPadding + 355, by + 2, 120, 20, "<BASEFONT COLOR=#FFFFFF>Salta avanti</BASEFONT>", false, false);
+                AddHtml(padding + innerPadding, by + 30, innerWidth, 20, "<BASEFONT COLOR=#CCCCCC>Puoi anche rispondere a voce: sì / no / ripeti / salta.</BASEFONT>", false, false);
+            }
+
+            public override void OnResponse(Server.Network.NetState sender, RelayInfo info)
+            {
+                Mobile m = sender.Mobile;
+                if (m == null)
+                    return;
+
+                switch (info.ButtonID)
+                {
+                    case 1: m.Say("yes"); break;
+                    case 2: m.Say("no"); break;
+                    case 3: m.Say("repeat"); break;
+                    case 4: m.Say("skip"); break;
+                }
             }
         }
 

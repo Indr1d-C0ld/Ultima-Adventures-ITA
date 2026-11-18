@@ -170,34 +170,17 @@ namespace Server.Misc
 						evilloc = true;	
 				}
 				
-				int cut = 50;
-
+				// Quota d'oro ricevuta, legata all'Equilibrio del mondo.
+				// Prima, per una divisione tra interi, valeva sempre 55% (zone normali) e 20% (zone malvagie).
+				// Ora quei valori sono il punto neutro e l'Equilibrio li sposta di +/- BalanceGoldSwing():
+				// mondo buono = più oro nelle zone normali, mondo malvagio = più oro nelle zone malvagie.
+				double tilt = BalanceTilt(); // -1 mondo buono ... +1 mondo malvagio
+				int cut;
 				if ( evilloc )
-				{
-						if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-							cut = 55;			
-						if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-							cut = 44;
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-							cut = 34;
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-							cut = 27;		
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-							cut = 20;
-				}	
+					cut = (int)Math.Round( 20 + BalanceGoldSwing() * tilt );
 				else
-				{
-						if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-							cut = 20;			
-						if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-							cut = 27;
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-							cut = 34;
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-							cut = 44;		
-						else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-							cut = 55;						
-				}	
+					cut = (int)Math.Round( 55 - BalanceGoldSwing() * tilt );
+				if ( cut < 5 ) cut = 5;
 
                                 if (AdventuresFunctions.IsPuritain((object)m))
                                         cut /= 2;
@@ -777,32 +760,13 @@ namespace Server.Misc
 			else if ( DungeonDifficulty == 3 ){ HitPercents = Utility.RandomMinMax( 90, 110 )*0.01; }		// LEVEL 3 DUNGEONS
 			else if ( DungeonDifficulty > 3 ){ HitPercents = Utility.RandomMinMax( 115, 175 )*0.01; }			// LEVEL 4 DUNGEONS
 
+			// Equilibrio: prima (divisione tra interi) i mostri malvagi avevano sempre x0.75 e quelli buoni x1.35.
+			// Quei valori restano il punto neutro; l'Equilibrio li sposta di +/- BalanceMonsterSwing():
+			// mondo malvagio = mostri malvagi più forti e buoni più deboli, e viceversa.
 			if (((Mobile)bc).Karma < 0)
-			{
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-					HitPercents *= 1.35;			
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-					HitPercents *= 1.15;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-					HitPercents += 0;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-					HitPercents *= .85;		
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-					HitPercents *= .75;			
-			}
+				HitPercents *= 0.75 * ( 1.0 - BalanceMonsterSwing() * BalanceTilt() );
 			else if (((Mobile)bc).Karma > 0)
-			{
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-					HitPercents *= .75;			
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-					HitPercents *= .85;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-					HitPercents += 0;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-					HitPercents *= 1.15;		
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-					HitPercents *= 1.35;	
-			}				
+				HitPercents *= 1.35 * ( 1.0 + BalanceMonsterSwing() * BalanceTilt() );				
 
 			// HitPercents = 0;	
 
@@ -828,32 +792,13 @@ namespace Server.Misc
 			else if ( DungeonDifficulty == 3 ){ HitPercents = Utility.RandomMinMax( 90, 110 )*0.01; }		// LEVEL 3 DUNGEONS
 			else if ( DungeonDifficulty > 3 ){ HitPercents = Utility.RandomMinMax( 115, 175 )*0.01; }			// LEVEL 4 DUNGEONS
 
+			// Equilibrio: prima (divisione tra interi) i mostri malvagi avevano sempre x0.75 e quelli buoni x1.35.
+			// Quei valori restano il punto neutro; l'Equilibrio li sposta di +/- BalanceMonsterSwing():
+			// mondo malvagio = mostri malvagi più forti e buoni più deboli, e viceversa.
 			if (((Mobile)bc).Karma < 0)
-			{
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-					HitPercents *= 1.35;			
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-					HitPercents *= 1.15;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-					HitPercents += 0;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-					HitPercents *= .85;		
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-					HitPercents *= .75;			
-			}
+				HitPercents *= 0.75 * ( 1.0 - BalanceMonsterSwing() * BalanceTilt() );
 			else if (((Mobile)bc).Karma > 0)
-			{
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.85)
-					HitPercents *= .75;			
-				if ((AetherGlobe.BalanceLevel / 100000) >= 0.55)
-					HitPercents *= .85;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.4)
-					HitPercents += 0;
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.20)
-					HitPercents *= 1.15;		
-				else if ((AetherGlobe.BalanceLevel / 100000) >= 0.00)
-					HitPercents *= 1.35;	
-			}				
+				HitPercents *= 1.35 * ( 1.0 + BalanceMonsterSwing() * BalanceTilt() );				
 
 			// HitPercents = 0;	
 
@@ -1004,6 +949,13 @@ namespace Server.Misc
 		// trappole che distruggono/rubano oggetti rese innocue; niente maledizione di viaggio;
 		// fame e sete calano più lentamente. Termina alla prima soglia raggiunta.
 		// ---------------------------------------------------------------------
+		// ---------------------------------------------------------------------
+		// EQUILIBRIO DEL MONDO (AetherGlobe.BalanceLevel: 0 = tutto bene ... 100000 = tutto male)
+		// ---------------------------------------------------------------------
+		public static double BalanceTilt() { double f = AetherGlobe.BalanceLevel / 100000.0; if ( f < 0 ) f = 0; if ( f > 1 ) f = 1; return ( f - 0.5 ) * 2.0; }
+		public static double BalanceGoldSwing() { return 10.0; }    // punti percentuali di oro in più/in meno agli estremi
+		public static double BalanceMonsterSwing() { return 0.20; } // variazione relativa dei punti ferita dei mostri agli estremi
+
 		public static bool BeginnerProtectionEnabled() { return true; }
 		public static double BeginnerProtectionHours() { return 20.0; }      // ore di gioco del personaggio
 		public static int BeginnerProtectionSkillPoints() { return 300; }   // punti abilità totali

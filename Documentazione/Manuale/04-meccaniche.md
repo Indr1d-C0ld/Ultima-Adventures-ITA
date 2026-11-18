@@ -201,7 +201,7 @@ Il comando `[myhunger` (o `[mhgr`) ti dice come stai: da "starving" a "quite ful
 | Karma | −15.000 | 15.000 |
 
 - Più fama hai, meno ne guadagni: il guadagno è ridotto di Fama/100.
-- I **non Avatar** guadagnano fama e karma ×0,75 e ne perdono ×1,25.
+- I **non Avatar** guadagnano fama e karma ×0,75; le perdite sono le stesse dell'Avatar.
 - Il karma sale uccidendo mostri malvagi e scende con azioni malvagie: Negromanzia, Furto, Accattonaggio verso i mercanti (−40 a vendita), carneficina di cadaveri umani (−50), uccisione di PNG buoni, ecc.
 - **Bloccare il karma**: dal menu contestuale di un **ankh** (santuario), entro 4 caselle, puoi bloccare il karma. Da bloccato il karma **non sale più**, ma può ancora scendere. Serve a chi vuole restare "neutro" o malvagio.
 - Il tuo **titolo** dipende da fama e karma: per esempio "The Glorious", oppure "The Dread Lord" con karma molto negativo. Sopra 10.000 di fama compare anche "Lord/Lady".
@@ -754,3 +754,18 @@ Sopra 80 punti ogni progresso è più difficile. In questa versione la fascia è
 - I **maestri PNG** insegnano a pagamento un'abilità fino a **50 punti** (al massimo metà della loro abilità; prima il limite era 42): di' «addestra» o «insegna» a un PNG del mestiere giusto.
 
 Tutti questi valori si regolano in `MyServerSettings.cs` (sezione «PROGRESSIONE»).
+
+---
+
+## L'Equilibrio del mondo: oro e mostri
+
+Le azioni buone e malvagie degli Avatar spostano l'**Equilibrio** del mondo (lo mostra il colore dei globi dell'Etere). Oltre agli effetti già descritti, l'Equilibrio modifica:
+
+| Effetto | Mondo molto buono | Neutro | Mondo molto malvagio |
+|---|---|---|---|
+| Oro ricevuto nelle zone normali (mostri, forzieri, carichi, botteghe, taglie) | 65% | 55% | 45% |
+| Oro ricevuto nelle zone malvagie (Umbra, terre dei negromanti, la Fossa, Darkmoor) | 10% | 20% | 30% |
+| Punti ferita dei mostri malvagi | un po' meno | normali | un po' di più (circa +20% di robustezza) |
+| Punti ferita dei mostri buoni | un po' di più | normali | un po' di meno |
+
+In breve: quando il bene prevale, le terre civili sono più ricche e i mostri malvagi più fragili; quando prevale il male accade il contrario. Le percentuali si regolano in `MyServerSettings.cs` (`BalanceGoldSwing`, `BalanceMonsterSwing`).

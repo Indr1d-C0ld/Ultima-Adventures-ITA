@@ -88,7 +88,7 @@ Questa è la scelta più importante. Determina la "modalità" del personaggio:
 | Tetto delle caratteristiche | **250** | **225** |
 | Velocità di apprendimento delle abilità | normale (×1,75) | uguale all'Avatar |
 | Influenza sulla Bilancia | sì: uccisioni, missioni e morti spostano l'equilibrio | no, o quasi nulla |
-| Fama e karma | guadagno pieno | guadagno ×0,75; le perdite sono maggiorate ×1,25 |
+| Fama e karma | guadagno pieno | guadagno ×0,75; perdite normali |
 | Danni | tetti di danno più alti (armi 200 contro 150, incantesimi 250 contro 200) | tetti più bassi |
 | Fortuna e raccolta | Fortuna ×1,15, raccolta di risorse ×1,15 | Fortuna ×0,75 |
 | Morte | perdita di fama/karma, più una **piccola perdita casuale di abilità e caratteristiche** | stessa perdita di fama/karma, **ma mai** perdita di abilità o caratteristiche |

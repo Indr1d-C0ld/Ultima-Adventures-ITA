@@ -54,8 +54,7 @@ namespace Server.Misc
 				if ( offset > 0 )
 					offset = 0;
 				
-				if ( !((PlayerMobile)m).Avatar )
-					offset = (int)((double)offset*1.25);
+				// modalità non-Avatar riequilibrata: le perdite di fama/karma non sono più maggiorate (era x1.25)
 			}
 
 			if ( m.Fame >= MyServerSettings.FameCap() )
@@ -137,8 +136,7 @@ namespace Server.Misc
 				if ( offset > 0 )
 					offset = 0;
 
-				if ( !((PlayerMobile)m).Avatar)
-					offset = (int)((double)offset*1.25);
+				// modalità non-Avatar riequilibrata: le perdite di fama/karma non sono più maggiorate (era x1.25)
 			}
 
 			if ( (m.Karma + offset) > MyServerSettings.KarmaMax() )

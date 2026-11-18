@@ -66,7 +66,8 @@ namespace Server
 			public string Suffix;
 			public Regex Pattern;
 			public int[] Order; // indice del segnaposto per ogni gruppo catturato
-			public HashSet<int> SuffixSlots; // segnaposto attaccati a una parola inglese (es. "ingot{1}" = suffisso plurale)
+			public HashSet<int> SuffixSlots;
+			public string[] Middle; // pezzi letterali fra i segnaposto (controllo veloce prima della regex) // segnaposto attaccati a una parola inglese (es. "ingot{1}" = suffisso plurale)
 			public int Literal; // lunghezza del testo letterale (per preferire i modelli piu' specifici)
 		}
 
@@ -278,12 +279,14 @@ namespace Server
 
 			StringBuilder rx = new StringBuilder( "^" );
 			List<int> order = new List<int>();
+			List<string> lits = new List<string>();
 			HashSet<int> suffixSlots = new HashSet<int>();
 			int pos = 0, literal = 0;
 
 			foreach ( Match m in mc )
 			{
 				string lit = key.Substring( pos, m.Index - pos );
+				lits.Add( lit );
 				rx.Append( Regex.Escape( lit ) );
 				literal += lit.Length;
 
@@ -325,8 +328,11 @@ namespace Server
 			t.Suffix = tail;
 			t.Order = order.ToArray();
 			t.SuffixSlots = suffixSlots;
+			lits.RemoveAt( 0 ); // il primo pezzo è il prefisso
+			lits.RemoveAll( delegate( string x ) { return x.Length == 0; } );
+			t.Middle = lits.ToArray();
 			t.Literal = literal;
-			t.Pattern = new Regex( rx.ToString(), RegexOptions.Singleline | RegexOptions.CultureInvariant );
+			t.Pattern = new Regex( rx.ToString(), RegexOptions.Singleline | RegexOptions.CultureInvariant, TimeSpan.FromMilliseconds( 50 ) );
 			return t;
 		}
 
@@ -545,6 +551,10 @@ namespace Server
 		{
 			List<Template> list;
 
+			// i testi molto lunghi (gump, libri) hanno voci esatte: niente modelli, evita confronti costosi
+			if ( text.Length > 2000 )
+				return null;
+
 			if ( text.Length >= IndexLen )
 			{
 				if ( m_ByPrefix.TryGetValue( text.Substring( 0, IndexLen ), out list ) )
@@ -575,7 +585,21 @@ namespace Server
 				if ( text.Length < t.Literal )
 					continue;
 
-				Match m = t.Pattern.Match( text );
+				// controllo veloce: i pezzi fissi devono comparire, in ordine, fra prefisso e suffisso
+				int p = t.Prefix.Length, end = text.Length - t.Suffix.Length;
+				bool ok = true;
+				for ( int k = 0; ok && k < t.Middle.Length; k++ )
+				{
+					int f = text.IndexOf( t.Middle[k], p, StringComparison.Ordinal );
+					if ( f < 0 || f + t.Middle[k].Length > end ) ok = false;
+					else p = f + t.Middle[k].Length;
+				}
+				if ( !ok )
+					continue;
+
+				Match m;
+				try { m = t.Pattern.Match( text ); }
+				catch ( RegexMatchTimeoutException ) { continue; } // modello troppo costoso su questo testo: ignoralo
 
 				if ( !m.Success )
 					continue;

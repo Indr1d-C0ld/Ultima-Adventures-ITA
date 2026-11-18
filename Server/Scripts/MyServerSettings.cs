@@ -952,6 +952,13 @@ namespace Server.Misc
 		// ---------------------------------------------------------------------
 		// EQUILIBRIO DEL MONDO (AetherGlobe.BalanceLevel: 0 = tutto bene ... 100000 = tutto male)
 		// ---------------------------------------------------------------------
+		// ---------------------------------------------------------------------
+		// RETE: indirizzo pubblico comunicato ai client che si collegano da Internet
+		// (IP o nome DNS). null = rilevamento automatico. La porta è in SocketOptions.cs (2593).
+		// I client della rete locale ricevono comunque l'indirizzo locale del server.
+		// ---------------------------------------------------------------------
+		public static string ServerPublicAddress() { return "nome.dyndns.esempio"; }
+
 		public static double BalanceTilt() { double f = AetherGlobe.BalanceLevel / 100000.0; if ( f < 0 ) f = 0; if ( f > 1 ) f = 1; return ( f - 0.5 ) * 2.0; }
 		public static double BalanceGoldSwing() { return 10.0; }    // punti percentuali di oro in più/in meno agli estremi
 		public static double BalanceMonsterSwing() { return 0.20; } // variazione relativa dei punti ferita dei mostri agli estremi

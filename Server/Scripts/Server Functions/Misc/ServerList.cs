@@ -38,7 +38,10 @@ namespace Server.Misc
 		 * firewalls) or specific IP adddresses you can do so by modifying the file SocketOptions.cs found in this directory.
 		 */
 
-		public static readonly string Address = null;
+		// Indirizzo pubblico (IP o nome DNS/DynDNS) in MyServerSettings.ServerPublicAddress().
+		// Un nome dinamico viene risolto di nuovo ogni 10 minuti, così un cambio di IP del router non richiede il riavvio.
+		public static readonly string Address = MyServerSettings.ServerPublicAddress();
+		private static DateTime m_LastResolve = DateTime.MinValue;
 		public static readonly string ServerName = MyServerSettings.ServerName();
 
 		public static readonly bool AutoDetect = true;
@@ -51,6 +54,8 @@ namespace Server.Misc
 			}
 			else {
 				Resolve( Address, out m_PublicAddress );
+				m_LastResolve = DateTime.UtcNow;
+				Console.WriteLine( "ServerList: indirizzo pubblico {0} -> {1}", Address, m_PublicAddress != null ? m_PublicAddress.ToString() : "non risolto" );
 			}
 
 			EventSink.ServerList += new ServerListEventHandler( EventSink_ServerList );
@@ -72,8 +77,20 @@ namespace Server.Misc
 
 				if ( IsPrivateNetwork( localAddress ) ) {
 					ipep = (IPEndPoint)s.RemoteEndPoint;
-					if ( !IsPrivateNetwork( ipep.Address ) && m_PublicAddress != null )
-						localAddress = m_PublicAddress;
+					if ( !IsPrivateNetwork( ipep.Address ) && !IPAddress.IsLoopback( ipep.Address ) )
+					{
+						if ( Address != null && DateTime.UtcNow - m_LastResolve > TimeSpan.FromMinutes( 10 ) )
+						{
+							IPAddress fresh;
+							Resolve( Address, out fresh );
+							if ( fresh != null )
+								m_PublicAddress = fresh;
+							m_LastResolve = DateTime.UtcNow;
+						}
+
+						if ( m_PublicAddress != null )
+							localAddress = m_PublicAddress;
+					}
 				}
 
 				e.AddServer( ServerName, new IPEndPoint( localAddress, localPort ) );
@@ -104,6 +121,10 @@ namespace Server.Misc
 
 			try {
 				IPHostEntry iphe = Dns.GetHostEntry( addr );
+
+				// preferisci un indirizzo IPv4 (il client UO non usa IPv6)
+				foreach ( IPAddress a in iphe.AddressList )
+					if ( a.AddressFamily == AddressFamily.InterNetwork ) { outValue = a; return; }
 
 				if ( iphe.AddressList.Length > 0 )
 					outValue = iphe.AddressList[iphe.AddressList.Length - 1];

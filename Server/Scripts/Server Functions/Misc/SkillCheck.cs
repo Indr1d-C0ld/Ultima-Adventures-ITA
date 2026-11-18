@@ -284,7 +284,7 @@ namespace Server.Misc
 
 				Region reg = Region.Find( from.Location, from.Map );
 
-				if ( from.Map != null && from.Map == Map.Trammel && from.X <= 2586 && from.X <= 2766 && from.Y >= 1402 && from.Y <= 1595 && from is PlayerMobile && from.Guild != null && !from.Guild.Disbanded && Insensitive.Contains( from.Guild.Name, "the church of justice" ) )
+				if ( from.Map != null && from.Map == Map.Trammel && from.X >= 2586 && from.X <= 2766 && from.Y >= 1402 && from.Y <= 1595 && from is PlayerMobile && from.Guild != null && !from.Guild.Disbanded && Insensitive.Contains( from.Guild.Name, "the church of justice" ) )
 				{					
 					gc *= 1.25;
 				}

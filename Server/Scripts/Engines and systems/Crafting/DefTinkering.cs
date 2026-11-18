@@ -319,10 +319,10 @@ namespace Server.Engines.Craft
 			AddCraft( typeof( DullCopperEarrings ), 1044049, "dull copper earrings", 40.0, 90.0, typeof( DullCopperIngot ), "dull copper ingot", 2, 1053098 );
 
 
-			AddCraft( typeof( DwarvenAmulet ), 1044049, "dwarven amulet", 99.0, 125.0, typeof( MithrilIngot ), "dwarven ingot", 2, 1053098 );
-			AddCraft( typeof( DwarvenBracelet ), 1044049, "dwarven bracelet", 99.0, 125.0, typeof( MithrilIngot ), "dwarven ingot", 2, 1053098 );
-			AddCraft( typeof( DwarvenRing ), 1044049, "dwarven ring", 99.0, 125.0, typeof( MithrilIngot ), "dwarven ingot", 2, 1053098 );
-			AddCraft( typeof( DwarvenEarrings ), 1044049, "dwarven earrings", 99.0, 125.0, typeof( MithrilIngot ), "dwarven ingot", 2, 1053098 );
+			AddCraft( typeof( DwarvenAmulet ), 1044049, "dwarven amulet", 99.0, 125.0, typeof( DwarvenIngot ), "dwarven ingot", 2, 1053098 );
+			AddCraft( typeof( DwarvenBracelet ), 1044049, "dwarven bracelet", 99.0, 125.0, typeof( DwarvenIngot ), "dwarven ingot", 2, 1053098 );
+			AddCraft( typeof( DwarvenRing ), 1044049, "dwarven ring", 99.0, 125.0, typeof( DwarvenIngot ), "dwarven ingot", 2, 1053098 );
+			AddCraft( typeof( DwarvenEarrings ), 1044049, "dwarven earrings", 99.0, 125.0, typeof( DwarvenIngot ), "dwarven ingot", 2, 1053098 );
 
 
 			index = AddCraft( typeof( EmeraldAmulet ), 1044049, "emerald amulet", 40.0, 90.0, typeof( IronIngot ), "iron ingot", 1, 1053098 );

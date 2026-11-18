@@ -14,6 +14,8 @@ Questo capitolo spiega:
 
 ---
 
+> **Novità di questa versione:** riposo e ispirazione, bonus alla varietà e fascia 80–100 ammorbidita rendono la crescita più rapida: vedi «Progressione» nel capitolo 4.
+
 ## 5.1 I tetti: totale, singola abilità, caratteristiche
 
 | Limite | Valore | Note |
@@ -118,7 +120,7 @@ Sul server il controllo anti-macro è **disattivato**: puoi ripetere la stessa a
 
 Ogni guadagno di abilità può far salire anche una caratteristica. L'ordine del controllo è Forza, poi Destrezza, poi Intelligenza; la probabilità dipende dall'abilità (colonne "For/Des/Int" della tabella finale; per esempio Accampamento dà 6% Forza, 4,5% Destrezza, 4,5% Intelligenza).
 
-- Ogni caratteristica può salire **al massimo una volta ogni 15 minuti** (7,5 minuti con lo stato FastGain). Il ritardo è calcolato per giocatore.
+- Ogni caratteristica può salire **al massimo una volta ogni 10 minuti** (5 minuti con lo stato FastGain). Il ritardo è calcolato per giocatore.
 - Le caratteristiche salgono solo se la loro freccia è su "su".
 - Quando sei al tetto delle caratteristiche, una sale e un'altra con la freccia "giù" scende.
 
@@ -130,7 +132,7 @@ Le abilità migliori per le caratteristiche:
 | Destrezza | Curiosare, Scassinare, Cucina, Costruzione Archi, Sartoria, Accampamento, Seguire Tracce, Furto |
 | Intelligenza | Cucina, Avvelenamento, Magia, Accampamento, Seguire Tracce, Conoscenza Animali, Valutare Intelligenza |
 
-> **Consiglio:** **Accampamento** (Camping) è la migliore abilità per alzare tutte e tre le caratteristiche. Dal primo giorno, ogni 15 minuti accendi un fuoco con la legna da ardere: con pochissima fatica le caratteristiche salgono in parallelo alle abilità.
+> **Consiglio:** **Accampamento** (Camping) è la migliore abilità per alzare tutte e tre le caratteristiche. Dal primo giorno, ogni 10 minuti accendi un fuoco con la legna da ardere: con pochissima fatica le caratteristiche salgono in parallelo alle abilità.
 
 ---
 
@@ -145,13 +147,13 @@ Quasi tutti i PNG possono insegnarti le loro abilità:
 Regole (file `BaseCreature.cs`):
 
 - Il PNG deve avere almeno 60 nell'abilità.
-- Insegna fino a **un terzo** del suo valore, **massimo 42,0**.
-- Prezzo: **1 moneta d'oro per ogni 0,1 punti** (da 0 a 42 costano 420 monete).
+- Insegna fino a **metà** del suo valore, **massimo 50,0**.
+- Prezzo: **1 moneta d'oro per ogni 0,1 punti** (da 0 a 50 costano 500 monete).
 - I **cloni** dei giocatori disconnessi (CharacterClone) insegnano fino a **80,0**, ma solo se hanno almeno 100 nell'abilità, e costano 300 monete per 0,1 punti.
 - Non si insegnano mai: Tessitura Arcana, Misticismo, Infusione, Lancio. **Furtività** si insegna solo se hai almeno 50 in Nascondersi.
 - I guaritori insegnano solo Medicina Legale, Guarigione, Parlare con gli Spiriti e Scherma con Spada.
 
-> **Consiglio:** comprare i primi 42 punti costa poco ed evita la parte più noiosa. Fallo per tutte le abilità che ti interessano, **tranne** quelle che vuoi usare per alzare le caratteristiche (come Accampamento): sotto 10 si guadagna sempre, e ogni guadagno è un'occasione di statistica.
+> **Consiglio:** comprare i primi 50 punti costa poco ed evita la parte più noiosa. Fallo per tutte le abilità che ti interessano, **tranne** quelle che vuoi usare per alzare le caratteristiche (come Accampamento): sotto 10 si guadagna sempre, e ogni guadagno è un'occasione di statistica.
 
 ---
 
@@ -278,8 +280,8 @@ Le abilità con **pulsante** (attive) sono 22: Anatomia, Conoscenza Animali, Ide
 - **Effetto**: probabilità di colpire e di non essere colpito. Le armi da taglio/asce ricevono bonus da Taglialegna; le contundenti da Estrazione Mineraria (vedi le rispettive abilità).
 - **Caratteristiche**: Spada For 2,3% / Des 0,8%; Mazza For 2,7% / Des 0,3%; Lame Leggere For 1,4% / Des 1,7%.
 - **Allenamento**:
-  - 0–42: compra dall'insegnante (guerriero, guardia, maestro d'armi).
-  - 42–70: combatti animali e mostri facili. Il guadagno si ha a **ogni colpo**, ma **non** contro giocatori, manichini, animali domestici o creature evocate.
+  - 0–50: compra dall'insegnante (guerriero, guardia, maestro d'armi).
+  - 50–70: combatti animali e mostri facili. Il guadagno si ha a **ogni colpo**, ma **non** contro giocatori, manichini, animali domestici o creature evocate.
   - 70–100: dungeon di difficoltà crescente. Il bonus dungeon (gruppo A) arriva a ×1,8.
   - Più il nemico è "alla pari", più impari: un nemico troppo debole non insegna niente.
 - **A 125 (Lame Leggere)**: 20% di probabilità di contrattaccare (riposta) dopo una parata riuscita.
@@ -379,8 +381,8 @@ I dettagli di ogni scuola di magia sono nel **capitolo 8**. Qui trovi solo come 
 
 | Fascia | Cosa lanciare |
 |---|---|
-| 0–42 | compra dall'insegnante (mago) |
-| 42–55 | 3°–4° cerchio: Benedizione, Purificazione Superiore, Cura Superiore |
+| 0–50 | compra dall'insegnante (mago) |
+| 50–55 | 3°–4° cerchio: Benedizione, Purificazione Superiore, Cura Superiore |
 | 55–70 | 5° cerchio: Paralisi, Riflesso Magico, Incognito |
 | 70–85 | 6° cerchio: Invisibilità, Marchio, Dissolvi |
 | 85–100 | 7° cerchio: Dissolvi di Massa, Portale, Metamorfosi |
@@ -610,8 +612,8 @@ Il "Mistico" del gioco è il **Monaco** e usa la Lotta (capitolo 8C).
 
 | Fascia | Su cosa |
 |---|---|
-| 0–42 | compra dall'allevatore |
-| 42–55 | orsi bruni, giaguari, cervi (vicino alle città iniziali) |
+| 0–50 | compra dall'allevatore |
+| 50–55 | orsi bruni, giaguari, cervi (vicino alle città iniziali) |
 | 55–70 | orsi grizzly (boschi lontani), lupi, gorilla |
 | 70–85 | orsi polari, leopardi delle nevi (isole ghiacciate: le zone innevate sono le migliori per domare), elefanti |
 | 85–100 | draghi giovani, viverne, draghi di palude, mammut |
@@ -705,7 +707,7 @@ Il "Mistico" del gioco è il **Monaco** e usa la Lotta (capitolo 8C).
   - **Tenda piccola**: richiede 10, solo nelle terre selvagge; si monta in 5 secondi.
 - **Effetto**: ogni 7–10 minuti hai una probabilità di Accampamento ÷ 400 di non consumare fame e sete (fino al 31% a 125). Con 100 puoi tenere animali nella **stalla di casa**.
 - **Caratteristiche**: For 6%, Des 4,5%, Int 4,5%: la **migliore abilità per le caratteristiche**.
-- **Allenamento**: accendi un fuoco ogni 15 minuti, poi usa le tende.
+- **Allenamento**: accendi un fuoco ogni 10 minuti, poi usa le tende.
 
 > **Consiglio:** non pagare mai l'insegnante per l'Accampamento: sotto 10 guadagni a ogni fuoco, ed è proprio quello che ti serve per le caratteristiche.
 

@@ -145,7 +145,7 @@ Quasi tutti i mercanti (vendor) insegnano le loro abilità. Hai due modi per far
 Poi **lascia l'oro sul mercante**. Le regole sono queste:
 
 - il prezzo è **10 monete d'oro per punto** di abilità (1 moneta per 0,1);
-- il mercante ti insegna fino a un terzo della sua abilità, mai oltre **42**. In pratica, con mercanti normali, arrivi intorno a **30–33**;
+- il mercante ti insegna fino a metà della sua abilità, mai oltre **50**. In pratica, con mercanti normali, arrivi intorno a **45–50**;
 - se paghi meno, impari meno. Se paghi troppo, ti restituisce il resto;
 - non puoi comprare abilità se sei criminale, se l'abilità è bloccata in discesa, o per Misticismo, Tessitura Arcana, Lancio e Infusione. Per Furtività ti serve Nascondersi ad almeno 50.
 
@@ -175,11 +175,11 @@ Con il resto dell'oro compra:
 
 ### Passo 6 – Fai crescere le caratteristiche fin da subito
 
-Ogni caratteristica può salire **al massimo di un punto ogni 15 minuti**, contati separatamente per For, Des e Int. Per questo conviene iniziare subito, anche mentre fai altro:
+Ogni caratteristica può salire **al massimo di un punto ogni 10 minuti**, contati separatamente per For, Des e Int. Per questo conviene iniziare subito, anche mentre fai altro:
 
 1. Impugna il **pugnale**, fai doppio clic su di esso e seleziona un **albero**: ottieni legnetti (kindling).
 2. Fai doppio clic sui legnetti per **accendere un fuoco**. Così usi Accampamento, che fa salire tutte e tre le caratteristiche (vedi la tabella in [4.1](04-meccaniche.md#41-caratteristiche)).
-3. Quando hai guadagnato un punto per caratteristica, riprova dopo 15 minuti.
+3. Quando hai guadagnato un punto per caratteristica, riprova dopo 10 minuti.
 
 ### Passo 7 – Guadagna i primi soldi
 

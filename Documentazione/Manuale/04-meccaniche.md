@@ -31,7 +31,7 @@ Le caratteristiche crescono **usando le abilità**:
 
 - ogni volta che un'abilità impostata **in salita** tenta un avanzamento, il gioco prova ad alzare la Forza, poi la Destrezza, poi l'Intelligenza (al massimo una per volta);
 - la probabilità dipende dall'abilità usata (vedi la tabella sotto). La caratteristica deve avere la freccia **in salita**;
-- **ogni caratteristica può salire al massimo di 1 punto ogni 15 minuti**, con un contatore separato per For, Des e Int. Per gli animali l'attesa è di 5 minuti;
+- **ogni caratteristica può salire al massimo di 1 punto ogni 10 minuti**, con un contatore separato per For, Des e Int. Per gli animali l'attesa è di 5 minuti;
 - quando sei al tetto totale, ogni aumento abbassa di un punto una caratteristica che hai messo **in discesa**. Se nessuna è in discesa, non sali più;
 - una caratteristica in discesa scende solo finché resta sopra 10.
 
@@ -60,7 +60,7 @@ Le caratteristiche crescono **usando le abilità**:
 
 Abilità come Meditazione, Tattica, Furtività, Negromanzia, Cavalleria, Bushido e Ninjitsu **non** fanno crescere nessuna caratteristica.
 
-> **Consiglio:** ogni 15 minuti fai qualche tentativo di **Accampamento**. Basta accendere dei legnetti, che ottieni usando un pugnale su un albero, e fa crescere tutte e tre le caratteristiche. La **Cucina** è la migliore per l'Intelligenza. Metti **in discesa** (freccia verso il basso) le caratteristiche che non vuoi far crescere oltre un certo valore.
+> **Consiglio:** ogni 10 minuti fai qualche tentativo di **Accampamento**. Basta accendere dei legnetti, che ottieni usando un pugnale su un albero, e fa crescere tutte e tre le caratteristiche. La **Cucina** è la migliore per l'Intelligenza. Metti **in discesa** (freccia verso il basso) le caratteristiche che non vuoi far crescere oltre un certo valore.
 
 ---
 
@@ -114,7 +114,7 @@ Nei dungeon compare il messaggio *"You gain inspiration from training here"* e a
 Quasi tutti i mercanti insegnano le proprie abilità:
 
 - costano **10 monete d'oro per punto**;
-- il PNG insegna fino a **un terzo della propria abilità**, mai oltre **42**. Con i mercanti normali significa circa **30–33** punti;
+- il PNG insegna fino a **metà della propria abilità**, mai oltre **50**. Con i mercanti normali significa circa **45–50** punti;
 - per insegnare, il PNG deve avere almeno 60 nell'abilità.
 
 La procedura passo per passo è nel [capitolo 2](02-primi-passi.md#passo-4--compra-le-prime-abilità).
@@ -705,7 +705,7 @@ Non esiste un sistema di taglie sui giocatori.
 | Oro iniziale | 5.000 |
 | Caratteristiche iniziali | 90 punti, ognuna tra 10 e 60 |
 | Tetto delle caratteristiche | 250 (Avatar) / 225 (non Avatar) |
-| Attesa tra due aumenti della stessa caratteristica | 15 minuti |
+| Attesa tra due aumenti della stessa caratteristica | 10 minuti |
 | Tetto totale delle abilità | 2.500 (10.000 dopo Skara Brae) |
 | Abilità comprate dai PNG | 10 monete d'oro per punto, fino a circa 30–33 (max 42) |
 | Protezione del principiante | 20 ore di gioco o 300 punti abilità |

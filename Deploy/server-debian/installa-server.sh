@@ -1,9 +1,10 @@
 #!/bin/bash
-# Installa Ultima Adventures (ITA) come servizio su Debian (server).
-# Uso (da root o con sudo):  sudo ./installa-server.sh  [archivio-server.tar.gz]
+# Installa Ultima Adventures (ITA) come servizio su Debian .
+# Uso (da root o con sudo):  sudo ./installa-server.sh  [archivio-server.tar.gz] [indirizzo-pubblico]
 set -euo pipefail
 ARCHIVIO="${1:-$(dirname "$(readlink -f "$0")")/ultima-adventures-server.tar.gz}"
 DEST=/opt/ultima-adventures
+INDIRIZZO="${2:-}"
 UTENTE=ultima
 PORTA=2593
 
@@ -26,6 +27,8 @@ if [ -d "$DEST/Server/Saves" ]; then
 else
   tar -xzf "$ARCHIVIO" -C "$DEST"
 fi
+
+if [ -n "$INDIRIZZO" ]; then echo "$INDIRIZZO" > "$DEST/Server/Data/indirizzo-pubblico.txt"; echo "== Indirizzo pubblico: $INDIRIZZO"; fi
 
 echo "== Mono 6.12 (runtime .NET) in $DEST/mono"
 if [ ! -x "$DEST/mono/bin/mono" ]; then

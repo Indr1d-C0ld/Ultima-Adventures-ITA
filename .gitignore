@@ -18,3 +18,11 @@
 *.log
 *.pdf
 *.bin
+
+# file generati dal server mentre gira e configurazione locale
+/Server/mono_crash*.json
+/Server/Crash*.log
+/Server/Data/indirizzo-pubblico.txt
+/Server/Data/pulizia-mondo*.txt
+/Server/Data/primo-owner*.txt
+/Server/console.fifo

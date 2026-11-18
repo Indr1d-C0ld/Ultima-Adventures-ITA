@@ -3,13 +3,17 @@ ULTIMA ADVENTURES - VERSIONE ITALIANA
 
 COME GIOCARE
   Windows 10/11 (64 bit):  doppio clic su uno dei file "Gioca - ....bat"
-     - "Gioca - Internet"            : da fuori casa (nome.dyndns.esempio)
-     - "Gioca - Rete di casa (LAN)"  : dalla rete di casa (IP-LAN-DEL-SERVER)
+     - "Gioca - Internet"            : da fuori casa (indirizzo pubblico del server)
+     - "Gioca - Rete di casa (LAN)"  : dalla rete di casa (IP del server nella rete locale)
      - "Gioca - Questo PC"           : se il server gira sullo stesso computer
   Debian/Linux (64 bit):
      ./gioca.sh                 (chiede quale collegamento usare)
      ./gioca.sh internet|lan|locale
      ./installa-collegamenti.sh (crea le voci nel menu delle applicazioni)
+
+CONFIGURAZIONE (una volta sola)
+  Apri Profili/lan.json e Profili/internet.json e sostituisci "IP-LAN-DEL-SERVER" e "nome.dyndns.esempio"
+  con l'IP del server nella tua rete e il suo indirizzo pubblico (IP o nome DNS).
 
 PRIMO ACCESSO
   Scegli un nome account e una password: l'account viene creato automaticamente al primo accesso.

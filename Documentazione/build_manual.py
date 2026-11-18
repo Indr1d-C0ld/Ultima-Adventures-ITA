@@ -4,7 +4,7 @@ Convertitore Markdown minimale: titoli, paragrafi, elenchi (anche annidati), tab
 blocchi di codice, grassetto/corsivo/codice in linea, link. Nessuna dipendenza esterna."""
 import re, glob, os, html, sys
 
-ROOT = '/percorso/progetto/src/Ultima-Adventures/Documentazione'
+ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, 'Manuale')
 OUT = os.path.join(ROOT, 'Manuale.html')
 

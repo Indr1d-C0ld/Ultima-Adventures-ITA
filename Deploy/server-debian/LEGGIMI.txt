@@ -2,11 +2,11 @@ ULTIMA ADVENTURES (ITA) - INSTALLAZIONE DEL SERVER SU UN SERVER DEBIAN (Debian 6
 =============================================================================
 
 1) Copia questa cartella sul server, per esempio:
-     scp -r server-debian utente@IP-LAN-DEL-SERVER:~/
+     scp -r server-debian utente@IP-DEL-SERVER:~/
 
 2) Sul server:
      cd ~/server-debian
-     sudo ./installa-server.sh
+     sudo ./installa-server.sh ultima-adventures-server.tar.gz nome.dyndns.esempio
 
    Lo script:
    - crea l'utente di servizio "ultima";
@@ -27,9 +27,9 @@ ULTIMA ADVENTURES (ITA) - INSTALLAZIONE DEL SERVER SU UN SERVER DEBIAN (Debian 6
      systemctl start ultima-adventures         avvia
 
 RETE
-- Porta del gioco: 2593/TCP (inoltrata dal router verso IP-LAN-DEL-SERVER).
-- Indirizzo pubblico comunicato ai giocatori da Internet: nome.dyndns.esempio
-  (si cambia in Scripts/MyServerSettings.cs, ServerPublicAddress()).
+- Porta del gioco: 2593/TCP (inoltrata dal router verso l'IP del server).
+- Indirizzo pubblico comunicato ai giocatori da Internet: si imposta come secondo
+  argomento di installa-server.sh e si cambia in Server/Data/indirizzo-pubblico.txt.
 - I giocatori in casa usano il profilo "Rete di casa (LAN)" del client; da fuori il profilo "Internet".
 
 PRIMO ACCOUNT AMMINISTRATORE

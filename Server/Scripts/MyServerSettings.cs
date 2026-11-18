@@ -957,7 +957,21 @@ namespace Server.Misc
 		// (IP o nome DNS). null = rilevamento automatico. La porta è in SocketOptions.cs (2593).
 		// I client della rete locale ricevono comunque l'indirizzo locale del server.
 		// ---------------------------------------------------------------------
-		public static string ServerPublicAddress() { return "nome.dyndns.esempio"; }
+		public static string ServerPublicAddress()
+		{
+			// letto da Data/indirizzo-pubblico.txt (file locale, non incluso nel repository); assente = rilevamento automatico
+			try
+			{
+				string f = System.IO.Path.Combine( Core.BaseDirectory, System.IO.Path.Combine( "Data", "indirizzo-pubblico.txt" ) );
+				if ( System.IO.File.Exists( f ) )
+				{
+					string a = System.IO.File.ReadAllText( f ).Trim();
+					if ( a.Length > 0 ) return a;
+				}
+			}
+			catch { }
+			return null;
+		}
 
 		public static double BalanceTilt() { double f = AetherGlobe.BalanceLevel / 100000.0; if ( f < 0 ) f = 0; if ( f > 1 ) f = 1; return ( f - 0.5 ) * 2.0; }
 		public static double BalanceGoldSwing() { return 10.0; }    // punti percentuali di oro in più/in meno agli estremi

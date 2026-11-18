@@ -7585,9 +7585,11 @@ namespace Server.Mobiles
 			}
 			else
 			{
-				baseToSet = ourSkill.BaseFixedPoint / 3;
-				if ( baseToSet > 420 )
-					baseToSet = 420;
+				// i maestri insegnano fino a metà della propria abilità, al massimo MyServerSettings.TrainerMaxSkill() (era 1/3 e 42)
+				int maxTeach = (int)( MyServerSettings.TrainerMaxSkill() * 10 );
+				baseToSet = ourSkill.BaseFixedPoint / 2;
+				if ( baseToSet > maxTeach )
+					baseToSet = maxTeach;
 				else if ( baseToSet < 200 )
 					return TeachResult.Failure;
 			}

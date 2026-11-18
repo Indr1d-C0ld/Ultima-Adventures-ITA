@@ -30,11 +30,7 @@ namespace Server.Misc
         {
 			Mobile from = e.Mobile;
 
-			if (!from.Alive)
-			{
-				from.SendMessage("You are dead and cannot do that!");
-				return;
-			}
+			// QoL: anche gli spiriti possono cercare il proprio cadavere (sono quelli che ne hanno più bisogno)
 
 			Map map = from.Map;
 
@@ -192,7 +188,7 @@ namespace Server.Misc
 				Stop();
 				return;
 			}
-			else if ( m_From.NetState == null || !m_From.Alive || m_From.Deleted || m_Target.Deleted || !m_From.InRange( m_Target, m_Range ) || GhostHelper.SameArea( m_From, m_Target ) == false )
+			else if ( m_From.NetState == null || m_From.Deleted || m_Target.Deleted || !m_From.InRange( m_Target, m_Range ) || GhostHelper.SameArea( m_From, m_Target ) == false )
 			{
 				m_Arrow.Stop();
 				Stop();

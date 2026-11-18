@@ -1007,6 +1007,26 @@ namespace Server.Misc
 		public static bool BeginnerProtectionEnabled() { return true; }
 		public static double BeginnerProtectionHours() { return 20.0; }      // ore di gioco del personaggio
 		public static int BeginnerProtectionSkillPoints() { return 300; }   // punti abilità totali
+
+		// ---------------------------------------------------------------------
+		// PROGRESSIONE (vedi Server Functions/Beginner/Progression.cs e SkillCheck.cs)
+		// ---------------------------------------------------------------------
+		// Riposo: uscire dal gioco in un luogo sicuro (locanda, taverna, casa, giaciglio) accumula ispirazione
+		public static bool RestedInspirationEnabled() { return true; }
+		public static double RestMinutesPerInspirationMinute() { return 4.0; } // 4 min di riposo = 1 min di ispirazione
+		public static double MaxInspirationMinutes() { return 120.0; }         // massimo accumulabile
+		public static double InspirationGainMultiplier() { return 2.0; }       // probabilità di guadagno x2 mentre si è ispirati
+		// Varietà: usare molte abilità diverse in poco tempo fa imparare più in fretta
+		public static bool VarietyBonusEnabled() { return true; }
+		public static double VarietyWindowMinutes() { return 30.0; }
+		public static int VarietySkillsNeeded() { return 4; }
+		public static double VarietyGainMultiplier() { return 1.25; }
+		// Fascia 80-100 ammorbidita: probabilità che un guadagno conti davvero (prima 1/2, 1/3, 1/4, 1/5)
+		public static bool SoftenHighSkillGains() { return true; }
+		// Attesa fra due aumenti della stessa caratteristica (minuti; originale 15)
+		public static double StatGainDelayMinutes() { return 10.0; }
+		// I PNG maestri insegnano fino a questo valore (originale 42), al massimo metà della loro abilità
+		public static double TrainerMaxSkill() { return 50.0; }
 		
 		public static int decayrate() // note, itemdecay was disabled in this release.  if you want itemdecay, run runuo.exe.itemdecay instead and set the value here to the amount of time you want for item decay .  
 		{

@@ -291,6 +291,8 @@ namespace Server.Misc
 
 				if ( from is PlayerMobile )
 				{
+					// riposo (ispirazione) e varietà delle abilità usate
+					gc *= Progression.GainMultiplier( (PlayerMobile)from, skillName );
 					if ( ((PlayerMobile)from).SoulBound && Server.Misc.Worlds.GetRegionName( from.Map, from.Location ) == "the Basement")
 						gc *= 4;
 					if ( ((PlayerMobile)from).FastGain > 1 )
@@ -735,6 +737,12 @@ namespace Server.Misc
 
 					else if ( skill.Base <= 80.0 )
 						toGain = 1;
+					else if ( skill.Base <= 100.0 && MyServerSettings.SoftenHighSkillGains() )
+					{
+						// fascia 80-100 ammorbidita: 2/3, 1/2, 1/3, 1/4 (prima 1/2, 1/3, 1/4, 1/5)
+						double ch = skill.Base <= 85.0 ? 2.0/3.0 : skill.Base <= 90.0 ? 0.5 : skill.Base <= 95.0 ? 1.0/3.0 : 0.25;
+						toGain = Utility.RandomDouble() < ch ? 1 : 0;
+					}
 
 					else if ( skill.Base <= 85.0 )
 						{
@@ -1008,7 +1016,7 @@ namespace Server.Misc
 			}
 		}
 
-		private static double m_DefaultStatGainDelay = 15.0;
+		private static double m_DefaultStatGainDelay { get { return MyServerSettings.StatGainDelayMinutes(); } }
 		private static TimeSpan m_PetStatGainDelay = TimeSpan.FromMinutes( 5.0 );
 
 		public static void GainStat( Mobile from, Stat stat )

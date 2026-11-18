@@ -3,7 +3,7 @@ Si scrivono nella barra di chat, iniziando con la parentesi quadra:
 • <B>[guida</B>: questa guida.
 • <B>[principiante</B>: stato della protezione del principiante.
 • <B>[skill</B>: finestra delle abilità.
-• <B>[corpse</B>: ti aiuta a ritrovare il tuo cadavere.
+• <B>[corpse</B>: una freccia ti guida verso il tuo cadavere (funziona anche da spirito).
 • <B>[status</B>, <B>[motd</B>: informazioni e notizie del server.
 
 L'elenco completo dei comandi da giocatore è nel manuale, capitolo "Comandi".

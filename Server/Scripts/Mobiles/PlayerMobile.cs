@@ -133,6 +133,23 @@ namespace Server.Mobiles
 
 		[CommandProperty( AccessLevel.GameMaster )]
 		public int BeginnerState { get { return m_BeginnerState; } set { m_BeginnerState = value; } }
+
+		// Progressione: riposo e ispirazione (vedi Server Functions/Beginner/Progression.cs)
+		private DateTime m_RestStart = DateTime.MinValue;   // inizio del riposo (logout in luogo sicuro)
+		private DateTime m_InspirationUntil = DateTime.MinValue; // fine dell'ispirazione attiva
+		private double m_InspirationLeft;                     // minuti di ispirazione non ancora usati (quando offline)
+		public Dictionary<SkillName, DateTime> RecentSkillUse = new Dictionary<SkillName, DateTime>();
+
+		public DateTime RestStart { get { return m_RestStart; } set { m_RestStart = value; } }
+		public DateTime InspirationUntil { get { return m_InspirationUntil; } set { m_InspirationUntil = value; } }
+		public double InspirationLeft { get { return m_InspirationLeft; } set { m_InspirationLeft = value; } }
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public double InspirationMinutes
+		{
+			get { return Math.Max( 0.0, ( m_InspirationUntil - DateTime.UtcNow ).TotalMinutes ); }
+			set { m_InspirationUntil = DateTime.UtcNow + TimeSpan.FromMinutes( Math.Max( 0.0, value ) ); }
+		}
 		private TimeSpan m_NpcGuildGameTime;
                 private PlayerFlag m_Flags;
                 public bool High;
@@ -5770,7 +5787,9 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 
 			base.Serialize( writer );
 
-                        writer.Write( (int) 68 );
+                        writer.Write( (int) 69 );
+			writer.Write( m_RestStart );
+			writer.Write( (double)( NetState != null ? InspirationMinutes : m_InspirationLeft ) );
 			writer.Write( (int)m_BeginnerState );
 			writer.Write( m_NextFrankenFighterSummonAllowed );
 			writer.Write( (bool)m_sbmasterspeedenabled );
@@ -5977,6 +5996,10 @@ A little mouse catches sight of you and flees into a small hole in the ground.*/
 
                         switch ( version )
                         {
+	                               case 69:
+	                                        m_RestStart = reader.ReadDateTime();
+	                                        m_InspirationLeft = reader.ReadDouble();
+	                                        goto case 68;
 	                               case 68:
 	                                        m_BeginnerState = reader.ReadInt();
 	                                        goto case 67;

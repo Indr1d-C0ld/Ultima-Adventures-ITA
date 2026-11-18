@@ -1,29 +1,29 @@
-- Although this world has the potential for player versus player combat, this does not give you the right to harass others on a constant basis.
+- Anche se in questo mondo il combattimento fra giocatori è possibile, ciò non dà a nessuno il diritto di molestare continuamente gli altri.
 
-- Although you shouldn't be harassed on a constant basis, player versus player combat can be a reality. The world is very large and there are many places to go where you may never be found. There are about 8 different worlds and over 80 dungeons. Some lands are so huge that one may never find where you built your house.
+- Il mondo è immenso: ci sono circa 8 terre diverse e oltre 80 dungeon. Alcune terre sono così vaste che nessuno troverà mai il luogo dove hai costruito la tua casa.
 
-- Killing citizens will increase your murder count, and not just killing other player characters.
+- Uccidere i cittadini aumenta il conteggio degli omicidi, non solo uccidere altri giocatori.
 
-- If your character's name is something like TacoChamp123 or Batman, it will eventually be changed for you to something else.
+- Se il nome del tuo personaggio è qualcosa come TacoChamp123 o Batman, prima o poi verrà cambiato.
 
-- Digging up graves is a criminal offense.
+- Profanare le tombe è un reato.
 
-- Although death knights are rare, it is illegal to be one in a settlement once you are too powerful. You will be attacked and perhaps killed on sight.
+- I Cavalieri della Morte sono rari, ma è vietato esserlo dentro un insediamento quando si diventa troppo potenti: si viene attaccati e forse uccisi a vista.
 
-- Any criminals (gray in color) or murderers (often red in color) will be unwelcome in settlements and often killed on sight.
+- Criminali (in grigio) e assassini (in rosso) non sono graditi negli insediamenti e spesso vengono uccisi a vista.
 
-- Public areas are safe havens for everyone. These areas include the banks, inns, taverns, secret guilds, and the lost glade.
+- Le aree pubbliche sono luoghi sicuri per tutti: banche, locande, taverne, gilde segrete e la Radura Perduta.
 
-- If you find any glitches, email the administrator and let them know so they can be addressed. There is no GM on staff so paging is not used here.
+- Se trovi un errore, segnalalo all'amministratore del server.
 
-The below items are not rules to follow, but rules this particular server imposes that may differ from other similar servers.
+Le voci seguenti non sono regole da rispettare, ma regole del mondo che possono differire da altri server:
 
-- Each account may have up to 5 houses, and they will not collapse due to age.
+- Ogni account può avere fino a 5 case, che non crollano per l'età.
 
-- According to maritime law, Boats left unattended for 45 days may be commandeered. A character must use the boat to reset this timer.
+- Per legge marittima, una barca lasciata incustodita per 45 giorni può essere requisita. Usarla azzera il conteggio.
 
-- Talk to merchants and town criers, as they offer information and services that may help you on your adventure.
+- Parla con mercanti e banditori: offrono informazioni e servizi utili.
 
-- Don't dismiss any skill, as they all can serve an important purpose in this world.
+- Non sottovalutare nessuna abilità: tutte hanno uno scopo importante.
 
-- You can have a maximum of 2,500 skill points and 250 (225 for Observers) ability points.
+- Puoi avere al massimo 2.500 punti abilità e 250 punti caratteristica (225 se non sei Avatar).

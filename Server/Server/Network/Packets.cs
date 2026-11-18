@@ -2681,6 +2681,13 @@ namespace Server.Network
 
 			if ( !m.Player )
 				text = Localization.Translate( text );
+			else if ( text != null )
+			{
+				// giocatori: il nome resta, si traduce solo il titolo ("Nome, Apprentice Healer")
+				int comma = text.IndexOf( ", " );
+				if ( comma > 0 )
+					text = text.Substring( 0, comma + 2 ) + Localization.Translate( text.Substring( comma + 2 ) );
+			}
 
 			m_Stream.Write( (int) m.Serial );
 			m_Stream.WriteAsciiFixed( Localization.ToAscii( text ), 60 );

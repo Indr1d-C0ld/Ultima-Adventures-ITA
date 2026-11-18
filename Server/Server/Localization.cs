@@ -585,6 +585,11 @@ namespace Server
 				if ( text.Length < t.Literal )
 					continue;
 
+				// i modelli con poco testo fisso (es. "{0} World {1}") non devono "catturare" frasi lunghe che non c'entrano:
+				// il testo fisso deve coprire almeno il 35% del testo (o almeno 12 caratteri per testi brevi)
+				if ( t.Literal < 12 && t.Literal * 100 < text.Length * 35 )
+					continue;
+
 				// controllo veloce: i pezzi fissi devono comparire, in ordine, fra prefisso e suffisso
 				int p = t.Prefix.Length, end = text.Length - t.Suffix.Length;
 				bool ok = true;

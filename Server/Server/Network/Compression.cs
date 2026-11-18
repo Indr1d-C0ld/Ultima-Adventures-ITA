@@ -302,16 +302,16 @@ namespace Server.Network {
 
 	public sealed class CompressorUnix32 : ICompressor {
 		internal class SafeNativeMethods {
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern string zlibVersion();
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError compress(byte[] dest, ref int destLength, byte[] source, int sourceLength);
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError compress2(byte[] dest, ref int destLength, byte[] source, int sourceLength, ZLibQuality quality);
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError uncompress(byte[] dest, ref int destLen, byte[] source, int sourceLen);
 		}
 
@@ -339,16 +339,16 @@ namespace Server.Network {
 
 	public sealed class CompressorUnix64 : ICompressor {
 		internal class SafeNativeMethods {
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern string zlibVersion();
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError compress(byte[] dest, ref ulong destLength, byte[] source, int sourceLength);
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError compress2(byte[] dest, ref ulong destLength, byte[] source, int sourceLength, ZLibQuality quality);
 
-		[DllImport( "libz" )]
+		[DllImport( "libz.so.1" )]
 			internal static extern ZLibError uncompress(byte[] dest, ref ulong destLen, byte[] source, int sourceLen);
 		}
 

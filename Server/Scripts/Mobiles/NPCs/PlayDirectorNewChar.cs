@@ -958,7 +958,7 @@ namespace Server.Mobiles
             Mobile m = e.Mobile;
             if (m.AccessLevel > AccessLevel.Player && Insensitive.Contains(e.Speech, "start"))
             {
-                StartPlay(this);
+                StartPlay(m); // corretto: prima passava il regista stesso, quindi lo staff non poteva mai avviare la scena
             }
 
             bool saidNo = IsNoAnswer(e.Speech);

@@ -42,7 +42,7 @@ namespace Server.Spells.DeathKnight
 
 				SpellHelper.CheckReflect( 4, Caster, ref m );
 
-				double duration = 7.0 + ( GetKarmaPower( m ) * 0.2 );
+				double duration = 7.0 + ( GetKarmaPower( Caster ) * 0.2 );
 
 				m.Paralyze( TimeSpan.FromSeconds( duration ) );
 				m.FixedEffect( 0x376A, 6, 1 );

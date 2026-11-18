@@ -10,7 +10,7 @@ namespace Server.Spells.Research
 {
 	public class ResearchBanishDaemon : ResearchSpell
 	{
-		public override int spellIndex { get { return 16; } }
+		public override int spellIndex { get { return 30; } } // corretto: era 16 (Palla di Neve)
 		public int CirclePower = 4;
 		public static int spellID = 16;
 		public override TimeSpan CastDelayBase { get { return TimeSpan.FromSeconds( 2.0 ); } }

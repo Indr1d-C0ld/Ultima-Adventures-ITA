@@ -66,8 +66,11 @@ namespace Server
 			public string Suffix;
 			public Regex Pattern;
 			public int[] Order; // indice del segnaposto per ogni gruppo catturato
+			public HashSet<int> SuffixSlots; // segnaposto attaccati a una parola inglese (es. "ingot{1}" = suffisso plurale)
 			public int Literal; // lunghezza del testo letterale (per preferire i modelli piu' specifici)
 		}
+
+		private static readonly Regex m_EnglishSuffix = new Regex( @"^(?:s|es|ies|y|'s|')?([\s.,;:!?]*)$", RegexOptions.Compiled );
 
 		private static readonly Regex m_Placeholder = new Regex( @"\{(\d+)\}", RegexOptions.Compiled );
 
@@ -275,6 +278,7 @@ namespace Server
 
 			StringBuilder rx = new StringBuilder( "^" );
 			List<int> order = new List<int>();
+			HashSet<int> suffixSlots = new HashSet<int>();
 			int pos = 0, literal = 0;
 
 			foreach ( Match m in mc )
@@ -284,6 +288,9 @@ namespace Server
 				literal += lit.Length;
 
 				int idx = int.Parse( m.Groups[1].Value );
+
+				if ( m.Index > 0 && Char.IsLetter( key[m.Index - 1] ) )
+					suffixSlots.Add( idx );
 
 				if ( order.Contains( idx ) )
 				{
@@ -317,6 +324,7 @@ namespace Server
 			t.Prefix = key.Substring( 0, mc[0].Index );
 			t.Suffix = tail;
 			t.Order = order.ToArray();
+			t.SuffixSlots = suffixSlots;
 			t.Literal = literal;
 			t.Pattern = new Regex( rx.ToString(), RegexOptions.Singleline | RegexOptions.CultureInvariant );
 			return t;
@@ -575,7 +583,22 @@ namespace Server
 				string[] values = new string[ MaxIndex( t.Order ) + 1 ];
 
 				for ( int g = 0; g < t.Order.Length; g++ )
-					values[ t.Order[g] ] = Translate( m.Groups[g + 1].Value );
+				{
+					string v = m.Groups[g + 1].Value;
+
+					// suffisso plurale inglese incollato a una parola ("ingot" + "s."): in italiano resta solo la punteggiatura
+					if ( t.SuffixSlots.Contains( t.Order[g] ) )
+					{
+						Match sm = m_EnglishSuffix.Match( v );
+						if ( sm.Success )
+						{
+							values[ t.Order[g] ] = sm.Groups[1].Value;
+							continue;
+						}
+					}
+
+					values[ t.Order[g] ] = Translate( v );
+				}
 
 				return m_Placeholder.Replace( t.Value, delegate( Match pm )
 				{

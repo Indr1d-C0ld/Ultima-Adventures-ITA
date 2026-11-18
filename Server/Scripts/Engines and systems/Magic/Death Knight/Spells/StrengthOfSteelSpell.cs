@@ -36,8 +36,8 @@ namespace Server.Spells.DeathKnight
 			{
 				SpellHelper.Turn( Caster, m );
 
-				int bonus = Server.Misc.MyServerSettings.PlayerLevelMod( (int)( GetKarmaPower( m ) / 3 ), Caster );
-				double timer = ( GetKarmaPower( m ) / 10 );
+				int bonus = Server.Misc.MyServerSettings.PlayerLevelMod( (int)( GetKarmaPower( Caster ) / 3 ), Caster );
+				double timer = ( GetKarmaPower( Caster ) / 10 );
 				int appliedBonus;
 				TimeSpan appliedDuration;
 				SpellHelper.AddStatBonus( Caster, m, StatType.Str, bonus, TimeSpan.FromMinutes( timer ), out appliedBonus, out appliedDuration );

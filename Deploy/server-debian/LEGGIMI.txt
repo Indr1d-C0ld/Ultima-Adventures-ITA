@@ -20,7 +20,7 @@ ULTIMA ADVENTURES (ITA) - INSTALLAZIONE DEL SERVER SU UN SERVER DEBIAN (Debian 6
 3) Comandi utili:
      systemctl status ultima-adventures        stato
      journalctl -u ultima-adventures -f        console del server in tempo reale
-     ultima-console save                       salva il mondo
+     ultima-console save                       salva il mondo (chiede la password di sudo)
      ultima-console "bc Ciao a tutti"          messaggio a tutti i giocatori
      ultima-console online                     chi è collegato
      systemctl stop ultima-adventures          salva e spegne

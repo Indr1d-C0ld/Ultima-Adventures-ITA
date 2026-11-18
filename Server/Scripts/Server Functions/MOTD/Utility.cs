@@ -119,7 +119,7 @@ namespace Joeku.MOTD
 				switch( i )
 				{
 					case 0:
-						lines += String.Format( "<CENTER><BIG>{0} ", list[i] );
+						lines += String.Format( "<CENTER><BIG>{0}<BR>", list[i] );
 						break;
 					case 1:
 						lines += String.Format( "{0}<BR>----------------------------------</BIG></CENTER>", list[i] );

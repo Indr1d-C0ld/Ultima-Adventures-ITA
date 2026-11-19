@@ -13,7 +13,7 @@ Gli elenchi completi di incantesimi e poteri sono nel **capitolo 8**. Qui trovi 
 
 ## 6.1 Prima di scegliere: tre regole d'oro
 
-1. **La scelta iniziale non è definitiva.** Alla creazione metti al massimo 50 punti in 2 o 3 abilità; tutto il resto si compra dai PNG (fino a 42 punti) o si allena. La scelta iniziale conta solo per risparmiare i punti più faticosi.
+1. **La scelta iniziale non è definitiva.** Alla creazione metti al massimo 50 punti in 2 o 3 abilità; tutto il resto si compra dai PNG (fino a 50 punti) o si allena. La scelta iniziale conta solo per risparmiare i punti più faticosi.
 2. **Pensa prima a sopravvivere.**
    - **Veleno**: Alchimia per le pozioni di Purificazione, oppure Guarigione e Anatomia, oppure Magia o Cavalleria.
    - **Cure**: bende, pozioni, Parlare con gli Spiriti.

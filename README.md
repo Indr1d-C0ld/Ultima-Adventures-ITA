@@ -113,7 +113,7 @@ Il comando `[principiante` mostra quanto manca alla fine della protezione e perm
 ### Guida in gioco e manuale
 
 - **`[guida`** apre una guida in gioco con 11 argomenti per chi inizia. Gli argomenti sono file di testo in `Server/Data/Guida/`, modificabili senza ricompilare.
-- **[Manuale completo](Documentazione/Manuale.html)**: 18 capitoli e circa 300 tabelle, con indice e ricerca, consultabile offline. Le sorgenti Markdown sono in `Documentazione/Manuale/`. Contiene:
+- **[Manuale completo](Documentazione/Manuale.html)** (anche in **[PDF stampabile](Documentazione/Manuale.pdf)**, A4, 231 pagine): una sezione «Primi passi» per i principianti, 18 capitoli e circa 300 tabelle, con indice e ricerca, consultabile offline. Le sorgenti Markdown sono in `Documentazione/Manuale/`. Contiene:
   - primi passi, comandi e meccaniche;
   - le 58 abilità;
   - professioni e classi speciali;

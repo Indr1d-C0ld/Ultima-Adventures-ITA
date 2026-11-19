@@ -1,4 +1,4 @@
-# 2. Primi passi
+# 2. Creazione del personaggio e primo giorno
 
 Questo capitolo ti accompagna dalla creazione del personaggio alla fine del tuo primo giorno di gioco. Se è la tua prima volta, leggilo tutto.
 
@@ -8,7 +8,7 @@ Nella schermata di creazione del client scegli **aspetto**, **caratteristiche** 
 
 ### Caratteristiche (stats)
 
-Hai **90 punti** da distribuire tra **Forza** (Strength, For), **Destrezza** (Dexterity, Des) e **Intelligenza** (Intelligence, Int). Ogni caratteristica deve stare tra **10** e **60**. Se il client invia valori non validi, il server li azzera tutti a 10/10/10.
+Hai **80 punti** (90 con client dalla versione 7.0.16) da distribuire tra **Forza** (Strength, For), **Destrezza** (Dexterity, Des) e **Intelligenza** (Intelligence, Int). Ogni caratteristica deve stare tra **10** e **60**. Se il client invia valori non validi, il server li azzera tutti a 10/10/10.
 
 | Caratteristica | A cosa serve |
 |---|---|
